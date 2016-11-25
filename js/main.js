@@ -7,23 +7,7 @@
 })();
 $(document).ready(function(){
 
-    $('.sortable').nestedSortable({
-        forcePlaceholderSize: true,
-        handle: 'div',
-        helper:	'clone',
-        items: 'li',
-        opacity: .6,
-        placeholder: 'placeholder',
-        revert: 250,
-        tabSize: 25,
-        tolerance: 'pointer',
-        toleranceElement: '> div',
-        maxLevels: 6,
 
-        isTree: true,
-        expandOnHover: 700,
-        startCollapsed: true
-    });
 
     $('.disclose').on('click', function() {
         $(this).closest('li').toggleClass('mjs-nestedSortable-collapsed').toggleClass('mjs-nestedSortable-expanded');
@@ -75,12 +59,14 @@ $(document).ready(function(){
                 work_list.eq(key).attr("data-check", 0);
             }
         });
+        $('.popup_edit.plan_work').removeClass('open');
     });
 
 
     $('.close, .exit').on('click', function () {
         $('.popup_edit.plan_work').removeClass('open');
         $('.popup_edit.external_promotion').removeClass('open');
+        $('.modal_overlay').removeClass('open');
     });
 
     $('.check_all').on('click', function () {
@@ -90,6 +76,7 @@ $(document).ready(function(){
     $('.edit_external_promotion').on('click', function (event) {
         event.preventDefault();
         $('.popup_edit.external_promotion').addClass('open');
+        $('.modal_overlay').addClass('open');
     });
 
     $('.add_link').on('click', function () {
@@ -117,4 +104,35 @@ $(document).ready(function(){
     //    }
     // });
 
+
+    //
+    // $( window ).resize(function() {
+    //
+    //     $.each( $('.head_element'), function( key ) {
+    //         var project_margin;
+    //         if(key == 0){
+    //             project_margin = 50;
+    //         }else{
+    //             project_margin = 0;
+    //         }
+    //         var line_element  = $('.line_element').eq(key);
+    //         var project_width = $(this).outerWidth();
+    //
+    //
+    //         line_element.css('width', project_width - project_margin);
+    //
+    //
+    //     });
+    //
+    // });
+    $(document).mouseup(function (e) {
+        var popup = $(".external_promotion");
+        if (!$('.external_promotion').is(e.target) && !popup.is(e.target) && popup.has(e.target).length == 0) {
+            $('.popup_edit.external_promotion').removeClass('open');
+            $('.modal_overlay').removeClass('open');
+            $('.audit_tooltip').removeClass('open')
+        }
+    });
+
 });
+

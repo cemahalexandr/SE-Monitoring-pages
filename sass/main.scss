@@ -30,8 +30,9 @@ header{
   .statistic_diagram{
     position: absolute;
     width:50%;
-    top: 0;
+    top: 30px;
     right:0;
+    text-align: right;
   }
   .navigation{
     margin-top:10px;
@@ -56,8 +57,20 @@ header{
 main{
   margin-bottom: 100px;
   background: #fff;
-  padding: 17px 20px;
+  padding: 17px 20px 20px;
   position: relative;
+  &.seo_page{
+    .sortable{
+      li{
+        &:before{
+          display: none;
+        }
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
   h2{
     font-size: 24px;
     color: $title-color;
@@ -266,7 +279,7 @@ main{
         content: '';
         display: block;
         position: absolute;
-        left: 10px;
+        left: 7px;
         width: 12px;
         height:15px;
         background: url(../img/icon_spite.png);
@@ -312,7 +325,7 @@ main{
         background-position: -45px 51px;
       }
     }
-    .delete{
+    .delete_selected{
       background: #ffc36b;
       &:before{
         background-position: -98px 40px;
@@ -320,7 +333,25 @@ main{
     }
   }
 }
+.table_wrap{
+  width: 100%;
+  overflow-x: scroll;
+}
+.table_monitoring_wrap{
+  width: 100%;
+  overflow-x: scroll;
+  .table{
+    min-width: 1368px;
+    .day{
+    .wrap{
+      margin:0;
+    }
+    }
+  }
+}
 .table{
+
+  min-width:1130px;
   .table_header{
     display: -webkit-box;
     display: -moz-box;
@@ -345,6 +376,13 @@ main{
     text-align: center;
     min-height: 40px;
     margin-left: 50px;
+    .search_wrap{
+      display: flex;
+
+      div{
+        flex-grow: 1;
+      }
+    }
     &:hover{
       background: #d9edff;
     }
@@ -533,7 +571,37 @@ main{
         }
       }
       .update{
-        background-position: -168px -51px;
+        background-position: -168px -52px;
+        &.rotated{
+          animation-name: in_rotate;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+          @keyframes in_rotate {
+            0% {
+              -webkit-transform: rotate(0deg);
+              -moz-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+              -o-transform: rotate(0deg);
+              transform: rotate(0deg);
+            }
+
+            100% {
+              -webkit-transform: rotate(360deg);
+              -moz-transform: rotate(360deg);
+              -ms-transform: rotate(360deg);
+              -o-transform: rotate(360deg);
+              transform: rotate(360deg);
+            }
+          }
+          &:hover{
+            background-color: transparent;
+          }
+        }
+        &.wait{
+          background: url(../img/sand-clock.png) no-repeat center;
+        }
       }
       .report{
         background-position: -168px -9px;
@@ -626,6 +694,7 @@ main{
       div{
         width: 67px;
         display: flex;
+        flex-grow: 1;
       }
       span{
         margin: auto;
@@ -716,6 +785,13 @@ main{
     height: 40px;
     margin-left: 50px;
     background: #e9ecf0;
+    font-weight:bold;
+    .project{
+      align-items: center;
+      span{
+        margin: 0;
+      }
+    }
   }
   .pagination{
     margin: 50px 0 25px;
@@ -776,6 +852,7 @@ main.requests_list{
   nav{
     text-align: right;
     border-bottom: 1px solid #ededed;
+    margin-top: -38px;
     li{
       display: inline-block;
       a{
@@ -811,11 +888,10 @@ main.requests_list{
     display: flex;
     justify-content: space-between;
     margin-top: 23px;
-    input{
-      width: 49%;
+    .select2-container{
+      width: 555px !important;
       height: 32px;
       border:1px solid #e8ebef;
-      padding-left: 5px;
     }
   }
 }
@@ -845,7 +921,33 @@ main.requests_list{
       position: fixed;
       top: 100px;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translate(-50%, 0%);
+      -moz-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+      -o-transform: translate(-50%, 0%);
+      transform: translate(-50%, 0%);
+      animation-name: in_up;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes in_up {
+      0% {
+        webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+      }
     }
     .tooltip_body{
       padding:20px 15px;
@@ -1087,17 +1189,19 @@ main.requests_list{
   Overflow:        Hidden;
   Cursor:          Default;
   display: inline-block;
+  padding-bottom: 20px;
+  margin-right: 25px;
 }
 
 .GaugeMeter SPAN,
 .GaugeMeter B{
-  Margin:          0 23%;
-  Width:           58%;
+  Margin: 0 16%;
+  Width: 71%;
   Position:        Absolute;
   Text-align:      Center;
   Display:         Inline-Block;
   Color:           RGBa(0,0,0,.6) !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   Overflow:        Hidden;
   White-Space:     NoWrap;
   Text-Overflow:   Ellipsis;
@@ -1116,6 +1220,8 @@ main.requests_list{
   Color:           Black;
   Font-Weight:     300;
   Opacity:         .8;
+  line-height: 20px !important;
+  bottom: 0;
 }
 .sortable{
   li{
@@ -1397,4 +1503,18 @@ main.requests_list{
   font-weight: bold;
   border-radius: 3px;
   z-index: 100;
+}
+.modal_overlay{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top: 0;
+  left:0;
+  display: none;
+  z-index: 15;
+  &.open{
+    background: rgba(0,0,0, .5);
+    display: block;
+  }
+
 }
