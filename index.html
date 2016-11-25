@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script src="libs/bootstrap/js/bootstrap.js"></script>
+  <script src="js/cbpFWTabs.js"></script>
+  <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+  <header>
+    <div class="logo"><a href="#"><img src="img/logo.png" alt="Seo"> SEO продвижение</a></div>
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Менеджер</a></li>
+        <li><a href="#">SEO продвижение</a></li>
+      </ul>
+    </div>
+    <div class="statistic_diagram">
+      <div class="diagram"></div>
+      <div class="diagram"></div>
+      <div class="diagram"></div>
+    </div>
+    <div class="statistic_diagram">
+      <div class="GaugeMeter" id="GaugeMeter_1" data-percent="50"
+           data-append="%"
+           data-size="150"
+           data-width="10"
+           data-back="#ffffff"
+           data-theme="Red-Gold-Green"
+           data-label_color="#FFF"
+           data-animate_text_colors="1"
+           data-animate_gauge_colors="1"
+      >
+      </div>
+      <div class="GaugeMeter" id="GaugeMeter_2" data-percent="65"
+           data-append="%"
+           data-size="150"
+           data-width="10"
+           data-back="#ffffff"
+           data-theme="Green-Gold-Red"
+           data-animate_text_colors="1"
+           data-animate_gauge_colors="1">
+      </div>
+      <div class="GaugeMeter" id="GaugeMeter_3" data-percent="79"
+           data-append="%"
+           data-size="150"
+           data-width="10"
+           data-back="#ffffff"
+           data-theme="Red-Gold-Green"
+           data-animate_text_colors="1"
+           data-animate_gauge_colors="1">
+      </div>
+    </div>
+  </header>
+<main>
+  <h2>Список проектов</h2>
+  <div class="open_filter">Фильтрация</div>
+  <aside class="filter">
+    <form>
+      <div class="filter_block select">
+        <div class="wrap">
+          <label for="user">Пользователь:</label>
+          <div class="custom_select">
+            <select name="user" id="user">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+       <div class="wrap">
+         <label for="domain">Домен:</label>
+         <div class="custom_select">
+           <select name="domain" id="domain">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+           </select>
+         </div>
+       </div>
+      </div>
+      <div class="filter_block optimize">
+        <span>Внутрення оптимизация:</span>
+        <div class="wrap">
+          <input id="requests1" type="checkbox"><label class="requests" for="requests1"></label>
+          <input id="relink1" type="checkbox"><label class="relink" for="relink1"></label>
+          <input id="key1" type="checkbox"><label class="key" for="key1"></label>
+          <input id="make_audit1" type="checkbox"><label class="make_audit" for="make_audit1"></label>
+        </div>
+      </div>
+      <div class="filter_block period">
+        <div class="wrap">
+          <span>Длительность (дней):</span>
+          <input type="number" class="from" placeholder="от"> - <input type="number" class="to" placeholder="до">
+        </div>
+        <div class="wrap">
+          <span>Внешнее продвижение:</span>
+          <input type="number" class="from" placeholder="от"> - <input type="number" class="to" placeholder="до">
+        </div>
+      </div>
+      <div class="filter_block status_block">
+        <div class="wrap status">
+          <span>Статус:</span>
+          <input id="status_a" type="checkbox"><label class="status_active"  for="status_a"></label>
+          <input id="status_b" type="checkbox"><label class="status_disable" for="status_b"></label>
+        </div>
+        <div class="wrap growth">
+          <span>Рост за 30 дней:</span>
+          <input id="increase" type="checkbox"><label class="increase" for="increase"></label>
+          <input id="unchanged" type="checkbox"><label class="unchanged" for="unchanged"></label>
+          <input id="decrease" type="checkbox"><label  class="decrease" for="decrease"></label>
+        </div>
+      </div>
+    </form>
+  </aside>
+  <div class="filter_button">
+    <button class="selection">Новый подбор</button>
+    <button class="delete">Удалить выделеные</button>
+  </div>
+  <aside class="table">
+    <div class="table_header">
+      <div class="project">
+        <span>
+          Проекты
+        </span>
+      </div>
+      <div class="status">
+        <span>Статус</span>
+      </div>
+      <div class="duration">
+        <span>Д-сть дней</span>
+      </div>
+      <div class="search_requests">
+        <div class="search_wrap">
+          <span>Поисковые запросы</span>
+        </div>
+        <div class="search_requests_wrap">
+          <div class="amount">
+            <span>к-во</span>
+          </div>
+          <div class="top_100">
+            <span>TOP-100</span>
+          </div>
+          <div class="top_10">
+            <span>TOP-10</span>
+          </div>
+          <div class="top_5">
+            <span>TOP-5</span>
+          </div>
+        </div>
+      </div>
+      <div class="growth">
+        <span>Рост за 30 д.</span>
+      </div>
+      <div class="plan_work">
+        <div class="work_wrap">
+          <span>План робот</span>
+        </div>
+        <div class="plan_work_wrap">
+          <div class="internal_optimization">
+            <span>внутрення оптимизация</span>
+          </div>
+          <div class="external_promotion">
+            <span>внешнее продвиж.</span>
+          </div>
+        </div>
+      </div>
+      <div class="audit">
+        <span>Бизнес аудит</span>
+      </div>
+    </div>
+    <div class="table_body">
+      <ol class="sortable">
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="decrease"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox">
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="unchanged"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="update"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="increase"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="decrease"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox">
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="unchanged"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="update"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="increase"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="decrease"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox">
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="unchanged"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="increase"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="decrease"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox">
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="unchanged"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ziperone.com.ua</a>
+                  <a href="#" class="setting"></a>
+              </div>
+              <div class="status">
+                  <label class="switch">
+                      <input type="checkbox" checked>
+                      <div class="slider round"></div>
+                  </label>
+              </div>
+              <div class="duration">
+                  <span> 155</span>
+              </div>
+
+              <div class="amount">
+                  <span> 155</span>
+              </div>
+              <div class="top_100">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_10">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="top_5">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div>
+              </div>
+              <div class="growth">
+                  <div class="increase"></div>
+
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="0" class="work_item relink"></div>
+                  <div data-check="1" class="work_item key"></div>
+                  <div data-check="0" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+
+              <div class="audit">
+                  <a href="#" class="report"></a>
+
+              </div>
+          </div></div></li>
+      </ol>
+    </div>
+    <div class="table_footer">
+      <div class="project">
+        <span> Итого:</span>
+      </div>
+      <div class="duration">
+        <span>64222</span>
+      </div>
+      <div class="amount">
+        <span>6342</span>
+      </div>
+      <div class="top_100">
+      </div>
+      <div class="top_10">
+      </div>
+      <div class="top_5">
+      </div>
+      <div class="growth">
+      </div>
+      <div class="internal_optimization">
+      </div>
+      <div class="external_promotion">
+        <a href="#">2553</a>
+      </div>
+      <div class="audit">
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="btn prev"></div>
+      <div class="btn page active">1</div>
+      <div class="btn page">...</div>
+      <div class="btn page">10</div>
+      <div class="btn next"></div>
+    </div>
+  </aside>
+
+</main>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#">КП в PDF </a></li>
+              <li class="update"><a href="#">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">Добавить запросы</label></li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+    <div class="popup_edit external_promotion">
+      <div class="tooltip_header">
+        <h3>Внешнее продвижение</h3>
+        <button class="close">&times;</button>
+      </div>
+      <div class="tooltip_body">
+        <p>Ремонт духовых шкафов candy киев</p>
+        <p class="link"><span>35</span> ссылок</p>
+        <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+        <ol class="link_list">
+          <li>
+            <div class="number"><span>1</span></div>
+            <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+            <div class="date"><span>17.11.2016</span> <button class="edit_link"></button> <button class="delete">&times;</button></div>
+          </li>
+        </ol>
+      </div>
+      <div class="tooltip_footer">
+        <button class="exit">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.mjs.nestedSortable.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

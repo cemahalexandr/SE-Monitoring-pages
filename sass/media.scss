@@ -1,0 +1,19 @@
+@media (max-width: 1199px) {
+  .table{
+    .search_requests{
+      .search_requests_wrap{
+        .top_5, .top_10{
+          display: none;
+        }
+      }
+    }
+    .table_line{
+      .top_5, .top_10{
+        display: none;
+      }
+    }
+    .external_promotion{
+      display: none;
+    }
+  }
+}
