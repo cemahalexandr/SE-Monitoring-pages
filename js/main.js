@@ -124,7 +124,8 @@ $(document).ready(function(){
         $('.modal_overlay').addClass('open');
     });
 
-    $('.add_link').on('click', function () {
+    $('.add_link').on('click', function (event) {
+        event.preventDefault();
         var link_address = $('.link_address');
         var link_list = $('.link_list li').length + 1;
         if ( link_address.val() == '' ) {

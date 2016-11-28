@@ -77,29 +77,30 @@
         <li><a href="#section-3">Остановленые</a></li>
       </ul>
     </nav>
+    <form class="group_filter">
+      <div class="form-group">
+        <select class="js-example-basic-multiple select_user" multiple="multiple" style="width: 100%">
+          <option>1</option>
+          <option>W22222222222222222</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="js-example-basic-multiple select_domen" multiple="multiple" style="width: 100%">
+          <option>1</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+        </select>
+      </div>
+      </select>
+    </form>
+    <div class="filter_button">
+      <button class="selection">Новый подбор</button>
+      <button class="delete_selected">Удалить выделеные</button>
+    </div>
     <div class="content-wrap">
       <div id="section-1" class="section" >
-        <form class="group_filter form-inline">
-          <div class="form-group">
-              <select class="js-example-basic-multiple select_user" multiple="multiple">
-                  <option>1</option>
-                  <option>W22222222222222222</option>
-              </select>
-          </div>
-            <div class="form-group">
-                <select class="js-example-basic-multiple select_domen" multiple="multiple">
-                    <option>1</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                </select>
-            </div>
-          </select>
-        </form>
-        <div class="filter_button">
-          <button class="selection">Новый подбор</button>
-          <button class="delete_selected">Удалить выделеные</button>
-        </div>
+        <div class="table_wrap">
         <aside class="table">
           <div class="table_header">
             <div class="project">
@@ -141,10 +142,10 @@
               </div>
               <div class="plan_work_wrap">
                 <div class="internal_optimization">
-                  <span>внутрення оптимизация</span>
+                  <span>Внутрення оптимизация</span>
                 </div>
                 <div class="external_promotion">
-                  <span>внешнее продвиж.</span>
+                  <span>Внешнее продвиж.</span>
                 </div>
               </div>
             </div>
@@ -887,30 +888,10 @@
             <div class="btn next"></div>
           </div>
         </aside>
+          </div>
       </div>
       <div id="section-2" class="section">
-          <form class="group_filter form-inline">
-              <div class="form-group">
-                  <select class="js-example-basic-multiple select_user" multiple="multiple">
-                      <option>1</option>
-                      <option>W22222222222222222</option>
-                  </select>
-              </div>
-              <div class="form-group">
-                  <select class="js-example-basic-multiple select_domen" multiple="multiple">
-                      <option>1</option>
-                      <option>12</option>
-                      <option>13</option>
-                      <option>14</option>
-                  </select>
-              </div>
-              </select>
-          </form>
-
-          <div class="filter_button">
-          <button class="selection">Новый подбор</button>
-          <button class="delete_selected">Удалить выделеные</button>
-        </div>
+        <div class="table_wrap">
         <aside class="table">
           <div class="table_header">
             <div class="project">
@@ -1408,30 +1389,10 @@
             <div class="btn next"></div>
           </div>
         </aside>
+          </div>
       </div>
       <div id="section-3" class="section">
-          <form class="group_filter form-inline">
-              <div class="form-group">
-                  <select class="js-example-basic-multiple select_user" multiple="multiple">
-                      <option>1</option>
-                      <option>W22222222222222222</option>
-                  </select>
-              </div>
-              <div class="form-group">
-                  <select class="js-example-basic-multiple select_domen" multiple="multiple">
-                      <option>1</option>
-                      <option>12</option>
-                      <option>13</option>
-                      <option>14</option>
-                  </select>
-              </div>
-              </select>
-          </form>
-
-          <div class="filter_button">
-          <button class="selection">Новый подбор</button>
-          <button class="delete_selected">Удалить выделеные</button>
-        </div>
+        <div class="table_wrap">
         <aside class="table">
           <div class="table_header">
             <div class="project">
@@ -2104,6 +2065,7 @@
             <div class="btn next"></div>
           </div>
         </aside>
+          </div>
       </div>
     </div><!-- /content -->
   </div><!-- /tabs -->
@@ -2214,10 +2176,12 @@
     });
     });
     $('.select_user').select2({
-        placeholder: "Выберите пользователя"
+        placeholder: "Выберите пользователя",
+        width: 'resolve'
     });
     $('.select_domen').select2({
-        placeholder: "Выберите домен"
+        placeholder: "Выберите домен",
+        width: 'resolve'
     });
   </script>
 </body>
