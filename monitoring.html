@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="js/jquery-1.7.2.min.js"></script>
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/media.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="libs/bootstrap/js/bootstrap.js"></script>
-  <script src="js/cbpFWTabs.js"></script>
-  <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="js/cbpFWTabs.js"></script>
+    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
 
 </head>
-<body>
+<body class="monitoring">
   <div class="container">
   <header>
     <div class="logo"><a href="#"><img src="img/logo.png" alt="Seo"> SEO продвижение</a></div>
@@ -86,9 +86,9 @@
 
   <div class="filter_button">
     <button class="add_request">Добавить запросы</button>
-    <button class="export">Добавить запросы</button>
+    <button class="export">Экспорт</button>
     <button class="delete_reques">Удалить запросы</button>
-    <button class="pause">Удалить запросы</button>
+    <button class="pause">Остановить проект</button>
   </div>
   <div class="table_monitoring_wrap">
 
@@ -96,7 +96,7 @@
     <div class="table_header">
       <div class="project">
         <span>
-          Проекты
+          Поисковые запросы
         </span>
       </div>
       <div class="month_request">
@@ -147,6 +147,7 @@
           <div class="external_promotion">
             <span>внешнее продвиж.</span>
           </div>
+            <div class="rrs"><span>РРС</span></div>
         </div>
       </div>
       <div class="audit">
@@ -156,7 +157,7 @@
     <div class="table_body">
 
       <ol class="sortable">
-        <li><div><div class="disclose"><span></span></div><div class="table_line">
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
           <div class="project">
             <div class="draggable"></div>
             <input class="check" type="checkbox">
@@ -220,438 +221,328 @@
             </div>
           </div>
           <div class="internal_optimization">
-            <button class="work_item edit"></button>
-            <div class="work_item requests"></div>
-            <div class="work_item relink"></div>
-            <div class="work_item key"></div>
-            <div class="work_item make_audit"></div>
+            <button class="edit"></button>
+            <div data-check="1" class="work_item requests"></div>
+            <div data-check="1" class="work_item relink"></div>
+            <div data-check="0" class="work_item key"></div>
+            <div data-check="1" class="work_item make_audit"></div>
           </div>
           <div class="external_promotion">
-            <a href="#">6</a>
+            <a href="#" class="edit_external_promotion">6</a>
           </div>
-
+          <div class="rrs">
+            <button class="edit_rrs"></button>
+            <div data-check="1" class="social_item google_adwords"></div>
+            <div data-check="1" class="social_item yandex_direct"></div>
+            <div data-check="1" class="social_item facebook"></div>
+            <div data-check="0" class="social_item instagramm"></div>
+            <div data-check="0" class="social_item youtube"></div>
+          </div>
           <div class="audit">
             <a href="#" class="report"></a>
           </div>
         </div></div></li>
-        <li><div><div class="disclose"><span></span></div><div class="table_line">
-          <div class="project">
-            <div class="draggable"></div>
-            <input class="check" type="checkbox">
-            <a class="project_name" href="#">ремонт електрических духовок киев</a>
-          </div>
-          <div class="month_request">
-            <span> 84</span>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="internal_optimization">
-            <button class="work_item edit"></button>
-            <div class="work_item requests"></div>
-            <div class="work_item relink"></div>
-            <div class="work_item key"></div>
-            <div class="work_item make_audit"></div>
-          </div>
-          <div class="external_promotion">
-            <a href="#">6</a>
-          </div>
-
-          <div class="audit">
-            <a href="#" class="report"></a>
-          </div>
-        </div></div></li>
-        <li><div><div class="disclose"><span></span></div><div class="table_line">
-          <div class="project">
-            <div class="draggable"></div>
-            <input class="check" type="checkbox">
-            <a class="project_name" href="#">ремонт електрических духовок киев</a>
-          </div>
-          <div class="month_request">
-            <span> 84</span>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="internal_optimization">
-            <button class="work_item edit"></button>
-            <div class="work_item requests"></div>
-            <div class="work_item relink"></div>
-            <div class="work_item key"></div>
-            <div class="work_item make_audit"></div>
-          </div>
-          <div class="external_promotion">
-            <a href="#">6</a>
-          </div>
-
-          <div class="audit">
-            <a href="#" class="report"></a>
-          </div>
-        </div></div></li>
-        <li><div><div class="disclose"><span></span></div><div class="table_line">
-          <div class="project">
-            <div class="draggable"></div>
-            <input class="check" type="checkbox">
-            <a class="project_name" href="#">ремонт електрических духовок киев</a>
-          </div>
-          <div class="month_request">
-            <span> 84</span>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="internal_optimization">
-            <button class="work_item edit"></button>
-            <div class="work_item requests"></div>
-            <div class="work_item relink"></div>
-            <div class="work_item key"></div>
-            <div class="work_item make_audit"></div>
-          </div>
-          <div class="external_promotion">
-            <a href="#">6</a>
-          </div>
-
-          <div class="audit">
-            <a href="#" class="report"></a>
-          </div>
-        </div></div></li>
-        <li><div><div class="disclose"><span></span></div><div class="table_line">
-          <div class="project">
-            <div class="draggable"></div>
-            <input class="check" type="checkbox">
-            <a class="project_name" href="#">ремонт електрических духовок киев</a>
-          </div>
-          <div class="month_request">
-            <span> 84</span>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="day">
-            <div class="wrap">
-              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-            </div>
-          </div>
-          <div class="internal_optimization">
-            <button class="work_item edit"></button>
-            <div class="work_item requests"></div>
-            <div class="work_item relink"></div>
-            <div class="work_item key"></div>
-            <div class="work_item make_audit"></div>
-          </div>
-          <div class="external_promotion">
-            <a href="#">6</a>
-          </div>
-
-          <div class="audit">
-            <a href="#" class="report"></a>
-          </div>
-        </div></div></li><li><div><div class="disclose"><span></span></div><div class="table_line">
-        <div class="project">
-          <div class="draggable"></div>
-          <input class="check" type="checkbox">
-          <a class="project_name" href="#">ремонт електрических духовок киев</a>
-        </div>
-        <div class="month_request">
-          <span> 84</span>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="day">
-          <div class="wrap">
-            <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
-            <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
-          </div>
-        </div>
-        <div class="internal_optimization">
-          <button class="work_item edit"></button>
-          <div class="work_item requests"></div>
-          <div class="work_item relink"></div>
-          <div class="work_item key"></div>
-          <div class="work_item make_audit"></div>
-        </div>
-        <div class="external_promotion">
-          <a href="#">6</a>
-        </div>
-
-        <div class="audit">
-          <a href="#" class="report"></a>
-        </div>
-      </div></div></li>
-
-
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ремонт електрических духовок киев</a>
+              </div>
+              <div class="month_request">
+                  <span> 84</span>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="1" class="work_item relink"></div>
+                  <div data-check="0" class="work_item key"></div>
+                  <div data-check="1" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+              <div class="rrs">
+                  <button class="edit_rrs"></button>
+                  <div data-check="1" class="social_item google_adwords"></div>
+                  <div data-check="1" class="social_item yandex_direct"></div>
+                  <div data-check="1" class="social_item facebook"></div>
+                  <div data-check="0" class="social_item instagramm"></div>
+                  <div data-check="0" class="social_item youtube"></div>
+              </div>
+              <div class="audit">
+                  <a href="#" class="report"></a>
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ремонт електрических духовок киев</a>
+              </div>
+              <div class="month_request">
+                  <span> 84</span>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="1" class="work_item relink"></div>
+                  <div data-check="0" class="work_item key"></div>
+                  <div data-check="1" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+              <div class="rrs">
+                  <button class="edit_rrs"></button>
+                  <div data-check="1" class="social_item google_adwords"></div>
+                  <div data-check="1" class="social_item yandex_direct"></div>
+                  <div data-check="1" class="social_item facebook"></div>
+                  <div data-check="0" class="social_item instagramm"></div>
+                  <div data-check="0" class="social_item youtube"></div>
+              </div>
+              <div class="audit">
+                  <a href="#" class="report"></a>
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="project">
+                  <div class="draggable"></div>
+                  <input class="check" type="checkbox">
+                  <a class="project_name" href="#">ремонт електрических духовок киев</a>
+              </div>
+              <div class="month_request">
+                  <span> 84</span>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="day">
+                  <div class="wrap">
+                      <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                      <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                  </div>
+              </div>
+              <div class="internal_optimization">
+                  <button class="edit"></button>
+                  <div data-check="1" class="work_item requests"></div>
+                  <div data-check="1" class="work_item relink"></div>
+                  <div data-check="0" class="work_item key"></div>
+                  <div data-check="1" class="work_item make_audit"></div>
+              </div>
+              <div class="external_promotion">
+                  <a href="#" class="edit_external_promotion">6</a>
+              </div>
+              <div class="rrs">
+                  <button class="edit_rrs"></button>
+                  <div data-check="1" class="social_item google_adwords"></div>
+                  <div data-check="1" class="social_item yandex_direct"></div>
+                  <div data-check="1" class="social_item facebook"></div>
+                  <div data-check="0" class="social_item instagramm"></div>
+                  <div data-check="0" class="social_item youtube"></div>
+              </div>
+              <div class="audit">
+                  <a href="#" class="report"></a>
+              </div>
+          </div></div></li>
       </ol>
     </div>
     <div class="table_footer">
       <div class="project">
         <span> Итого:</span>
       </div>
-      <div class="duration">
-        <span>64222</span>
-      </div>
-      <div class="amount">
-        <span>6342</span>
-      </div>
-      <div class="top_100">
-      </div>
-      <div class="top_10">
-      </div>
-      <div class="top_5">
-      </div>
-      <div class="growth">
-      </div>
-      <div class="internal_optimization">
-      </div>
-      <div class="external_promotion">
-        <a href="#">2553</a>
-      </div>
-      <div class="audit">
-      </div>
+        <div class="month_request">
+            <span> 16665</span>
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="day">
+
+        </div>
+        <div class="internal_optimization">
+
+        </div>
+        <div class="external_promotion">
+            <span href="#" class="edit_external_promotion">5556</span>
+        </div>
+
+        <div class="audit">
+
+        </div>
     </div>
     <div class="pagination">
       <div class="btn prev"></div>
@@ -683,8 +574,57 @@
         <button class="check_all">Выделить все</button>
         <button class="submit">Принять</button>
       </div>
-
     </div>
+
+      <div class="popup_edit rrs">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="g_adwors" for="g_adwors"><input class="check_rrs" id="g_adwors" type="checkbox">Google Adwords</label></li>
+                      <li><label class="y_direct" for="y_direct"><input class="check_rrs" id="y_direct" type="checkbox">Яндекс директ</label></li>
+                      <li><label class="facebook" for="facebook"><input class="check_rrs" id="facebook" type="checkbox">Facebook</label></li>
+                      <li><label class="instagramm" for="instagramm"><input class="check_rrs" id="instagramm" type="checkbox">Instagramm</label></li>
+                      <li><label class="youtube" for="youtube"><input class="check_rrs" id="youtube" type="checkbox">Youtube</label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit_rrs">Принять</button>
+          </div>
+      </div>
+
+      <div class="popup_edit project">
+          <div class="popup_header">
+              <h2>Редактирование проекта</h2>
+              <button class="close">&times;</button>
+          </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">1</div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close">Закрыть</button>
+              <button class="save">Сохранить</button>
+          </div>
+      </div>
     <div class="modal_overlay"></div>
     <div class="popup_edit external_promotion">
       <div class="tooltip_header">
@@ -714,5 +654,25 @@
   <script src="js/jquery.ui.touch-punch.js"></script>
 
   <script src="js/main.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 1,
+              isTree: false,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
+      });
+  </script>
 </body>
 </html>

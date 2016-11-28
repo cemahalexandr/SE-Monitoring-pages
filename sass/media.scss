@@ -17,3 +17,15 @@
 //  //  }
 //  //}
 //}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  body.monitoring{
+    .container{
+      width: 1440px;
+      margin: 0 auto;
+    }
+  }
+  .table_monitoring_wrap {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

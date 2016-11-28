@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
-  <script src="js/jquery-1.7.2.min.js"></script>
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/media.css">
-  <script src="libs/bootstrap/js/bootstrap.js"></script>
-  <script src="js/cbpFWTabs.js"></script>
-  <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="js/cbpFWTabs.js"></script>
+    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
 
 </head>
 <body>
@@ -31,37 +33,43 @@
       <div class="diagram"></div>
       <div class="diagram"></div>
     </div>
-    <div class="statistic_diagram">
-      <div class="GaugeMeter" id="GaugeMeter_1" data-percent="50"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Red-Gold-Green"
-           data-label_color="#FFF"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1"
-      >
+      <div class="statistic_diagram">
+          <div class="GaugeMeter" id="GaugeMeter_1" data-percent="50"
+               data-append="%"
+               data-size="100"
+               data-width="10"
+               data-back="#ffffff"
+               data-theme="Red-Gold-Green"
+               data-label_color="#FFF"
+               data-animate_text_colors="1"
+               data-animate_gauge_colors="1"
+               data-label="ТОП 5"
+          >
+          </div>
+          <div class="GaugeMeter" id="GaugeMeter_2" data-percent="65"
+               data-append="%"
+               data-size="100"
+               data-width="10"
+               data-back="#ffffff"
+               data-theme="Green-Gold-Red"
+               data-animate_text_colors="1"
+               data-animate_gauge_colors="1"
+               data-label="ТОП 10"
+          >
+
+          </div>
+          <div class="GaugeMeter" id="GaugeMeter_3" data-percent="79"
+               data-append="%"
+               data-size="100"
+               data-width="10"
+               data-back="#ffffff"
+               data-theme="Red-Gold-Green"
+               data-animate_text_colors="1"
+               data-animate_gauge_colors="1"
+               data-label="ТОП 100"
+          >
+          </div>
       </div>
-      <div class="GaugeMeter" id="GaugeMeter_2" data-percent="65"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Green-Gold-Red"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1">
-      </div>
-      <div class="GaugeMeter" id="GaugeMeter_3" data-percent="79"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Red-Gold-Green"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1">
-      </div>
-    </div>
   </header>
 <main class="seo_page">
   <h2>Список проектов</h2>
@@ -73,7 +81,7 @@
           <label for="user">Пользователь:</label>
           <div class="custom_select">
             <select name="user" id="user">
-              <option value="1">1</option>
+              <option value="" disabled selected>Все пользователи</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
@@ -83,7 +91,7 @@
          <label for="domain">Домен:</label>
          <div class="custom_select">
            <select name="domain" id="domain">
-             <option value="1">1</option>
+             <option value="" disabled selected>Все домены</option>
              <option value="2">2</option>
              <option value="3">3</option>
            </select>
@@ -101,23 +109,23 @@
       </div>
       <div class="filter_block period">
         <div class="wrap">
-          <span>Длительность (дней):</span>
-          <input type="number" class="from" placeholder="от"> - <input type="number" class="to" placeholder="до">
+          <span class="duration">Длительность (дней):</span>
+          <input type="number" class="from"  placeholder="от"> - <input type="number"  class="to" placeholder="до">
         </div>
         <div class="wrap">
-          <span>Внешнее продвижение:</span>
-          <input type="number" class="from" placeholder="от"> - <input type="number" class="to" placeholder="до">
+          <span class="promotion">Внешнее продвижение:</span>
+          <input type="number" class="from from_second"  placeholder="от"> - <input type="number" class="to to_second"  placeholder="до">
         </div>
       </div>
       <div class="filter_block status_block">
         <div class="wrap status">
           <span>Статус:</span>
-          <input id="status_a" type="checkbox"><label class="status_active"  for="status_a"></label>
+          <input id="status_a"  type="checkbox"><label class="status_active"  for="status_a"></label>
           <input id="status_b" type="checkbox"><label class="status_disable" for="status_b"></label>
         </div>
         <div class="wrap growth">
           <span>Рост за 30 дней:</span>
-          <input id="increase" type="checkbox"><label class="increase" for="increase"></label>
+          <input id="increase"  type="checkbox"><label class="increase" for="increase"></label>
           <input id="unchanged" type="checkbox"><label class="unchanged" for="unchanged"></label>
           <input id="decrease" type="checkbox"><label  class="decrease" for="decrease"></label>
         </div>
@@ -354,7 +362,7 @@
               </div>
 
               <div class="audit">
-                  <a href="#" class="report"></a>
+                  <a href="#" class="update rotated"></a>
 
               </div>
           </div></div></li>
@@ -412,7 +420,7 @@
               </div>
 
               <div class="audit">
-                  <a href="#" class="report"></a>
+                  <a href="#" class="update wait"></a>
 
               </div>
           </div></div></li>
@@ -971,6 +979,32 @@
         <button class="exit">Закрыть</button>
       </div>
     </div>
+      <div class="popup_edit project">
+         <div class="popup_header">
+             <h2>Редактирование проекта</h2>
+             <button class="close">&times;</button>
+         </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">1</div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close">Закрыть</button>
+              <button class="save">Сохранить</button>
+          </div>
+      </div>
   </div>
 
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>

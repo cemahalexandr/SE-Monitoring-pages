@@ -1,0 +1,13 @@
+@media (min-width: 1440px) and (max-width: 1920px) {
+  /* line 22, ../sass/media.scss */
+  body.monitoring .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* line 27, ../sass/media.scss */
+  .table_monitoring_wrap {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
