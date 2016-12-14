@@ -11,12 +11,11 @@
     <script src="libs/select2/select2.min.js"></script>
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
     <script src="js/cbpFWTabs.js"></script>
-    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
-
 </head>
 <body>
   <div class="container">
@@ -29,79 +28,76 @@
       </ul>
     </div>
       <div class="statistic_diagram">
-          <div class="GaugeMeter" id="GaugeMeter_1" data-percent="50"
-               data-append="%"
-               data-size="100"
-               data-width="10"
-               data-back="#ffffff"
-               data-theme="Red-Gold-Green"
-               data-label_color="#FFF"
-               data-animate_text_colors="1"
-               data-animate_gauge_colors="1"
-               data-label="ТОП 5"
-          >
-          </div>
-          <div class="GaugeMeter" id="GaugeMeter_2" data-percent="65"
-               data-append="%"
-               data-size="100"
-               data-width="10"
-               data-back="#ffffff"
-               data-theme="Green-Gold-Red"
-               data-animate_text_colors="1"
-               data-animate_gauge_colors="1"
-               data-label="ТОП 10"
-          >
-
-          </div>
-          <div class="GaugeMeter" id="GaugeMeter_3" data-percent="79"
-               data-append="%"
-               data-size="100"
-               data-width="10"
-               data-back="#ffffff"
-               data-theme="Red-Gold-Green"
-               data-animate_text_colors="1"
-               data-animate_gauge_colors="1"
-               data-label="ТОП 100"
-          >
-          </div>
+          <span class="chart top5" data-percent="86">
+		    <span class="percent"></span>
+              <span class="title">ТОП 5</span>
+	      </span>
+          <span class="chart top10" data-percent="10">
+		    <span class="percent"></span>
+               <span class="title">ТОП 10</span>
+	      </span>
+          <span class="chart top100" data-percent="50">
+		    <span class="percent"></span>
+              <span class="title">ТОП 100</span>
+	      </span>
       </div>
   </header>
 <main class="seo_page">
   <h2>Список проектов</h2>
-  <div class="open_filter">Фильтрация</div>
+  <div class="open_filter">Фильтрация...</div>
   <aside class="filter">
     <form>
       <div class="filter_block select">
+          <div class="wrap">
+              <label class="f_search" for="search_input">Поиск:</label>
+              <input id="search_input" class="search_input" type="text">
+          </div>
         <div class="wrap">
           <label for="user">Пользователь:</label>
           <div class="custom_select">
-            <select name="user" id="user">
-              <option value="" disabled selected>Все пользователи</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+              <select name="user" id="user" class="js-example-basic-multiple select_user" multiple="multiple" style="width: 100%">
+                  <option>1</option>
+                  <option>W22222222222222222</option>
+              </select>
           </div>
         </div>
        <div class="wrap">
          <label for="domain">Домен:</label>
          <div class="custom_select">
-           <select name="domain" id="domain">
-             <option value="" disabled selected>Все домены</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-           </select>
+             <select name="domain" id="domain" class="js-example-basic-multiple select_domen" multiple="multiple" style="width: 100%">
+                   <option>1</option>
+                   <option>W22222222222222222</option>
+             </select>
          </div>
        </div>
       </div>
-      <div class="filter_block optimize">
-        <span>Внутрення оптимизация:</span>
-        <div class="wrap">
-          <input id="requests1" type="checkbox"><label class="requests" for="requests1"></label>
-          <input id="relink1" type="checkbox"><label class="relink" for="relink1"></label>
-          <input id="key1" type="checkbox"><label class="key" for="key1"></label>
-          <input id="make_audit1" type="checkbox"><label class="make_audit" for="make_audit1"></label>
+      <div class="filter_block status_block">
+          <div class="wrap">
+              <span class="f_date">Дата:</span>
+              <input type="date" id="date_from" class="from_date"  placeholder="от"> - <input type="date" id="date_to" class="to_date" placeholder="до">
+          </div>
+            <div class="wrap status">
+                <span>Статус:</span>
+                <input id="status_a"  type="checkbox"><label class="status_active"  for="status_a">
+                <img src="img/status_active.svg" alt="">
+            </label>
+                <input id="status_b" type="checkbox"><label class="status_disable" for="status_b">
+                <img src="img/status_disable.svg" alt="">
+            </label>
+            </div>
+            <div class="wrap growth">
+                <span>Рост:</span>
+                <input id="increase"  type="checkbox"><label class="increase" for="increase">
+                <img src="img/increase.svg" alt="">
+            </label>
+                <input id="unchanged" type="checkbox"><label class="unchanged" for="unchanged">
+                <img src="img/unchanged.svg" alt="">
+            </label>
+                <input id="decrease" type="checkbox"><label  class="decrease" for="decrease">
+                <img src="img/decrease.svg" alt="">
+            </label>
+            </div>
         </div>
-      </div>
       <div class="filter_block period">
         <div class="wrap">
           <span class="duration">Длительность (дней):</span>
@@ -111,25 +107,49 @@
           <span class="promotion">Внешнее продвижение:</span>
           <input type="number" class="from from_second"  placeholder="от"> - <input type="number" class="to to_second"  placeholder="до">
         </div>
+          <div class="wrap">
+              <span class="position">Позиция:</span>
+              <input type="number" class="from_position"  placeholder="от"> - <input type="number"  class="to_position" placeholder="до">
+          </div>
       </div>
-      <div class="filter_block status_block">
-        <div class="wrap status">
-          <span>Статус:</span>
-          <input id="status_a"  type="checkbox"><label class="status_active"  for="status_a"></label>
-          <input id="status_b" type="checkbox"><label class="status_disable" for="status_b"></label>
+      <div class="filter_block optimize">
+            <span class="optimize_inside">Внутрення оптимизация:</span>
+            <div class="wrap">
+                <input class="optimize_input" id="requests1" type="checkbox"><label class="requests" for="requests1"><img
+                    src="img/requests.svg" alt=""></label>
+                <input class="optimize_input" id="relink1" type="checkbox"><label class="relink" for="relink1">
+                <img src="img/relink.svg" alt="">
+            </label>
+                <input class="optimize_input" id="key1" type="checkbox"><label class="key" for="key1">
+                <img src="img/key.svg" alt="">
+            </label>
+                <input class="optimize_input" id="make_audit1" type="checkbox"><label class="make_audit" for="make_audit1">
+                <img src="img/make_audit.svg" alt="">
+            </label>
+            </div>
+          <span class="rrs_inside">РРС:</span>
+          <div class="wrap">
+              <input class="rrs_input" id="ga" type="checkbox"><label class="requests" for="ga"><img
+                  src="img/ga_icon.svg" alt=""></label>
+              <input class="rrs_input" id="yan" type="checkbox"><label class="relink" for="yan">
+              <img src="img/yandex_dir.svg" alt="">
+          </label>
+              <input class="rrs_input" id="fb" type="checkbox"><label class="key" for="fb">
+              <img src="img/fb_icon.svg" alt="">
+          </label>
+              <input class="rrs_input" id="inst" type="checkbox"><label class="make_audit" for="inst">
+              <img src="img/instagram.svg" alt="">
+          </label>
+              <input class="rrs_input" id="yt" type="checkbox"><label class="make_audit" for="yt">
+              <img src="img/yt_icon.svg" alt="">
+          </label>
+          </div>
         </div>
-        <div class="wrap growth">
-          <span>Рост за 30 дней:</span>
-          <input id="increase"  type="checkbox"><label class="increase" for="increase"></label>
-          <input id="unchanged" type="checkbox"><label class="unchanged" for="unchanged"></label>
-          <input id="decrease" type="checkbox"><label  class="decrease" for="decrease"></label>
-        </div>
-      </div>
     </form>
   </aside>
   <div class="filter_button">
-    <button class="selection">Новый подбор</button>
-    <button class="delete_selected">Удалить выделеные</button>
+    <button class="selection"><img src="img/doc_btn.svg" alt="">Новый подбор</button>
+    <button class="delete_selected"><img src="img/delete_btn.svg" alt="">Удалить выделеные</button>
   </div>
     <div class="table_wrap">
   <aside class="table">
@@ -187,11 +207,78 @@
     <div class="table_body">
       <ol class="sortable">
           <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                <div class="line r_top_100">
+                    <div class="section_name_top_100"> <span>TOP-100</span></div>
+                    <div class="result_top_100"><div class="wrap">
+                        <p class="google">G:<span>130</span></p>
+                        <p class="yandex">Y:<span>130</span></p>
+                    </div></div>
+                </div>
+                <div class="line r_top_10">
+                    <div class="section_name_top_10"><span>TOP-10</span></div>
+                    <div class="result_top_10"><div class="wrap">
+                        <p class="google">G:<span>130</span></p>
+                        <p class="yandex">Y:<span>130</span></p>
+                    </div></div>
+                </div>
+                  <div class="line r_top_5">
+                      <div class="section_name_top_5">
+                          <span>TOP-5</span>
+                      </div><div class="result_top_5"><div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div></div>
+                  </div>
+                <div class="line r_amount">
+                    <div class="section_name_amount"><span>к-во</span></div>
+                    <div class="result_amount"> <span> 155</span></div>
+                </div>
+                <div class="line r_growth">
+                    <div class="section_name_growth"><span>Рост за 30 д.</span></div>
+                    <div class="result_growth"><div class="decrease"><img src="img/decrease.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="line r_external_promotion">
+                    <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                    <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                </div>
+                <div class="line r_duration">
+                    <div class="section_name_duration"><span>Д-сть дней</span></div>
+                    <div class="result_duration"><span> 155</span></div>
+                </div>
+                <div class="line r_internal_optimization">
+                    <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                    <div class="result_internal_optimization">
+                        <button class="edit"><img src="img/edit.svg" alt=""></button>
+                        <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                        <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                        <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                        <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="line r_status">
+                    <div class="section_name_status"><span>Д-сть дней</span></div>
+                    <div class="result_status">
+                        <label class="switch">
+                        <input type="checkbox" checked>
+                        <div class="slider round"></div>
+                    </label>
+                    </div>
+                </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit"><a class="report"><img src="img/report.svg" alt=""></a>
+                      </div>
+                  </div>
+              </div>
               <div class="project line_element">
-                  <div class="draggable"></div>
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
@@ -226,661 +313,404 @@
               </div>
                 </div>
               <div class="growth line_element">
-                  <div class="decrease"></div>
-
+                  <div class="decrease">
+                      <img src="img/decrease.svg" alt="">
+                  </div>
               </div>
               <div class="internal_optimization line_element">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
               <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
 
               <div class="audit line_element">
-                  <a href="#" class="report"></a>
-
+                  <a class="report"><img src="img/report.svg" alt=""></a>
               </div>
           </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_top_100">
+                      <div class="section_name_top_100"> <span>TOP-100</span></div>
+                      <div class="result_top_100"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_10">
+                      <div class="section_name_top_10"><span>TOP-10</span></div>
+                      <div class="result_top_10"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_5">
+                      <div class="section_name_top_5">
+                          <span>TOP-5</span>
+                      </div><div class="result_top_5"><div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div></div>
+                  </div>
+                  <div class="line r_amount">
+                      <div class="section_name_amount"><span>к-во</span></div>
+                      <div class="result_amount"> <span> 155</span></div>
+                  </div>
+                  <div class="line r_growth">
+                      <div class="section_name_growth"><span>Рост за 30 д.</span></div>
+                      <div class="result_growth"><div class="increase"><img src="img/increase.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_duration">
+                      <div class="section_name_duration"><span>Д-сть дней</span></div>
+                      <div class="result_duration"><span> 155</span></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_status">
+                      <div class="section_name_status"><span>Д-сть дней</span></div>
+                      <div class="result_status">
+                          <label class="switch">
+                              <input type="checkbox" checked>
+                              <div class="slider round"></div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">
+                          <a class="update"><img src="img/update.svg" alt=""></a>
+                      </div>
+                  </div>
+              </div>
               <div class="project line_element">
-                  <div class="draggable"></div>
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" checked>
                       <div class="slider round"></div>
                   </label>
               </div>
               <div class="duration line_element">
                   <span> 155</span>
               </div>
-
-              <div class="amount line_element">
-                  <span> 155</span>
-              </div>
-              <div class="top_100 line_element">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+              <div class="search_wrap">
+                  <div class="amount line_element">
+                      <span> 155</span>
                   </div>
-              </div>
-              <div class="top_10 line_element">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+                  <div class="top_100 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
                   </div>
-              </div>
-              <div class="top_5 line_element">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+                  <div class="top_10 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
+                  </div>
+                  <div class="top_5 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
                   </div>
               </div>
               <div class="growth line_element">
-                  <div class="unchanged"></div>
-
+                  <div class="increase">
+                      <img src="img/increase.svg" alt="">
+                  </div>
               </div>
               <div class="internal_optimization line_element">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
               <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
 
               <div class="audit line_element">
-                  <a href="#" class="update"></a>
-
+                  <a class="update"><img alt=""></a>
               </div>
           </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_top_100">
+                      <div class="section_name_top_100"> <span>TOP-100</span></div>
+                      <div class="result_top_100"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_10">
+                      <div class="section_name_top_10"><span>TOP-10</span></div>
+                      <div class="result_top_10"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_5">
+                      <div class="section_name_top_5">
+                          <span>TOP-5</span>
+                      </div><div class="result_top_5"><div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div></div>
+                  </div>
+                  <div class="line r_amount">
+                      <div class="section_name_amount"><span>к-во</span></div>
+                      <div class="result_amount"> <span> 155</span></div>
+                  </div>
+                  <div class="line r_growth">
+                      <div class="section_name_growth"><span>Рост за 30 д.</span></div>
+                      <div class="result_growth"><div class="unchanged"><img src="img/unchanged.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_duration">
+                      <div class="section_name_duration"><span>Д-сть дней</span></div>
+                      <div class="result_duration"><span> 155</span></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_status">
+                      <div class="section_name_status"><span>Д-сть дней</span></div>
+                      <div class="result_status">
+                          <label class="switch">
+                              <input type="checkbox" checked>
+                              <div class="slider round"></div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">
+                          <a class="update"><img src="img/update.svg" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
               </div>
-              <div class="status">
+              <div class="status line_element">
                   <label class="switch">
                       <input type="checkbox" checked>
                       <div class="slider round"></div>
                   </label>
               </div>
-              <div class="duration">
+              <div class="duration line_element">
                   <span> 155</span>
               </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+              <div class="search_wrap">
+                  <div class="amount line_element">
+                      <span> 155</span>
+                  </div>
+                  <div class="top_100 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
+                  </div>
+                  <div class="top_10 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
+                  </div>
+                  <div class="top_5 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
                   </div>
               </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+              <div class="growth line_element">
+                  <div class="unchanged">
+                      <img src="img/unchanged.svg" alt="">
                   </div>
               </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
-              <div class="growth">
-                  <div class="increase"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
+              <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
 
-              <div class="audit">
-                  <a href="#" class="update rotated"></a>
-
+              <div class="audit line_element">
+                  <a class="update rotated"><img src="img/update.svg" alt=""></a>
               </div>
           </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_top_100">
+                      <div class="section_name_top_100"> <span>TOP-100</span></div>
+                      <div class="result_top_100"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_10">
+                      <div class="section_name_top_10"><span>TOP-10</span></div>
+                      <div class="result_top_10"><div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div></div>
+                  </div>
+                  <div class="line r_top_5">
+                      <div class="section_name_top_5">
+                          <span>TOP-5</span>
+                      </div><div class="result_top_5"><div class="wrap">
+                      <p class="google">G:<span>130</span></p>
+                      <p class="yandex">Y:<span>130</span></p>
+                  </div></div>
+                  </div>
+                  <div class="line r_amount">
+                      <div class="section_name_amount"><span>к-во</span></div>
+                      <div class="result_amount"> <span> 155</span></div>
+                  </div>
+                  <div class="line r_growth">
+                      <div class="section_name_growth"><span>Рост за 30 д.</span></div>
+                      <div class="result_growth"><div class="unchanged"><img src="img/unchanged.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_duration">
+                      <div class="section_name_duration"><span>Д-сть дней</span></div>
+                      <div class="result_duration"><span> 155</span></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_status">
+                      <div class="section_name_status"><span>Д-сть дней</span></div>
+                      <div class="result_status">
+                          <label class="switch">
+                              <input type="checkbox" checked>
+                              <div class="slider round"></div>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">
+                          <a class="update"><img src="img/update.svg" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
               </div>
-              <div class="status">
+              <div class="status line_element">
                   <label class="switch">
                       <input type="checkbox" checked>
                       <div class="slider round"></div>
                   </label>
               </div>
-              <div class="duration">
+              <div class="duration line_element">
                   <span> 155</span>
               </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+              <div class="search_wrap">
+                  <div class="amount line_element">
+                      <span> 155</span>
+                  </div>
+                  <div class="top_100 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
+                  </div>
+                  <div class="top_10 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
+                  </div>
+                  <div class="top_5 line_element">
+                      <div class="wrap">
+                          <p class="google">G:<span>130</span></p>
+                          <p class="yandex">Y:<span>130</span></p>
+                      </div>
                   </div>
               </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
+              <div class="growth line_element">
+                  <div class="unchanged">
+                      <img src="img/unchanged.svg" alt="">
                   </div>
               </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
-              <div class="growth">
-                  <div class="decrease"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
+              <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
 
-              <div class="audit">
-                  <a href="#" class="update wait"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox">
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="unchanged"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="update"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox" checked>
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="increase"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox" checked>
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="decrease"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox">
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="unchanged"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox" checked>
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="increase"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox" checked>
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="decrease"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox">
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="unchanged"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
-              </div>
-          </div></div></li>
-          <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
-                  <input class="check" type="checkbox">
-                  <a class="project_name" href="#">ziperone.com.ua</a>
-                  <a href="#" class="setting"></a>
-              </div>
-              <div class="status">
-                  <label class="switch">
-                      <input type="checkbox" checked>
-                      <div class="slider round"></div>
-                  </label>
-              </div>
-              <div class="duration">
-                  <span> 155</span>
-              </div>
-
-              <div class="amount">
-                  <span> 155</span>
-              </div>
-              <div class="top_100">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_10">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="top_5">
-                  <div class="wrap">
-                      <p class="google">G:<span>130</span></p>
-                      <p class="yandex">Y:<span>130</span></p>
-                  </div>
-              </div>
-              <div class="growth">
-                  <div class="increase"></div>
-
-              </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="0" class="work_item relink"></div>
-                  <div data-check="1" class="work_item key"></div>
-                  <div data-check="0" class="work_item make_audit"></div>
-              </div>
-              <div class="external_promotion">
-                  <a href="#" class="edit_external_promotion">6</a>
-              </div>
-
-              <div class="audit">
-                  <a href="#" class="report"></a>
-
+              <div class="audit line_element">
+                  <a class="update wait"><img src="img/sand_clock.svg" alt=""></a>
               </div>
           </div></div></li>
       </ol>
@@ -924,11 +754,11 @@
       <div class="modal_overlay"></div>
       <div class="audit_tooltip">
           <ul>
-              <li class="report_link"><a href="#">Отчет по ссылке</a></li>
-              <li class="report_pdf"><a href="#">Отчет в PDF</a></li>
-              <li class="kp_link"><a href="#">КП по ссылке</a></li>
-              <li class="kp_pdf"><a href="#">КП в PDF </a></li>
-              <li class="update"><a href="#">Обновить</a></li>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
           </ul>
       </div>
       <div class="popup_edit plan_work">
@@ -940,10 +770,15 @@
           <div class="tooltip_body">
               <form>
                   <ul>
-                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">Добавить запросы</label></li>
-                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">Сделать перелиновку</label></li>
-                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">Разместить ключ</label></li>
-                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">Сделать аудит </label></li>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
                   </ul>
               </form>
           </div>
@@ -953,7 +788,7 @@
           </div>
 
       </div>
-    <div class="popup_edit external_promotion">
+      <div class="popup_edit external_promotion">
       <div class="tooltip_header">
         <h3>Внешнее продвижение</h3>
         <button class="close">&times;</button>
@@ -966,7 +801,8 @@
           <li>
             <div class="number"><span>1</span></div>
             <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
-            <div class="date"><span>17.11.2016</span> <button class="edit_link"></button> <button class="delete">&times;</button></div>
+            <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                <img src="img/delete.svg" alt=""></button></div>
           </li>
         </ol>
       </div>
@@ -1001,14 +837,14 @@
           </div>
       </div>
   </div>
-
+  <script src="js/jquery.easypiechart.min.js"></script>
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
   <script src="js/jquery.mjs.nestedSortable.js"></script>
   <script src="js/jquery.ui.touch-punch.js"></script>
-
   <script src="js/main.js"></script>
   <script>
       $(document).ready(function(){
+
           $('.sortable').nestedSortable({
               forcePlaceholderSize: true,
               handle: 'div',
@@ -1025,7 +861,17 @@
               expandOnHover: 700,
               startCollapsed: true
           });
+
       });
+      $('.select_user').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve'
+      });
+      $('.select_domen').select2({
+          placeholder: "Выберите домен",
+          width: 'resolve'
+      });
+
   </script>
 </body>
 </html>

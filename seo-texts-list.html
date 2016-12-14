@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
+    <script src="js/cbpFWTabs.js"></script>
+</head>
+<body>
+  <div class="container">
+  <header>
+    <div class="logo"><a href="#"><img src="img/logo.png" alt="Seo"> SEO продвижение</a></div>
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">Создать новую карту сайта</a></li>
+      </ul>
+    </div>
+
+  </header>
+<main class="create_sitemaps">
+  <h2>service-market.com.ua / Список SEO статей</h2>
+        <div class="open_filter">Фильтрация...</div>
+        <aside class="filter">
+                <div class="filter_block select">
+                    <div class="wrap">
+                        <label for="title">Пользователь:</label>
+                        <input id="title" type="text" class="select_user">
+                    </div>
+                    <div class="wrap">
+                        <label>Статус:</label>
+                        <select name="asd" class="js-example-basic-multiple status_select" multiple="multiple" style="width: 100%" class="edit_status">
+                            <option value="1">В работе</option>
+                            <option value="2">Новый</option>
+                            <option value="3">Проверенный</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter_block">
+                    <div class="wrap">
+                        <label>От</label>
+                        <input type="date" class="from">
+                    </div>
+                    <div class="wrap">
+                        <label>До</label>
+                        <input type="date" class="to">
+                    </div>
+                </div>
+                <div class="filter_block">
+                    <div class="wrap">
+                        <div class="custom_select">
+                            <label>Размещение</label>
+                            <select name="asd" class="js-example-basic-multiple copyrighters" multiple="multiple" style="width: 100%">
+                                <option>1</option>
+                                <option>W22222222222222222</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="custom_select">
+                            <label>Копирайтер</label>
+                            <select name="asd" class="js-example-basic-multiple placement" multiple="multiple" style="width: 100%">
+                                <option>1</option>
+                                <option>W22222222222222222</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+        </aside>
+        <div class="button_block">
+            <div class="button_wrap">
+                <button>Развернуть все</button>
+                <button>Свернуть все</button>
+            </div>
+
+        </div>
+            <aside class="table">
+                <div class="table_body">
+                  <ol class="sortable">
+                      <li><div><div class="disclose"><span></span></div><div class="table_line">
+                          <div class="responsive_table popup_edit">
+                              <div class="close_table">&times;</div>
+                              <div class="line r_date">
+                                  <div class="wrap">
+                                      13.13.2013
+                                  </div>
+                              </div>
+                              <div class="line r_copyrighter">
+                                  <div class="wrap">
+                                      Яна Дырявская
+                                  </div>
+                              </div>
+                              <div class="line r_article">
+                                  <div class="wrap">
+                                      <span>Статья:</span>аксессуары мобильных телефонов
+                                  </div>
+                              </div>
+                              <div class="line r_control_button">
+                                      <a class="contol_btn" href="#"><img src="img/link_icon.svg" alt=""></a>
+                                      <a class="contol_btn" href="#"><img src="img/doc_icon.svg" alt=""></a>
+                                      <a class="contol_btn" href="#"><img src="img/pencil_icon.svg" alt=""></a>
+                                      <a class="contol_btn" href="#"><img src="img/a_icon.svg" alt=""></a>
+                              </div>
+                              <div class="line r_keyword">
+                                  <div class="wrap">
+                                      <a href="#">14/136</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="project line_element">
+                              <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                              <input class="check" type="checkbox">
+                              <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                          </div>
+                          <div class="group_block line_element">
+                              <div class="wrap">
+                                  <span>Группа:</span>аксессуары мобильных телефонов
+                              </div>
+                          </div>
+                          <div class="keyword line_element">
+                              <div class="wrap">
+                                  <a href="#">14/136</a>
+                              </div>
+                          </div>
+                          <div class="article line_element">
+                              <div class="wrap">
+                                  <span>Статья:</span>аксессуары мобильных телефонов
+                              </div>
+                          </div>
+                          <div class="date line_element">
+                              <div class="wrap">
+                                  13.13.2013
+                              </div>
+                          </div>
+                          <div class="copyrighter line_element">
+                              <div class="wrap">
+                                  Яна Дырявская
+                              </div>
+                          </div>
+                          <div class="control_button line_element">
+                                  <a class="contol_btn" href="#"><img src="img/link_icon.svg" alt=""></a>
+                                  <a class="contol_btn" href="#"><img src="img/doc_icon.svg" alt=""></a>
+                                  <a class="contol_btn" href="#"><img src="img/pencil_icon.svg" alt=""></a>
+                                  <a class="contol_btn" href="#"><img src="img/a_icon.svg" alt=""></a>
+                          </div>
+
+                          <div class="audit line_element"><a class="report"><img src="img/report.svg" alt=""></a></div>
+                          <div class="button_delete line_element">
+                              <button><img src="img/delete.svg" alt=""></button>
+                          </div>
+                      </div></div></li>
+                  </ol>
+                </div>
+            </aside>
+        <div class="button_bottom_block">
+            <button class="remove">Удалить</button>
+        </div>
+
+</main>
+      <div class="modal_overlay"></div>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+      <div class="popup_edit external_promotion">
+          <div class="tooltip_header">
+              <h3>Внешнее продвижение</h3>
+              <button class="close">&times;</button>
+          </div>
+          <div class="tooltip_body">
+              <p>Ремонт духовых шкафов candy киев</p>
+              <p class="link"><span>35</span> ссылок</p>
+              <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+              <ol class="link_list">
+                  <li>
+                      <div class="number"><span>1</span></div>
+                      <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+                      <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                          <img src="img/delete.svg" alt=""></button></div>
+                  </li>
+              </ol>
+          </div>
+          <div class="tooltip_footer">
+              <button class="exit">Закрыть</button>
+          </div>
+      </div>
+      <div class="popup_edit project">
+          <div class="popup_header">
+              <h2>Редактирование проекта</h2>
+              <button class="close">&times;</button>
+          </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">1</div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close">Закрыть</button>
+              <button class="save">Сохранить</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/jquery.easypiechart.min.js"></script>
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.mjs.nestedSortable.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+      $(document).ready(function(){
+
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 4,
+              isTree: true,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
+
+      });
+      $('.copyrighters').select2();
+      $('.placement').select2();
+      $('.status_select').select2();
+//      $('.select_country').select2({
+//          placeholder: "Выберите страну",
+//          width: 'resolve'
+//      });
+//      $('.select_deep').select2({
+//          placeholder: "Выберите глубину",
+//          width: 'resolve'
+//      });
+
+  </script>
+</body>
+</html>

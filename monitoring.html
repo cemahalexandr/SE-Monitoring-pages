@@ -10,12 +10,11 @@
     <script src="libs/select2/select2.min.js"></script>
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
     <script src="js/cbpFWTabs.js"></script>
-    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
-
 </head>
 <body class="monitoring">
   <div class="container">
@@ -30,48 +29,20 @@
         <li><a href="#">Список запросов</a></li>
       </ul>
     </div>
-    <div class="statistic_diagram">
-      <div class="diagram"></div>
-      <div class="diagram"></div>
-      <div class="diagram"></div>
-    </div>
-    <div class="statistic_diagram">
-      <div class="GaugeMeter" id="GaugeMeter_1" data-percent="50"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Red-Gold-Green"
-           data-label_color="#FFF"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1"
-           data-label="ТОП 5"
-      >
+      <div class="statistic_diagram">
+          <span class="chart top5" data-percent="86">
+		    <span class="percent"></span>
+              <span class="title">ТОП 5</span>
+	      </span>
+          <span class="chart top10" data-percent="10">
+		    <span class="percent"></span>
+               <span class="title">ТОП 10</span>
+	      </span>
+          <span class="chart top100" data-percent="50">
+		    <span class="percent"></span>
+              <span class="title">ТОП 100</span>
+	      </span>
       </div>
-      <div class="GaugeMeter" id="GaugeMeter_2" data-percent="65"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Green-Gold-Red"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1"
-           data-label="ТОП 10"
-      >
-
-      </div>
-      <div class="GaugeMeter" id="GaugeMeter_3" data-percent="79"
-           data-append="%"
-           data-size="100"
-           data-width="10"
-           data-back="#ffffff"
-           data-theme="Red-Gold-Green"
-           data-animate_text_colors="1"
-           data-animate_gauge_colors="1"
-           data-label="ТОП 100"
-      >
-      </div>
-    </div>
 
   </header>
 <main class="requests_list">
@@ -83,23 +54,127 @@
       <p>Рекламная группа: <a href="#">ремонт духовок</a></p>
     </div>
   </div>
-
+    <div class="wrap_filter">
+        <div class="open_filter">Фильтрация...</div>
+        <aside class="filter">
+            <form>
+                <div class="filter_block select">
+                    <div class="wrap">
+                        <label class="f_search" for="search_input">Поиск:</label>
+                        <input id="search_input" class="search_input" type="text">
+                    </div>
+                    <div class="wrap">
+                        <label for="user">Пользователь:</label>
+                        <div class="custom_select">
+                            <select name="user" id="user" class="js-example-basic-multiple select_user" multiple="multiple" style="width: 100%">
+                                <option>1</option>
+                                <option>W22222222222222222</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <label for="domain">Домен:</label>
+                        <div class="custom_select">
+                            <select name="domain" id="domain" class="js-example-basic-multiple select_domen" multiple="multiple" style="width: 100%">
+                                <option>1</option>
+                                <option>W22222222222222222</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter_block status_block">
+                    <div class="wrap">
+                        <span class="f_date">Дата:</span>
+                        <input type="date" class="from_date"  placeholder="от"> - <input type="date"  class="to_date" placeholder="до">
+                    </div>
+                    <div class="wrap status">
+                        <span>Статус:</span>
+                        <input id="status_a"  type="checkbox"><label class="status_active"  for="status_a">
+                        <img src="img/status_active.svg" alt="">
+                    </label>
+                        <input id="status_b" type="checkbox"><label class="status_disable" for="status_b">
+                        <img src="img/status_disable.svg" alt="">
+                    </label>
+                    </div>
+                    <div class="wrap growth">
+                        <span>Рост:</span>
+                        <input id="increase"  type="checkbox"><label class="increase" for="increase">
+                        <img src="img/increase.svg" alt="">
+                    </label>
+                        <input id="unchanged" type="checkbox"><label class="unchanged" for="unchanged">
+                        <img src="img/unchanged.svg" alt="">
+                    </label>
+                        <input id="decrease" type="checkbox"><label  class="decrease" for="decrease">
+                        <img src="img/decrease.svg" alt="">
+                    </label>
+                    </div>
+                </div>
+                <div class="filter_block period">
+                    <div class="wrap">
+                        <span class="duration">Длительность (дней):</span>
+                        <input type="number" class="from"  placeholder="от"> - <input type="number"  class="to" placeholder="до">
+                    </div>
+                    <div class="wrap">
+                        <span class="promotion">Внешнее продвижение:</span>
+                        <input type="number" class="from from_second"  placeholder="от"> - <input type="number" class="to to_second"  placeholder="до">
+                    </div>
+                    <div class="wrap">
+                        <span class="position">Позиция:</span>
+                        <input type="number" class="from_position"  placeholder="от"> - <input type="number"  class="to_position" placeholder="до">
+                    </div>
+                </div>
+                <div class="filter_block optimize">
+                    <span class="optimize_inside">Внутрення оптимизация:</span>
+                    <div class="wrap">
+                        <input class="optimize_input" id="requests1" type="checkbox"><label class="requests" for="requests1"><img
+                            src="img/requests.svg" alt=""></label>
+                        <input class="optimize_input" id="relink1" type="checkbox"><label class="relink" for="relink1">
+                        <img src="img/relink.svg" alt="">
+                    </label>
+                        <input class="optimize_input" id="key1" type="checkbox"><label class="key" for="key1">
+                        <img src="img/key.svg" alt="">
+                    </label>
+                        <input class="optimize_input" id="make_audit1" type="checkbox"><label class="make_audit" for="make_audit1">
+                        <img src="img/make_audit.svg" alt="">
+                    </label>
+                    </div>
+                    <span class="rrs_inside">РРС:</span>
+                    <div class="wrap">
+                        <input class="rrs_input" id="ga" type="checkbox"><label class="requests" for="ga"><img
+                            src="img/ga_icon.svg" alt=""></label>
+                        <input class="rrs_input" id="yan" type="checkbox"><label class="relink" for="yan">
+                        <img src="img/yandex_dir.svg" alt="">
+                    </label>
+                        <input class="rrs_input" id="fb" type="checkbox"><label class="key" for="fb">
+                        <img src="img/fb_icon.svg" alt="">
+                    </label>
+                        <input class="rrs_input" id="inst" type="checkbox"><label class="make_audit" for="inst">
+                        <img src="img/instagram.svg" alt="">
+                    </label>
+                        <input class="rrs_input" id="yt" type="checkbox"><label class="make_audit" for="yt">
+                        <img src="img/yt_icon.svg" alt="">
+                    </label>
+                    </div>
+                </div>
+            </form>
+        </aside>
+    </div>
   <div class="filter_button">
-    <button class="add_request">Добавить запросы</button>
-    <button class="export">Экспорт</button>
-    <button class="delete_reques">Удалить запросы</button>
-    <button class="pause">Остановить проект</button>
+    <button class="add_request"><img src="img/plus_btn.svg" alt="">Добавить запросы</button>
+    <button class="export"><img src="img/export_btn.svg" alt="">Экспорт</button>
+    <button class="delete_reques"><img src="img/delete_btn.svg" alt="">Удалить запросы</button>
+    <button class="pause"><img src="img/pause_btn.svg" alt="">Остановить проект</button>
   </div>
   <div class="table_monitoring_wrap">
 
   <aside class="table">
     <div class="table_header">
-      <div class="project">
+      <div class="project head_element">
         <span>
           Поисковые запросы
         </span>
       </div>
-      <div class="month_request">
+      <div class="month_request head_element">
         <span>Стат. запросов в месяц</span>
       </div>
       <div class="position">
@@ -107,31 +182,31 @@
           <span>Позиции</span>
         </div>
         <div class="day_wrap">
-          <div class="day">
+          <div class="day day_1 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_2 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_3 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_4 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_5 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_6 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_7 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_8 head_element">
             <span>22.05 2016</span>
           </div>
-          <div class="day">
+          <div class="day day_9 head_element">
             <span>22.05 2016</span>
           </div>
         </div>
@@ -141,16 +216,16 @@
           <span>План робот</span>
         </div>
         <div class="plan_work_wrap">
-          <div class="internal_optimization">
+          <div class="internal_optimization head_element">
             <span>Внутрення оптимизация</span>
           </div>
-          <div class="external_promotion">
+          <div class="external_promotion head_element">
             <span>Внешнее продвиж.</span>
           </div>
-            <div class="rrs"><span>РРС</span></div>
+            <div class="rrs head_element"><span>РРС</span></div>
         </div>
       </div>
-      <div class="audit">
+      <div class="audit head_element">
         <span>Бизнес аудит</span>
       </div>
     </div>
@@ -158,345 +233,938 @@
 
       <ol class="sortable">
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-          <div class="project">
-            <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_month_request">
+                      <div class="section_month_request"></div>
+                      <div class="result_month_request"></div>
+                  </div>
+                  <div class="line r_day_1">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                          <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                          <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_2">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_3">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_4">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_5">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_6">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_7">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_8">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_9">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_rrs">
+                      <div class="section_name_rrs">
+                          <span>РРС</span>
+                      </div>
+                      <div class="result_rrs">
+                          <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">    <a href="#" class="update wait"></a>
+                      </div>
+                  </div>
+              </div>
+          <div class="project line_element">
+             <div class="draggable"><img src="img/draggable.svg" alt=""></div>
             <input class="check" type="checkbox">
             <a class="project_name" href="#">ремонт електрических духовок киев</a>
+              <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
           </div>
-          <div class="month_request">
+          <div class="month_request line_element">
             <span> 84</span>
           </div>
-          <div class="day">
+          <div class="day day_1 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_2 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_3 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_4 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_5 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_6 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_7 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_8 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="day">
+          <div class="day day_9 line_element">
             <div class="wrap">
               <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
               <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
             </div>
           </div>
-          <div class="internal_optimization">
-            <button class="edit"></button>
-            <div data-check="1" class="work_item requests"></div>
-            <div data-check="1" class="work_item relink"></div>
-            <div data-check="0" class="work_item key"></div>
-            <div data-check="1" class="work_item make_audit"></div>
-          </div>
-          <div class="external_promotion">
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+              </div>
+          <div class="external_promotion line_element">
             <a href="#" class="edit_external_promotion">6</a>
           </div>
-          <div class="rrs">
-            <button class="edit_rrs"></button>
-            <div data-check="1" class="social_item google_adwords"></div>
-            <div data-check="1" class="social_item yandex_direct"></div>
-            <div data-check="1" class="social_item facebook"></div>
-            <div data-check="0" class="social_item instagramm"></div>
-            <div data-check="0" class="social_item youtube"></div>
+          <div class="rrs line_element">
+            <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+            <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+            <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+            <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+            <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+            <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
           </div>
-          <div class="audit">
-            <a href="#" class="report"></a>
+          <div class="audit line_element">
+              <a href="#" class="report"><img src="img/report.svg" alt=""></a>
           </div>
         </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_month_request">
+                      <div class="section_month_request"></div>
+                      <div class="result_month_request"></div>
+                  </div>
+                  <div class="line r_day_1">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_2">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_3">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_4">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_5">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_6">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_7">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_8">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_9">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_rrs">
+                      <div class="section_name_rrs">
+                          <span>РРС</span>
+                      </div>
+                      <div class="result_rrs">
+                          <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">    <a href="#" class="update wait"></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ремонт електрических духовок киев</a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
               </div>
-              <div class="month_request">
+              <div class="month_request line_element">
                   <span> 84</span>
               </div>
-              <div class="day">
+              <div class="day day_1 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_2 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_3 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_4 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_5 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_6 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_7 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_8 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_9 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="1" class="work_item relink"></div>
-                  <div data-check="0" class="work_item key"></div>
-                  <div data-check="1" class="work_item make_audit"></div>
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
-              <div class="external_promotion">
+              <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
-              <div class="rrs">
-                  <button class="edit_rrs"></button>
-                  <div data-check="1" class="social_item google_adwords"></div>
-                  <div data-check="1" class="social_item yandex_direct"></div>
-                  <div data-check="1" class="social_item facebook"></div>
-                  <div data-check="0" class="social_item instagramm"></div>
-                  <div data-check="0" class="social_item youtube"></div>
+              <div class="rrs line_element">
+                  <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
               </div>
-              <div class="audit">
-                  <a href="#" class="report"></a>
+              <div class="audit line_element">
+                  <a href="#" class="report"><img src="img/report.svg" alt=""></a>
               </div>
           </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_month_request">
+                      <div class="section_month_request"></div>
+                      <div class="result_month_request"></div>
+                  </div>
+                  <div class="line r_day_1">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_2">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_3">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_4">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_5">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_6">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_7">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_8">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_9">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_rrs">
+                      <div class="section_name_rrs">
+                          <span>РРС</span>
+                      </div>
+                      <div class="result_rrs">
+                          <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">    <a href="#" class="update wait"></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ремонт електрических духовок киев</a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
               </div>
-              <div class="month_request">
+              <div class="month_request line_element">
                   <span> 84</span>
               </div>
-              <div class="day">
+              <div class="day day_1 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_2 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_3 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_4 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_5 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_6 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_7 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_8 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_9 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="1" class="work_item relink"></div>
-                  <div data-check="0" class="work_item key"></div>
-                  <div data-check="1" class="work_item make_audit"></div>
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
-              <div class="external_promotion">
+              <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
-              <div class="rrs">
-                  <button class="edit_rrs"></button>
-                  <div data-check="1" class="social_item google_adwords"></div>
-                  <div data-check="1" class="social_item yandex_direct"></div>
-                  <div data-check="1" class="social_item facebook"></div>
-                  <div data-check="0" class="social_item instagramm"></div>
-                  <div data-check="0" class="social_item youtube"></div>
+              <div class="rrs line_element">
+                  <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
               </div>
-              <div class="audit">
-                  <a href="#" class="report"></a>
+              <div class="audit line_element">
+                  <a href="#" class="report"><img src="img/report.svg" alt=""></a>
               </div>
           </div></div></li>
           <li><div><div class="disclose"><span></span></div><div class="table_line">
-              <div class="project">
-                  <div class="draggable"></div>
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_month_request">
+                      <div class="section_month_request"></div>
+                      <div class="result_month_request"></div>
+                  </div>
+                  <div class="line r_day_1">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_2">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_3">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_4">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_5">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_6">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_7">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_8">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_day_9">
+                      <div class="section_day_1">
+                          <span>22.05 2016</span>
+                      </div>
+                      <div class="result_day_1">
+                          <div class="wrap">
+                              <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
+                              <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="line r_external_promotion">
+                      <div class="section_name_external_promotion"><span>Внешнее продвиж.</span></div>
+                      <div class="result_external_promotion"> <a href="#" class="edit_external_promotion">6</a></div>
+                  </div>
+                  <div class="line r_internal_optimization">
+                      <div class="section_name_internal_optimization"><span>Внутрення оптимизация</span></div>
+                      <div class="result_internal_optimization">
+                          <button class="edit"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                          <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                          <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                          <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_rrs">
+                      <div class="section_name_rrs">
+                          <span>РРС</span>
+                      </div>
+                      <div class="result_rrs">
+                          <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                          <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                          <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                          <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
+                      </div>
+                  </div>
+                  <div class="line r_audit">
+                      <div class="section_name_audit"><span>Бизнес аудит</span></div>
+                      <div class="result_audit">    <a href="#" class="update wait"></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
                   <input class="check" type="checkbox">
                   <a class="project_name" href="#">ремонт електрических духовок киев</a>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
               </div>
-              <div class="month_request">
+              <div class="month_request line_element">
                   <span> 84</span>
               </div>
-              <div class="day">
+              <div class="day day_1 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_2 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_3 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_4 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_5 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_6 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_7 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_8 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="day">
+              <div class="day day_9 line_element">
                   <div class="wrap">
                       <p class="google">G:<span>130</span> <span class="visit increment">+50</span></p>
                       <p class="yandex">Y:<span>130</span> <span class="visit decline">-50</span></p>
                   </div>
               </div>
-              <div class="internal_optimization">
-                  <button class="edit"></button>
-                  <div data-check="1" class="work_item requests"></div>
-                  <div data-check="1" class="work_item relink"></div>
-                  <div data-check="0" class="work_item key"></div>
-                  <div data-check="1" class="work_item make_audit"></div>
+              <div class="internal_optimization line_element">
+                  <button class="edit"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="work_item requests"><img src="img/requests.svg" alt=""></div>
+                  <div data-check="0" class="work_item relink"><img src="img/relink.svg" alt=""></div>
+                  <div data-check="1" class="work_item key"><img src="img/key.svg" alt=""></div>
+                  <div data-check="0" class="work_item make_audit"><img src="img/make_audit.svg" alt=""></div>
               </div>
-              <div class="external_promotion">
+              <div class="external_promotion line_element">
                   <a href="#" class="edit_external_promotion">6</a>
               </div>
-              <div class="rrs">
-                  <button class="edit_rrs"></button>
-                  <div data-check="1" class="social_item google_adwords"></div>
-                  <div data-check="1" class="social_item yandex_direct"></div>
-                  <div data-check="1" class="social_item facebook"></div>
-                  <div data-check="0" class="social_item instagramm"></div>
-                  <div data-check="0" class="social_item youtube"></div>
+              <div class="rrs line_element">
+                  <button class="edit_rrs"><img src="img/edit.svg" alt=""></button>
+                  <div data-check="1" class="social_item"><img src="img/ga_icon.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/yandex_dir.svg" alt=""></div>
+                  <div data-check="1" class="social_item"><img src="img/fb_icon.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/instagram.svg" alt=""></div>
+                  <div data-check="0" class="social_item"><img src="img/yt_icon.svg" alt=""></div>
               </div>
-              <div class="audit">
-                  <a href="#" class="report"></a>
+              <div class="audit line_element">
+                  <a href="#" class="report"><img src="img/report.svg" alt=""></a>
               </div>
           </div></div></li>
+
       </ol>
     </div>
     <div class="table_footer">
@@ -563,10 +1231,10 @@
       <div class="tooltip_body">
         <form>
           <ul>
-            <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">Добавить запросы</label></li>
-            <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">Сделать перелиновку</label></li>
-            <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">Разместить ключ</label></li>
-            <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">Сделать аудит </label></li>
+            <li><label class="requests" for="requests10"><input class="check_input" id="requests10" type="checkbox">Добавить запросы</label></li>
+            <li><label class="relink" for="relink10"><input class="check_input" id="relink10" type="checkbox">Сделать перелиновку</label></li>
+            <li><label class="key" for="key10"><input class="check_input" id="key10" type="checkbox">Разместить ключ</label></li>
+            <li><label class="make_audit" for="make_audit10"><input class="check_input" id="make_audit10" type="checkbox">Сделать аудит </label></li>
           </ul>
         </form>
       </div>
@@ -585,11 +1253,11 @@
           <div class="tooltip_body">
               <form>
                   <ul>
-                      <li><label class="g_adwors" for="g_adwors"><input class="check_rrs" id="g_adwors" type="checkbox">Google Adwords</label></li>
-                      <li><label class="y_direct" for="y_direct"><input class="check_rrs" id="y_direct" type="checkbox">Яндекс директ</label></li>
-                      <li><label class="facebook" for="facebook"><input class="check_rrs" id="facebook" type="checkbox">Facebook</label></li>
-                      <li><label class="instagramm" for="instagramm"><input class="check_rrs" id="instagramm" type="checkbox">Instagramm</label></li>
-                      <li><label class="youtube" for="youtube"><input class="check_rrs" id="youtube" type="checkbox">Youtube</label></li>
+                      <li><label class="g_adwors" for="g_adwors"><input class="check_rrs" id="g_adwors" type="checkbox"><img src="img/ga_icon.svg" alt="">Google Adwords</label></li>
+                      <li><label class="y_direct" for="y_direct"><input class="check_rrs" id="y_direct" type="checkbox"><img src="img/yandex_dir.svg" alt="">Яндекс директ</label></li>
+                      <li><label class="facebook" for="facebook"><input class="check_rrs" id="facebook" type="checkbox"><img src="img/fb_icon.svg" alt="">Facebook</label></li>
+                      <li><label class="instagramm" for="instagramm"><input class="check_rrs" id="instagramm" type="checkbox"><img src="img/instagram.svg" alt="">Instagramm</label></li>
+                      <li><label class="youtube" for="youtube"><input class="check_rrs" id="youtube" type="checkbox"><img src="img/yt_icon.svg" alt="">Youtube</label></li>
                   </ul>
               </form>
           </div>
@@ -598,7 +1266,65 @@
               <button class="submit_rrs">Принять</button>
           </div>
       </div>
+      <div class="modal_overlay"></div>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
 
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+      <div class="popup_edit external_promotion">
+          <div class="tooltip_header">
+              <h3>Внешнее продвижение</h3>
+              <button class="close">&times;</button>
+          </div>
+          <div class="tooltip_body">
+              <p>Ремонт духовых шкафов candy киев</p>
+              <p class="link"><span>35</span> ссылок</p>
+              <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+              <ol class="link_list">
+                  <li>
+                      <div class="number"><span>1</span></div>
+                      <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+                      <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                          <img src="img/delete.svg" alt=""></button></div>
+                  </li>
+              </ol>
+          </div>
+          <div class="tooltip_footer">
+              <button class="exit">Закрыть</button>
+          </div>
+      </div>
       <div class="popup_edit project">
           <div class="popup_header">
               <h2>Редактирование проекта</h2>
@@ -625,37 +1351,15 @@
               <button class="save">Сохранить</button>
           </div>
       </div>
-    <div class="modal_overlay"></div>
-    <div class="popup_edit external_promotion">
-      <div class="tooltip_header">
-        <h3>Внешнее продвижение</h3>
-        <button class="close">&times;</button>
-      </div>
-      <div class="tooltip_body">
-        <p>Ремонт духовых шкафов candy киев</p>
-        <p class="link"><span>35</span> ссылок</p>
-        <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
-        <ol class="link_list">
-          <li>
-            <div class="number"><span>1</span></div>
-            <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
-            <div class="date"><span>17.11.2016</span> <button class="edit_link"></button> <button class="delete">&times;</button></div>
-          </li>
-        </ol>
-      </div>
-      <div class="tooltip_footer">
-        <button class="exit">Закрыть</button>
-      </div>
-    </div>
   </div>
-
+  <script src="js/jquery.easypiechart.min.js"></script>
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
   <script src="js/jquery.mjs.nestedSortable.js"></script>
   <script src="js/jquery.ui.touch-punch.js"></script>
-
   <script src="js/main.js"></script>
   <script>
       $(document).ready(function(){
+
           $('.sortable').nestedSortable({
               forcePlaceholderSize: true,
               handle: 'div',
@@ -672,6 +1376,14 @@
               expandOnHover: 700,
               startCollapsed: true
           });
+      });
+      $('.select_user').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve'
+      });
+      $('.select_domen').select2({
+          placeholder: "Выберите домен",
+          width: 'resolve'
       });
   </script>
 </body>

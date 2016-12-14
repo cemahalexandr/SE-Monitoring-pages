@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
+    <script src="js/cbpFWTabs.js"></script>
+</head>
+<body>
+  <div class="container">
+  <header>
+    <div class="logo"><a href="#"><img src="img/logo.png" alt="Seo"> SEO продвижение</a></div>
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">Создать новую карту сайта</a></li>
+      </ul>
+    </div>
+
+  </header>
+<main class="create_sitemaps">
+  <h2>Редактирование карты сайта</h2>
+    <div class="panel-title">
+        ID Проекта: 1590
+    </div>
+    <form>
+        <div class="select_wrap">
+        <div class="custom_input">
+            <label>Адрес сайта</label>
+            <input type="text">
+        </div>
+        <div class="custom_select">
+            <label>Страна</label>
+            <select name="domain" class="js-example-basic-multiple select_country" multiple="multiple" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        <div class="custom_select">
+            <label>Глубина</label>
+            <select name="domain" class="js-example-basic-multiple select_deep" multiple="multiple" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        <div class="custom_select">
+            <label>Менеджер</label>
+            <select name="domain" class="js-example-basic-multiple select_user" multiple="multiple" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        </div>
+        <div class="button_block">
+            <div class="button_wrap">
+                <button>Развернуть все</button>
+                <button>Свернуть все</button>
+            </div>
+            <div class="button_wrap">
+                <button>Загрузить карту сайта EXEL</button>
+                <button class="upload">Upload</button>
+                <button class="remove"><img src="img/delete.svg" alt=""></button>
+            </div>
+        </div>
+            <aside class="table">
+                <div class="table_body">
+                  <ol class="sortable">
+                      <li><div><div class="disclose"><span></span></div><div class="table_line">
+                          <div class="responsive_table popup_edit">
+                              <div class="close_table">&times;</div>
+                            <div class="line r_group_input">
+                              <div class="wrap">
+                                  <input type="text" placeholder="Название группы">
+                              </div>
+                            </div>
+                              <div class="line r_link_input">
+                                  <div class="wrap">
+                                      <input type="text" placeholder="Название группы">
+                                  </div>
+                              </div>
+                              <div class="line r_requests_input">
+                                  <div class="wrap">
+                                      <input type="text" placeholder="Название группы">
+                                  </div>
+                              </div>
+                              <div class="line r_button_switch ">
+                                  <div class="wrap">
+                                      <button class="switch_btn">Подобрать</button>
+                                      <button class="switch_btn">Добавить</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="project line_element">
+                              <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                              <input class="check" type="checkbox">
+                              <button class="add_inside_line"><img src="img/plus_btn.svg" alt=""></button>
+                              <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+                          </div>
+                          <div class="group_input line_element">
+                              <input type="text" placeholder="Название группы">
+                          </div>
+                          <div class="link_input line_element">
+                              <input class="link_hidden" type="text" placeholder="Название ссылки">
+                          </div>
+                          <div class="requests_input line_element">
+                              <input type="text" placeholder="Название группы" disabled>
+                          </div>
+                          <div class="button_switch line_element">
+                              <button class="switch_btn">Авт.</button>
+                              <button class="switch_btn">Руч.</button>
+                          </div>
+                          <div class="keyword line_element">
+                              <a href="#">14/136</a>
+                          </div>
+                          <div class="audit line_element"><a class="report"><img src="img/report.svg" alt=""></a></div>
+                          <div class="button_delete line_element">
+                              <button><img src="img/delete.svg" alt=""></button>
+                          </div>
+                      </div></div></li>
+                  </ol>
+                </div>
+            </aside>
+        <div class="button_bottom_block">
+            <button class="add_line">Добавить строку</button>
+            <button>Сохранить</button>
+            <button class="launch">Запустить</button>
+            <button class="remove">Удалить</button>
+        </div>
+    </form>
+</main>
+      <div class="modal_overlay"></div>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+      <div class="popup_edit external_promotion">
+          <div class="tooltip_header">
+              <h3>Внешнее продвижение</h3>
+              <button class="close">&times;</button>
+          </div>
+          <div class="tooltip_body">
+              <p>Ремонт духовых шкафов candy киев</p>
+              <p class="link"><span>35</span> ссылок</p>
+              <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+              <ol class="link_list">
+                  <li>
+                      <div class="number"><span>1</span></div>
+                      <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+                      <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                          <img src="img/delete.svg" alt=""></button></div>
+                  </li>
+              </ol>
+          </div>
+          <div class="tooltip_footer">
+              <button class="exit">Закрыть</button>
+          </div>
+      </div>
+      <div class="popup_edit project">
+          <div class="popup_header">
+              <h2>Редактирование проекта</h2>
+              <button class="close">&times;</button>
+          </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">1</div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close">Закрыть</button>
+              <button class="save">Сохранить</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/jquery.easypiechart.min.js"></script>
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.mjs.nestedSortable.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+      $(document).ready(function(){
+
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 4,
+              isTree: true,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
+
+      });
+      $('.select_user').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve',
+          disabled: true
+      });
+      $('.select_domen').select2({
+          placeholder: "Выберите домен",
+          width: 'resolve'
+      });
+      $('.select_country').select2({
+          placeholder: "Выберите страну",
+          width: 'resolve'
+      });
+      $('.select_deep').select2({
+          placeholder: "Выберите глубину",
+          width: 'resolve'
+      });
+
+  </script>
+</body>
+</html>
