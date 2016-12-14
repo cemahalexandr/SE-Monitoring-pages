@@ -93,6 +93,16 @@ main{
   padding: 17px 20px 20px;
   position: relative;
   &.seo_page{
+    .table{
+      .project{
+        flex-grow:1;
+      }
+      .table_line{
+        .project{
+          flex-grow:1;
+        }
+      }
+    }
     .sortable{
       li{
         &:before{
@@ -220,7 +230,7 @@ main{
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
-        border: 1px solid #c6c6c6;
+        border: 1px solid #aaa;
       }
     }
     .optimize{
@@ -370,6 +380,10 @@ main{
       .decrease{
       }
     }
+    form{
+      display: flex;
+      align-items: baseline;
+    }
   }
   .filter_button{
     margin: 25px 0 20px;
@@ -439,9 +453,9 @@ main{
   overflow-x: scroll;
 }
 
-.poject_list{
+.project_list{
   .table{
-    min-width: 1326px;
+    min-width: 1255px;
     .plan_work {
       width: 452px;
     }
@@ -452,7 +466,7 @@ main{
   width: 100%;
   overflow-x: scroll;
   .table{
-    min-width: 1603px;
+    min-width: 1535px;
     .table_line{
       .project{
         padding-right: 30px;
@@ -579,7 +593,7 @@ main{
     .project{
       align-items: center;
       position: relative;
-      width: 320px;
+      width: 250px;
       padding-right: 55px;
       .draggable{
         position: absolute;
@@ -596,12 +610,23 @@ main{
         left: -30px;
         top: 11px;
       }
+      .project_name_wrap{
+        width: 190px;
+        padding-right: 5px;
+        height:100%;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        color: #006ba0;
+        font-weight: bold;
+      }
       .project_name{
         color: #006ba0;
         font-weight: bold;
         padding-bottom: 3px;
         border-bottom: 2px dotted #b3b3b3;
         margin-left: 10px;
+        line-height: 35px;
+        white-space: nowrap;
       }
       .setting{
         display: block;
@@ -845,7 +870,7 @@ main{
     }
   }
   .project{
-    width: 370px;
+    width: 300px;
     display: flex;
     border-right: 1px solid #ececec;
     span{

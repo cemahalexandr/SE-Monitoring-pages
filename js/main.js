@@ -474,6 +474,8 @@ $(document).ready(function(){
     $('.open_link').on('click', function () {
        $('.link_hidden').toggleClass('open');
     });
+
+
 });
 
 $(window).resize(function () {
