@@ -108,6 +108,7 @@ main{
         &:before{
           display: none;
         }
+
         &:after{
           display: none;
         }
@@ -165,7 +166,7 @@ main{
     border: 2px solid #fff;
     z-index:5;
     &.open{
-      height: 160px;
+      height: 190px;
       border: 2px solid #d2d2d2;
       transform: translateY(0%);
     }
@@ -182,6 +183,19 @@ main{
       }
       .wrap{
         margin-bottom: 13px;
+      }
+      .success {
+        margin: 10px 45px;
+        padding: 10px 30px;
+        border-radius: 3px;
+        height: 34px;
+        border: none;
+        background: #86c053;
+        color: #fff;
+        position: relative;
+        padding-left: 13px;
+        padding-right: 13px;
+        margin-bottom: 5px;
       }
     }
     .select{
@@ -904,6 +918,7 @@ main{
       word-break: break-word;
     }
   }
+
   .delete_table_line{
     width:65px;
     button{
@@ -2278,6 +2293,7 @@ main.requests_list{
       .wrap{
         margin-bottom: 5px;
       }
+
     }
   }
 
