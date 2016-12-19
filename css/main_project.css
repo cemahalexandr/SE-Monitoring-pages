@@ -531,7 +531,7 @@ main .filter_button .delete_selected:before {
 
 /* line 443, ../sass/main.scss */
 .poject_list .table {
-  min-width: 1226px;
+  min-width: 1326px;
 }
 /* line 445, ../sass/main.scss */
 .poject_list .table .plan_work {
@@ -683,7 +683,7 @@ main .filter_button .delete_selected:before {
 .table .table_line .project {
   align-items: center;
   position: relative;
-  width: 219px;
+  width: 320px;
   padding-right: 55px;
 }
 /* line 584, ../sass/main.scss */
@@ -960,7 +960,7 @@ main .filter_button .delete_selected:before {
 }
 /* line 847, ../sass/main.scss */
 .table .project {
-  width: 270px;
+  width: 370px;
   display: flex;
   border-right: 1px solid #ececec;
 }
