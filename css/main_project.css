@@ -1493,10 +1493,9 @@ main.requests_list .sortable li:after {
   width: 100%;
   height: auto;
   max-height: 630px;
-  display: none;
   border: none;
 }
-/* line 1328, ../sass/main_project.scss */
+/* line 1327, ../sass/main_project.scss */
 .popup_edit.project.open {
   display: block;
   position: fixed;
@@ -1529,18 +1528,18 @@ main.requests_list .sortable li:after {
     transform: translate(-50%, 0%);
   }
 }
-/* line 1361, ../sass/main_project.scss */
+/* line 1360, ../sass/main_project.scss */
 .popup_edit.project .popup_header {
   padding: 15px 15px 10px;
 }
-/* line 1363, ../sass/main_project.scss */
+/* line 1362, ../sass/main_project.scss */
 .popup_edit.project .popup_header h2 {
   font-size: 18px;
   font-weight: lighter;
   padding-bottom: 15px;
   border-bottom: 1px solid #ededed;
 }
-/* line 1369, ../sass/main_project.scss */
+/* line 1368, ../sass/main_project.scss */
 .popup_edit.project .popup_header .close {
   position: absolute;
   top: 15px;
@@ -1554,32 +1553,32 @@ main.requests_list .sortable li:after {
   height: 23px;
   opacity: .4;
 }
-/* line 1381, ../sass/main_project.scss */
+/* line 1380, ../sass/main_project.scss */
 .popup_edit.project .popup_header .close:hover {
   opacity: .8;
 }
-/* line 1386, ../sass/main_project.scss */
+/* line 1385, ../sass/main_project.scss */
 .popup_edit.project .popup_body {
   padding: 0 15px;
   height: auto;
 }
-/* line 1390, ../sass/main_project.scss */
+/* line 1389, ../sass/main_project.scss */
 .popup_edit.project .popup_body .tabs nav {
   margin-top: 0;
   text-align: left;
 }
-/* line 1394, ../sass/main_project.scss */
+/* line 1393, ../sass/main_project.scss */
 .popup_edit.project .popup_body .tabs nav li a {
   font-weight: normal;
 }
-/* line 1401, ../sass/main_project.scss */
+/* line 1400, ../sass/main_project.scss */
 .popup_edit.project .popup_footer {
   background: #F9F9F9;
   height: 52px;
   padding: 10px 15px;
   text-align: right;
 }
-/* line 1406, ../sass/main_project.scss */
+/* line 1405, ../sass/main_project.scss */
 .popup_edit.project .popup_footer button {
   height: 31px;
   padding: 5px 12px;
@@ -1589,11 +1588,11 @@ main.requests_list .sortable li:after {
   color: #fff;
   font-weight: normal;
 }
-/* line 1414, ../sass/main_project.scss */
+/* line 1413, ../sass/main_project.scss */
 .popup_edit.project .popup_footer button:hover {
   opacity: .5;
 }
-/* line 1417, ../sass/main_project.scss */
+/* line 1416, ../sass/main_project.scss */
 .popup_edit.project .popup_footer button.close {
   background: transparent;
   border: 1px solid #CDD7E1;
@@ -1601,17 +1600,17 @@ main.requests_list .sortable li:after {
   float: none;
   color: #000;
 }
-/* line 1423, ../sass/main_project.scss */
+/* line 1422, ../sass/main_project.scss */
 .popup_edit.project .popup_footer button.close:hover {
   opacity: .5;
 }
-/* line 1430, ../sass/main_project.scss */
+/* line 1429, ../sass/main_project.scss */
 .popup_edit.external_promotion {
   max-width: 560px;
   width: 100%;
   display: none;
 }
-/* line 1434, ../sass/main_project.scss */
+/* line 1433, ../sass/main_project.scss */
 .popup_edit.external_promotion.open {
   display: block;
   position: fixed;
@@ -1644,21 +1643,21 @@ main.requests_list .sortable li:after {
     transform: translate(-50%, 0%);
   }
 }
-/* line 1467, ../sass/main_project.scss */
+/* line 1466, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body {
   padding: 20px 15px;
 }
-/* line 1469, ../sass/main_project.scss */
+/* line 1468, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body p {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* line 1472, ../sass/main_project.scss */
+/* line 1471, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body p.link {
   color: #ff5258;
   font-size: 14px;
 }
-/* line 1477, ../sass/main_project.scss */
+/* line 1476, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body input {
   width: 385px;
   height: 32px;
@@ -1666,7 +1665,7 @@ main.requests_list .sortable li:after {
   border-radius: 3px;
   margin-right: 5px;
 }
-/* line 1484, ../sass/main_project.scss */
+/* line 1483, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .add_link {
   width: 138px;
   height: 33px;
@@ -1677,18 +1676,18 @@ main.requests_list .sortable li:after {
   background: #3d8eff;
   color: #fff;
 }
-/* line 1493, ../sass/main_project.scss */
+/* line 1492, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .add_link:hover {
   opacity: .8;
 }
-/* line 1497, ../sass/main_project.scss */
+/* line 1496, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list {
   margin-top: 20px;
   height: 340px;
   overflow-y: scroll;
   border: 1px solid #ededed;
 }
-/* line 1502, ../sass/main_project.scss */
+/* line 1501, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list li {
   display: flex;
   justify-content: flex-start;
@@ -1696,7 +1695,7 @@ main.requests_list .sortable li:after {
   height: 40px;
   align-items: center;
 }
-/* line 1510, ../sass/main_project.scss */
+/* line 1509, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .link a {
   color: #006ba0;
   font-weight: bold;
@@ -1704,7 +1703,7 @@ main.requests_list .sortable li:after {
   border-bottom: 2px dotted #b3b3b3;
   margin-left: 10px;
 }
-/* line 1518, ../sass/main_project.scss */
+/* line 1517, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .number {
   width: 36px;
   border-right: 1px solid #ededed;
@@ -1714,7 +1713,7 @@ main.requests_list .sortable li:after {
   text-align: center;
   padding-left: 5px;
 }
-/* line 1527, ../sass/main_project.scss */
+/* line 1526, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .link {
   width: 320px;
   border-right: 1px solid #ededed;
@@ -1722,42 +1721,42 @@ main.requests_list .sortable li:after {
   display: flex;
   align-items: center;
 }
-/* line 1534, ../sass/main_project.scss */
+/* line 1533, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-/* line 1538, ../sass/main_project.scss */
+/* line 1537, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date span {
   display: block;
   margin: 0 10px;
 }
-/* line 1542, ../sass/main_project.scss */
+/* line 1541, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date button {
   display: block;
   width: 25px;
   height: 25px;
   border: none;
 }
-/* line 1549, ../sass/main_project.scss */
+/* line 1548, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date .edit_link {
   margin-right: 10px;
   padding: 0;
 }
-/* line 1552, ../sass/main_project.scss */
+/* line 1551, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date .edit_link img {
   height: 100%;
 }
-/* line 1556, ../sass/main_project.scss */
+/* line 1555, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date .delete {
   padding: 0;
 }
-/* line 1558, ../sass/main_project.scss */
+/* line 1557, ../sass/main_project.scss */
 .popup_edit.external_promotion .tooltip_body .link_list .date .delete img {
   height: 100%;
 }
-/* line 1566, ../sass/main_project.scss */
+/* line 1565, ../sass/main_project.scss */
 .popup_edit .tooltip_header {
   padding: 10px 15px;
   background: #3d8eff;
@@ -1765,7 +1764,7 @@ main.requests_list .sortable li:after {
   color: #ffffff;
   font-weight: bold;
 }
-/* line 1572, ../sass/main_project.scss */
+/* line 1571, ../sass/main_project.scss */
 .popup_edit .tooltip_header .close {
   position: absolute;
   top: 4px;
@@ -1782,15 +1781,15 @@ main.requests_list .sortable li:after {
   height: 23px;
   opacity: 1;
 }
-/* line 1587, ../sass/main_project.scss */
+/* line 1586, ../sass/main_project.scss */
 .popup_edit .tooltip_header .close:hover {
   opacity: .8;
 }
-/* line 1592, ../sass/main_project.scss */
+/* line 1591, ../sass/main_project.scss */
 .popup_edit .tooltip_body {
   padding: 3px;
 }
-/* line 1594, ../sass/main_project.scss */
+/* line 1593, ../sass/main_project.scss */
 .popup_edit .tooltip_body label {
   display: block;
   padding: 10px 13px;
@@ -1799,7 +1798,7 @@ main.requests_list .sortable li:after {
   position: relative;
   line-height: 13px;
 }
-/* line 1601, ../sass/main_project.scss */
+/* line 1600, ../sass/main_project.scss */
 .popup_edit .tooltip_body label img {
   width: 25px;
   height: 25px;
@@ -1807,39 +1806,39 @@ main.requests_list .sortable li:after {
   top: 7px;
   left: 35px;
 }
-/* line 1608, ../sass/main_project.scss */
+/* line 1607, ../sass/main_project.scss */
 .popup_edit .tooltip_body label:hover {
   border: 1px solid #8cc7ff;
   background: #baddff;
 }
-/* line 1612, ../sass/main_project.scss */
+/* line 1611, ../sass/main_project.scss */
 .popup_edit .tooltip_body label input {
   margin-right: 45px;
   margin-top: 0;
 }
-/* line 1618, ../sass/main_project.scss */
+/* line 1617, ../sass/main_project.scss */
 .popup_edit .tooltip_body .requests:before {
   background-position: -116px -61px;
 }
-/* line 1623, ../sass/main_project.scss */
+/* line 1622, ../sass/main_project.scss */
 .popup_edit .tooltip_body .relink:before {
   background-position: -166px -61px;
 }
-/* line 1628, ../sass/main_project.scss */
+/* line 1627, ../sass/main_project.scss */
 .popup_edit .tooltip_body .key:before {
   background-position: -217px -61px;
 }
-/* line 1633, ../sass/main_project.scss */
+/* line 1632, ../sass/main_project.scss */
 .popup_edit .tooltip_body .make_audit:before {
   background-position: -68px -114px;
 }
-/* line 1638, ../sass/main_project.scss */
+/* line 1637, ../sass/main_project.scss */
 .popup_edit .tooltip_footer {
   background: #e6daeb;
   padding: 5px 12px;
   text-align: center;
 }
-/* line 1642, ../sass/main_project.scss */
+/* line 1641, ../sass/main_project.scss */
 .popup_edit .tooltip_footer button {
   width: 108px;
   height: 33px;
@@ -1852,12 +1851,12 @@ main.requests_list .sortable li:after {
   font-size: 13px;
   font-weight: 600;
 }
-/* line 1653, ../sass/main_project.scss */
+/* line 1652, ../sass/main_project.scss */
 .popup_edit .tooltip_footer button:hover {
   opacity: .8;
 }
 
-/* line 1659, ../sass/main_project.scss */
+/* line 1658, ../sass/main_project.scss */
 .audit_tooltip {
   display: none;
   position: absolute;
@@ -1870,17 +1869,17 @@ main.requests_list .sortable li:after {
   -moz-box-shadow: 3px 3px 10px black;
   box-shadow: 3px 3px 10px black;
 }
-/* line 1670, ../sass/main_project.scss */
+/* line 1669, ../sass/main_project.scss */
 .audit_tooltip.open {
   display: block;
 }
-/* line 1674, ../sass/main_project.scss */
+/* line 1673, ../sass/main_project.scss */
 .audit_tooltip ul li {
   padding-left: 35px;
   border-radius: 5px;
   position: relative;
 }
-/* line 1678, ../sass/main_project.scss */
+/* line 1677, ../sass/main_project.scss */
 .audit_tooltip ul li img {
   content: '';
   display: block;
@@ -1890,21 +1889,21 @@ main.requests_list .sortable li:after {
   width: 22px;
   height: 45px;
 }
-/* line 1698, ../sass/main_project.scss */
+/* line 1697, ../sass/main_project.scss */
 .audit_tooltip ul a {
   display: block;
   padding: 14px 0;
 }
 
-/* line 1706, ../sass/main_project.scss */
+/* line 1705, ../sass/main_project.scss */
 .sortable li {
   position: relative;
 }
-/* line 1708, ../sass/main_project.scss */
+/* line 1707, ../sass/main_project.scss */
 .sortable li:nth-child(even) {
   background: #f8f9fa;
 }
-/* line 1711, ../sass/main_project.scss */
+/* line 1710, ../sass/main_project.scss */
 .sortable li:before {
   content: '';
   display: block;
@@ -1916,19 +1915,19 @@ main.requests_list .sortable li:after {
   background: #3489ff;
   z-index: 100;
 }
-/* line 1723, ../sass/main_project.scss */
+/* line 1722, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-collapsed > ol {
   display: none;
 }
-/* line 1728, ../sass/main_project.scss */
+/* line 1727, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-leaf:before {
   display: none;
 }
-/* line 1733, ../sass/main_project.scss */
+/* line 1732, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-branch:nth-child(odd) {
   background: #f8f9fa;
 }
-/* line 1737, ../sass/main_project.scss */
+/* line 1736, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -1937,11 +1936,11 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1748, ../sass/main_project.scss */
+/* line 1747, ../sass/main_project.scss */
 .sortable li ol li {
   position: relative;
 }
-/* line 1751, ../sass/main_project.scss */
+/* line 1750, ../sass/main_project.scss */
 .sortable li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -1950,7 +1949,7 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1762, ../sass/main_project.scss */
+/* line 1761, ../sass/main_project.scss */
 .sortable li ol li:after {
   content: '';
   display: block;
@@ -1961,7 +1960,7 @@ main.requests_list .sortable li:after {
   height: 2px;
   background: #2681ff;
 }
-/* line 1772, ../sass/main_project.scss */
+/* line 1771, ../sass/main_project.scss */
 .sortable li ol li:before {
   content: '';
   display: block;
@@ -1973,15 +1972,15 @@ main.requests_list .sortable li:after {
   background: #73c5ff;
   z-index: 100;
 }
-/* line 1784, ../sass/main_project.scss */
+/* line 1783, ../sass/main_project.scss */
 .sortable li ol li .table_line .project {
   padding-left: 10px;
 }
-/* line 1789, ../sass/main_project.scss */
+/* line 1788, ../sass/main_project.scss */
 .sortable li ol li ol li {
   position: relative;
 }
-/* line 1792, ../sass/main_project.scss */
+/* line 1791, ../sass/main_project.scss */
 .sortable li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -1990,7 +1989,7 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1803, ../sass/main_project.scss */
+/* line 1802, ../sass/main_project.scss */
 .sortable li ol li ol li:after {
   content: '';
   display: block;
@@ -2001,7 +2000,7 @@ main.requests_list .sortable li:after {
   height: 2px;
   background: #73c5ff;
 }
-/* line 1813, ../sass/main_project.scss */
+/* line 1812, ../sass/main_project.scss */
 .sortable li ol li ol li:before {
   content: '';
   display: block;
@@ -2013,15 +2012,15 @@ main.requests_list .sortable li:after {
   background: #c89cff;
   z-index: 100;
 }
-/* line 1825, ../sass/main_project.scss */
+/* line 1824, ../sass/main_project.scss */
 .sortable li ol li ol li .table_line .project {
   padding-left: 20px;
 }
-/* line 1830, ../sass/main_project.scss */
+/* line 1829, ../sass/main_project.scss */
 .sortable li ol li ol li ol li {
   position: relative;
 }
-/* line 1833, ../sass/main_project.scss */
+/* line 1832, ../sass/main_project.scss */
 .sortable li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -2030,7 +2029,7 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1844, ../sass/main_project.scss */
+/* line 1843, ../sass/main_project.scss */
 .sortable li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -2041,7 +2040,7 @@ main.requests_list .sortable li:after {
   height: 2px;
   background: #c797ff;
 }
-/* line 1854, ../sass/main_project.scss */
+/* line 1853, ../sass/main_project.scss */
 .sortable li ol li ol li ol li:before {
   content: '';
   display: block;
@@ -2053,15 +2052,15 @@ main.requests_list .sortable li:after {
   background: #73c5ff;
   z-index: 100;
 }
-/* line 1866, ../sass/main_project.scss */
+/* line 1865, ../sass/main_project.scss */
 .sortable li ol li ol li ol li .table_line .project {
   padding-left: 40px;
 }
-/* line 1871, ../sass/main_project.scss */
+/* line 1870, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li {
   position: relative;
 }
-/* line 1875, ../sass/main_project.scss */
+/* line 1874, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -2070,7 +2069,7 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1885, ../sass/main_project.scss */
+/* line 1884, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -2081,7 +2080,7 @@ main.requests_list .sortable li:after {
   height: 2px;
   background: #73c5ff;
 }
-/* line 1895, ../sass/main_project.scss */
+/* line 1894, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li:before {
   content: '';
   display: block;
@@ -2093,15 +2092,15 @@ main.requests_list .sortable li:after {
   background: #c6c678;
   z-index: 100;
 }
-/* line 1907, ../sass/main_project.scss */
+/* line 1906, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li .table_line .project {
   padding-left: 45px;
 }
-/* line 1912, ../sass/main_project.scss */
+/* line 1911, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li ol li {
   position: relative;
 }
-/* line 1915, ../sass/main_project.scss */
+/* line 1914, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: none;
   position: absolute;
@@ -2110,7 +2109,7 @@ main.requests_list .sortable li:after {
   width: 12px;
   height: 12px;
 }
-/* line 1926, ../sass/main_project.scss */
+/* line 1925, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -2121,19 +2120,19 @@ main.requests_list .sortable li:after {
   height: 2px;
   background: #c6c678;
 }
-/* line 1937, ../sass/main_project.scss */
+/* line 1936, ../sass/main_project.scss */
 .sortable li ol li ol li ol li ol li ol li .table_line .project {
   padding-left: 35px;
 }
 
-/* line 1954, ../sass/main_project.scss */
+/* line 1953, ../sass/main_project.scss */
 .disclose {
   display: none;
   cursor: pointer;
   width: 10px;
 }
 
-/* line 1960, ../sass/main_project.scss */
+/* line 1959, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-collapsed > div > .disclose > span:before {
   content: '+';
   position: absolute;
@@ -2148,7 +2147,7 @@ main.requests_list .sortable li:after {
   z-index: 100;
 }
 
-/* line 1973, ../sass/main_project.scss */
+/* line 1972, ../sass/main_project.scss */
 .sortable li.mjs-nestedSortable-expanded > div > .disclose > span:before {
   content: '-';
   position: absolute;
@@ -2163,7 +2162,7 @@ main.requests_list .sortable li:after {
   z-index: 100;
 }
 
-/* line 1986, ../sass/main_project.scss */
+/* line 1985, ../sass/main_project.scss */
 .modal_overlay {
   position: fixed;
   width: 100%;
@@ -2173,29 +2172,29 @@ main.requests_list .sortable li:after {
   display: none;
   z-index: 15;
 }
-/* line 1994, ../sass/main_project.scss */
+/* line 1993, ../sass/main_project.scss */
 .modal_overlay.open {
   background: rgba(0, 0, 0, 0.5);
   display: block;
 }
 
-/* line 1999, ../sass/main_project.scss */
+/* line 1998, ../sass/main_project.scss */
 .filter_span_bold {
   font-weight: bold;
 }
 
-/* line 2002, ../sass/main_project.scss */
+/* line 2001, ../sass/main_project.scss */
 .seo_texts {
   margin-top: 30px;
 }
-/* line 2004, ../sass/main_project.scss */
+/* line 2003, ../sass/main_project.scss */
 .seo_texts label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
   color: #5e5e5e;
 }
-/* line 2010, ../sass/main_project.scss */
+/* line 2009, ../sass/main_project.scss */
 .seo_texts input {
   outline: none;
   border-radius: 5px;
@@ -2204,7 +2203,7 @@ main.requests_list .sortable li:after {
   width: 50%;
   padding-left: 5px;
 }
-/* line 2018, ../sass/main_project.scss */
+/* line 2017, ../sass/main_project.scss */
 .seo_texts .description {
   width: 100%;
   border-radius: 5px;
@@ -2213,15 +2212,15 @@ main.requests_list .sortable li:after {
   resize: none;
   margin-bottom: 10px;
 }
-/* line 2026, ../sass/main_project.scss */
+/* line 2025, ../sass/main_project.scss */
 .seo_texts .mce-tinymce {
   border-radius: 5px;
 }
-/* line 2029, ../sass/main_project.scss */
+/* line 2028, ../sass/main_project.scss */
 .seo_texts .select2-search__field {
   height: auto;
 }
-/* line 2032, ../sass/main_project.scss */
+/* line 2031, ../sass/main_project.scss */
 .seo_texts .input_wrap {
   display: flex;
   justify-content: space-between;
@@ -2229,19 +2228,19 @@ main.requests_list .sortable li:after {
   width: 50%;
   margin: 10px 0;
 }
-/* line 2038, ../sass/main_project.scss */
+/* line 2037, ../sass/main_project.scss */
 .seo_texts .input_wrap .group-filter {
   flex-grow: 1;
 }
-/* line 2040, ../sass/main_project.scss */
+/* line 2039, ../sass/main_project.scss */
 .seo_texts .input_wrap .group-filter:first-child {
   padding-right: 10px;
 }
-/* line 2043, ../sass/main_project.scss */
+/* line 2042, ../sass/main_project.scss */
 .seo_texts .input_wrap .group-filter input {
   width: 100%;
 }
-/* line 2048, ../sass/main_project.scss */
+/* line 2047, ../sass/main_project.scss */
 .seo_texts .select_wrap {
   display: flex;
   justify-content: space-between;
@@ -2249,17 +2248,17 @@ main.requests_list .sortable li:after {
   width: 50%;
   margin: 10px 0;
 }
-/* line 2054, ../sass/main_project.scss */
+/* line 2053, ../sass/main_project.scss */
 .seo_texts .select_wrap .custom_select {
   width: 100%;
   flex-grow: 1;
   margin-bottom: 10px;
 }
-/* line 2058, ../sass/main_project.scss */
+/* line 2057, ../sass/main_project.scss */
 .seo_texts .select_wrap .custom_select:first-child {
   padding-right: 10px;
 }
-/* line 2063, ../sass/main_project.scss */
+/* line 2062, ../sass/main_project.scss */
 .seo_texts .bttn {
   border-radius: 3px;
   height: 34px;
@@ -2270,20 +2269,20 @@ main.requests_list .sortable li:after {
   padding-right: 10px;
   margin-bottom: 5px;
 }
-/* line 2072, ../sass/main_project.scss */
+/* line 2071, ../sass/main_project.scss */
 .seo_texts .bttn img {
   width: 12px;
 }
-/* line 2075, ../sass/main_project.scss */
+/* line 2074, ../sass/main_project.scss */
 .seo_texts .bttn.save {
   background: #86c053;
 }
-/* line 2078, ../sass/main_project.scss */
+/* line 2077, ../sass/main_project.scss */
 .seo_texts .bttn.download {
   background: #ffc36b;
 }
 
-/* line 2084, ../sass/main_project.scss */
+/* line 2083, ../sass/main_project.scss */
 .create_sitemaps .select_wrap {
   display: flex;
   justify-content: space-between;
@@ -2291,32 +2290,32 @@ main.requests_list .sortable li:after {
   width: 100%;
   margin: 20px 0;
 }
-/* line 2091, ../sass/main_project.scss */
+/* line 2090, ../sass/main_project.scss */
 .create_sitemaps .select_wrap label {
   display: block;
   margin-bottom: 5px;
 }
-/* line 2095, ../sass/main_project.scss */
+/* line 2094, ../sass/main_project.scss */
 .create_sitemaps .select_wrap .custom_select, .create_sitemaps .select_wrap .custom_input {
   flex-grow: 1;
   margin-right: 10px;
   width: 0;
 }
-/* line 2101, ../sass/main_project.scss */
+/* line 2100, ../sass/main_project.scss */
 .create_sitemaps .select_wrap .custom_input input {
   width: 100%;
   border-radius: 5px;
   border: 1px solid #c6c6c6;
   height: 32px;
 }
-/* line 2109, ../sass/main_project.scss */
+/* line 2108, ../sass/main_project.scss */
 .create_sitemaps .button_block {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   margin: 20px 0;
 }
-/* line 2114, ../sass/main_project.scss */
+/* line 2113, ../sass/main_project.scss */
 .create_sitemaps .button_block button {
   border-radius: 3px;
   height: 34px;
@@ -2329,36 +2328,36 @@ main.requests_list .sortable li:after {
   background: #86c053;
   vertical-align: top;
 }
-/* line 2125, ../sass/main_project.scss */
+/* line 2124, ../sass/main_project.scss */
 .create_sitemaps .button_block button.upload {
   background: #ffc36b;
 }
-/* line 2128, ../sass/main_project.scss */
+/* line 2127, ../sass/main_project.scss */
 .create_sitemaps .button_block button.remove {
   background: rgba(236, 31, 31, 0.82);
   width: 34px;
   padding: 0;
 }
-/* line 2132, ../sass/main_project.scss */
+/* line 2131, ../sass/main_project.scss */
 .create_sitemaps .button_block button.remove img {
   width: 100%;
 }
-/* line 2140, ../sass/main_project.scss */
+/* line 2139, ../sass/main_project.scss */
 .create_sitemaps .table .table_line {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-/* line 2145, ../sass/main_project.scss */
+/* line 2144, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .responsive_table .line {
   min-height: 40px;
   padding: 5px;
 }
-/* line 2150, ../sass/main_project.scss */
+/* line 2149, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .keyword {
   font-weight: bold;
 }
-/* line 2153, ../sass/main_project.scss */
+/* line 2152, ../sass/main_project.scss */
 .create_sitemaps .table .table_line input[type=text] {
   width: 100%;
   margin: 0 5px;
@@ -2368,18 +2367,18 @@ main.requests_list .sortable li:after {
   padding-left: 5px;
   transition: all .3s;
 }
-/* line 2162, ../sass/main_project.scss */
+/* line 2161, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .audit {
   border: none;
 }
-/* line 2165, ../sass/main_project.scss */
+/* line 2164, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .project {
   width: 0;
   padding-right: 0;
   border: none;
   flex-grow: 0 !important;
 }
-/* line 2170, ../sass/main_project.scss */
+/* line 2169, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .project button {
   width: 30px;
   height: 30px;
@@ -2388,21 +2387,21 @@ main.requests_list .sortable li:after {
   border-radius: 5px;
   margin-left: 5px;
 }
-/* line 2178, ../sass/main_project.scss */
+/* line 2177, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .project .open_hidden_table {
   right: 0;
 }
-/* line 2181, ../sass/main_project.scss */
+/* line 2180, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .project .add_inside_line {
   visibility: hidden;
 }
-/* line 2185, ../sass/main_project.scss */
+/* line 2184, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .line_element {
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
-/* line 2191, ../sass/main_project.scss */
+/* line 2190, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .switch_btn {
   border-radius: 3px;
   height: 34px;
@@ -2413,15 +2412,15 @@ main.requests_list .sortable li:after {
   padding-right: 10px;
   margin-right: 5px;
 }
-/* line 2200, ../sass/main_project.scss */
+/* line 2199, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .switch_btn.active {
   background: #86c053;
 }
-/* line 2205, ../sass/main_project.scss */
+/* line 2204, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .button_delete {
   text-align: center;
 }
-/* line 2207, ../sass/main_project.scss */
+/* line 2206, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .button_delete button {
   border-radius: 3px;
   width: 30px;
@@ -2431,27 +2430,27 @@ main.requests_list .sortable li:after {
   padding: 0;
   margin: 0 auto;
 }
-/* line 2215, ../sass/main_project.scss */
+/* line 2214, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .button_delete button img {
   width: 100%;
 }
-/* line 2220, ../sass/main_project.scss */
+/* line 2219, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .group_block, .create_sitemaps .table .table_line .article {
   font-weight: bold;
   word-break: break-word;
   max-width: 200px;
   font-size: 13px;
 }
-/* line 2225, ../sass/main_project.scss */
+/* line 2224, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .group_block span, .create_sitemaps .table .table_line .article span {
   font-weight: normal;
   font-size: 14px;
 }
-/* line 2230, ../sass/main_project.scss */
+/* line 2229, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .control_button, .create_sitemaps .table .table_line .r_control_button {
   justify-content: space-around;
 }
-/* line 2232, ../sass/main_project.scss */
+/* line 2231, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .control_button a, .create_sitemaps .table .table_line .r_control_button a {
   border-radius: 4px;
   display: block;
@@ -2461,18 +2460,18 @@ main.requests_list .sortable li:after {
   padding: 5px;
   margin: 0 2px;
 }
-/* line 2240, ../sass/main_project.scss */
+/* line 2239, ../sass/main_project.scss */
 .create_sitemaps .table .table_line .control_button a img, .create_sitemaps .table .table_line .r_control_button a img {
   width: 100%;
 }
-/* line 2247, ../sass/main_project.scss */
+/* line 2246, ../sass/main_project.scss */
 .create_sitemaps .button_bottom_block {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 20px 0;
 }
-/* line 2252, ../sass/main_project.scss */
+/* line 2251, ../sass/main_project.scss */
 .create_sitemaps .button_bottom_block button {
   border-radius: 3px;
   height: 34px;
@@ -2485,46 +2484,94 @@ main.requests_list .sortable li:after {
   background: #86c053;
   margin-right: 5px;
 }
-/* line 2263, ../sass/main_project.scss */
+/* line 2262, ../sass/main_project.scss */
 .create_sitemaps .button_bottom_block button.launch {
   background: #ffc36b;
 }
-/* line 2266, ../sass/main_project.scss */
+/* line 2265, ../sass/main_project.scss */
 .create_sitemaps .button_bottom_block button.add_line {
   background-color: #ddd;
 }
-/* line 2269, ../sass/main_project.scss */
+/* line 2268, ../sass/main_project.scss */
 .create_sitemaps .button_bottom_block button.remove {
   background: rgba(236, 31, 31, 0.82);
 }
-/* line 2276, ../sass/main_project.scss */
+/* line 2275, ../sass/main_project.scss */
 .create_sitemaps .filter .filter_block {
   flex-grow: 1;
   height: auto;
   max-width: 360px;
 }
-/* line 2280, ../sass/main_project.scss */
+/* line 2279, ../sass/main_project.scss */
 .create_sitemaps .filter .filter_block label {
   display: block;
   margin-bottom: 5px;
   text-align: left;
 }
-/* line 2285, ../sass/main_project.scss */
+/* line 2284, ../sass/main_project.scss */
 .create_sitemaps .filter .filter_block input {
   width: 100%;
 }
-/* line 2288, ../sass/main_project.scss */
+/* line 2287, ../sass/main_project.scss */
 .create_sitemaps .filter .filter_block .select_user, .create_sitemaps .filter .filter_block .from, .create_sitemaps .filter .filter_block .to {
   height: 32px;
   border-radius: 5px;
   border: 1px solid #aaa;
 }
-/* line 2293, ../sass/main_project.scss */
+/* line 2292, ../sass/main_project.scss */
 .create_sitemaps .filter .filter_block .wrap {
   margin-bottom: 5px;
 }
 
-/* line 2302, ../sass/main_project.scss */
+/* line 2299, ../sass/main_project.scss */
 .panel-title {
   margin: 20px 0;
+}
+
+/* line 2302, ../sass/main_project.scss */
+.edit_project {
+  padding: 30px 0;
+}
+/* line 2304, ../sass/main_project.scss */
+.edit_project .form-group {
+  display: flex;
+  align-items: center;
+}
+/* line 2307, ../sass/main_project.scss */
+.edit_project .form-group > label {
+  width: 130px;
+  text-align: right;
+  margin-right: 20px;
+}
+/* line 2313, ../sass/main_project.scss */
+.edit_project .wrap {
+  flex-grow: 1;
+  display: flex;
+}
+/* line 2318, ../sass/main_project.scss */
+.edit_project .radio input[type="radio"] {
+  margin-left: -15px;
+  top: -3px;
+}
+/* line 2322, ../sass/main_project.scss */
+.edit_project .radio label {
+  margin-bottom: -6px;
+}
+/* line 2326, ../sass/main_project.scss */
+.edit_project .custom_select {
+  width: 100%;
+}
+/* line 2329, ../sass/main_project.scss */
+.edit_project .domen_input {
+  position: relative;
+  margin-right: 20px;
+}
+/* line 2331, ../sass/main_project.scss */
+.edit_project .domen_input:after {
+  content: '/';
+  display: block;
+  position: absolute;
+  top: 8px;
+  font-size: 18px;
+  right: -13px;
 }

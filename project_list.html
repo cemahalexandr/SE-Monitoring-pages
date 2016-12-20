@@ -9,6 +9,8 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <link href="libs/select2/select2.css" rel="stylesheet" />
     <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/src/remodal.css">
+    <link rel="stylesheet" href="libs/src/remodal-default-theme.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
@@ -296,7 +298,7 @@
                       <a class="project_name" href="#">ziperoziperonene.cziperoneom.ua</a>
                   </div>
                   <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
-                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
+                  <a href="#" class="setting" data-remodal-target="modal"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
@@ -445,7 +447,7 @@
                       <a class="project_name" href="#">ziperoziperonene.cziperoneom.ua</a>
                   </div>
                   <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
-                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
+                  <a href="#" class="setting" data-remodal-target="modal"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
@@ -594,7 +596,7 @@
                       <a class="project_name" href="#">ziperoziperonene.cziperoneom.ua</a>
                   </div>
                   <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
-                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
+                  <a href="#" class="setting" data-remodal-target="modal"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
@@ -743,7 +745,7 @@
                       <a class="project_name" href="#">ziperoziperonene.cziperoneom.ua</a>
                   </div>
                   <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
-                  <a href="#" class="setting"><img src="img/setting.svg" alt=""></a>
+                  <a href="#" class="setting" data-remodal-target="modal"><img src="img/setting.svg" alt=""></a>
               </div>
               <div class="status line_element">
                   <label class="switch">
@@ -923,7 +925,7 @@
         <button class="exit">Закрыть</button>
       </div>
     </div>
-      <div class="popup_edit project">
+      <div class="popup_edit project remodal" data-remodal-id="modal">
          <div class="popup_header">
              <h2>Редактирование проекта</h2>
              <button class="close">&times;</button>
@@ -938,15 +940,67 @@
                       </ul>
                   </nav>
                   <div class="content-wrap">
-                      <div class="section" id="section-5">1</div>
+                      <div class="section" id="section-5">
+                          <div class="edit_project">
+                              <div class="form-group">
+
+                                  <label class="control-label">Клиент</label>
+                                  <div class="wrap">
+                                      <div id="user_select">
+                                          Сергей Service-market
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label">Домен</label>
+                                  <div class="wrap">
+                                      <div class="domen_input"><input type="text" value="ziperone.com.ua" class="form-control" readonly="readonly"></div> <input  type="text" value="" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Регион продвижения</label>
+                                  <div class="wrap">
+                                      <input type="text" readonly="readonly" name="country" value="Украина" id="demo-hor-inputpass" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label">Рекламная группа</label>
+                                  <div class="wrap">
+                                      <input type="text"  value="катушка для пылесоса"  class="form-control">
+                                  </div>
+                              </div>
+
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Дата запуска проекта</label>
+                                  <div class="wrap create_date">
+                                      14.09.2016
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Статус активности</label>
+                                  <div class="wrap radio">
+                                      <label class="form-radio form-icon form-text active">
+                                          <input type="radio" checked="checked" value="1" name="run"> Вкл
+                                      </label>
+                                      <label class="form-radio form-icon form-text ">
+                                          <input type="radio" value="0" name="run"> Выкл
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                       <div class="section" id="section-6">2</div>
                       <div class="section" id="section-7">3</div>
                   </div><!-- /content -->
               </div>
           </div>
           <div class="popup_footer">
-              <button class="close">Закрыть</button>
-              <button class="save">Сохранить</button>
+              <button class="close remodal-cancel"  data-remodal-action="cancel">Закрыть</button>
+              <button data-remodal-action="confirm" class="remodal-confirm save">Сохранить</button>
           </div>
       </div>
   </div>
@@ -954,6 +1008,7 @@
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
   <script src="js/jquery.mjs.nestedSortable.js"></script>
   <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="libs/src/remodal.js"></script>
   <script src="js/main.js"></script>
   <script>
       $(document).ready(function(){
