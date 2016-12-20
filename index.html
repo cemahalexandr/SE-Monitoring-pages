@@ -847,7 +847,7 @@
                                           Сергей Service-market
                                           <button class="btn btn-xs btn-info" id="change_user">Сменить</button>
                                       </div>
-                                          <select name="user"  class="js-example-basic-multiple select_user user_wrap" multiple="multiple" style="width: 100%; display: none">
+                                          <select name="user"  class="js-example-basic-single select_client user_wrap" style="width: 100%; display: none">
                                               <option>1</option>
                                               <option>W22222222222222222</option>
                                           </select>
@@ -877,7 +877,7 @@
                               <div class="form-group region">
                                   <label class="control-label">Регион продвижения в Yandex</label>
                                   <div class="wrap">
-                                      <select name="user"  class="js-example-basic-multiple select_region" multiple="multiple" style="width: 100%">
+                                      <select name="user"  class="js-example-basic-single select_region" style="width: 100%">
                                           <option>1</option>
                                           <option>W22222222222222222</option>
                                       </select>
@@ -947,13 +947,13 @@
           width: 'resolve'
       });
 
+      $('.select_client').select2();
+
       $('.select_domen').select2({
           placeholder: "Выберите домен",
           width: 'resolve'
       });
-      $('.select_region').select2({
-          width: 'resolve'
-      });
+      $('.select_region').select2();
 
   </script>
 </body>
