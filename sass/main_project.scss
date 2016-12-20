@@ -2310,6 +2310,16 @@ main.requests_list{
       margin-right:20px;
     }
   }
+  .region{
+    height:0;
+    transition: all .3s;
+    overflow: hidden;
+    margin:0;
+    &.open{
+      height:39px;
+      margin-bottom:20px;
+    }
+  }
   .wrap{
     flex-grow:1;
     display: flex;
@@ -2323,8 +2333,9 @@ main.requests_list{
       margin-bottom: -6px;
     }
   }
-  .custom_select{
-    width:100%;
+  .select2 {
+    display: none;
+    max-width: 420px;
   }
   .domen_input{
     position: relative;

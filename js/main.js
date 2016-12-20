@@ -480,11 +480,11 @@ $(document).ready(function(){
     });
 
     $('#ya_check_position').on('click', function () {
-        $('.region').slideToggle( "slow" );
+        $('.region').toggleClass('open');
     });
     $('#change_user').on('click', function () {
         $('#user_select').hide();
-        $('.user_wrap').show(" slow ");
+        $('.select2').show(" slow ");
     });
 
 });

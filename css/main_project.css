@@ -2544,29 +2544,42 @@ main.requests_list .sortable li:after {
   margin-right: 20px;
 }
 /* line 2313, ../sass/main_project.scss */
+.edit_project .region {
+  height: 0;
+  transition: all .3s;
+  overflow: hidden;
+  margin: 0;
+}
+/* line 2318, ../sass/main_project.scss */
+.edit_project .region.open {
+  height: 39px;
+  margin-bottom: 20px;
+}
+/* line 2323, ../sass/main_project.scss */
 .edit_project .wrap {
   flex-grow: 1;
   display: flex;
 }
-/* line 2318, ../sass/main_project.scss */
+/* line 2328, ../sass/main_project.scss */
 .edit_project .radio input[type="radio"] {
   margin-left: -15px;
   top: -3px;
 }
-/* line 2322, ../sass/main_project.scss */
+/* line 2332, ../sass/main_project.scss */
 .edit_project .radio label {
   margin-bottom: -6px;
 }
-/* line 2326, ../sass/main_project.scss */
-.edit_project .custom_select {
-  width: 100%;
+/* line 2336, ../sass/main_project.scss */
+.edit_project .select2 {
+  display: none;
+  max-width: 420px;
 }
-/* line 2329, ../sass/main_project.scss */
+/* line 2340, ../sass/main_project.scss */
 .edit_project .domen_input {
   position: relative;
   margin-right: 20px;
 }
-/* line 2331, ../sass/main_project.scss */
+/* line 2342, ../sass/main_project.scss */
 .edit_project .domen_input:after {
   content: '/';
   display: block;
