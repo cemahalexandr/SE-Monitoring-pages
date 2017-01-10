@@ -22,11 +22,11 @@
 <body class="query_selection">
   <div class="container">
   <header>
-    <div class="logo"><a href="#"><img class="sitemap_logo" src="img/sitemap_img.svg" alt="Seo"> Карты сайтов</a></div>
+    <div class="logo"><a href="#"><img class="seo_logo" src="img/seo_text_img.svg" alt="Seo"> SEO статьи</a></div>
     <div class="navigation">
       <ul>
         <li><a href="http://advanced.cabinet.smartexpert.net/my">Главная</a></li>
-        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">SEO статьи</a></li>
       </ul>
     </div>
       <div class="statistic_diagram">
@@ -47,14 +47,14 @@
 <main>
     <div class="project_line">
         <div class="selection_project">
-            <label>Управление картами сайта</label>
+            <label>Управление SEO статьями</label>
 
         </div>
         <div class="select_wrap sitemap_select">
             <div class="custom_select styled">
                 <label>Выборка по менеджеру:</label>
-                <select class="js-example-basic-multiple select_manager" style="width: 100%">
-                    <option>2</option>
+                <select name="domain" class="js-example-basic-multiple select_manager" style="width: 100%">
+                    <option>Все пользователи</option>
                     <option>1</option>
                 </select>
             </div>
@@ -88,116 +88,125 @@
         <div class="status_work head_element">
             <span>Статус</span>
         </div>
+        <div class="table_requests head_element">
+            <span>Запросы</span>
+        </div>
+        <div class="group head_element">
+            <span>В работе</span>
+        </div>
+        <div class="articles head_element">
+            <span>Проверено</span>
+        </div>
+        <div class="articles head_element">
+            <span>Размещено</span>
+        </div>
         <div class="manager head_element">
             <span>Менеджер</span>
         </div>
-        <div class="group head_element">
-            <span>Группы</span>
-        </div>
-        <div class="table_requests head_element">
-            <span>запросы</span>
-        </div>
-        <div class="articles head_element">
-            <span>Статьи</span>
-        </div>
-        <div class="analysis head_element">
-            <span>Анализ конкурентов</span>
+        <div class="edits head_element">
+            <span>Редакт.</span>
         </div>
     </div>
     <div class="table_body">
       <ol class="sortable">
           <li><div><div class="disclose"><span></span></div>
               <div class="table_line">
-              <div class="responsive_table popup_edit">
-                  <div class="close_table">&times;</div>
-                  <div class="line r_status_work">
-                      <div class="section_status_work"><span>Статус Работы</span></div>
-                      <div class="result_status_work">
-                          <div class="wrap">
-                              <a href="#" class="change_status">В работе</a>
+                  <div class="responsive_table popup_edit">
+                      <div class="close_table">&times;</div>
+                      <div class="line r_status_work">
+                          <div class="section_status_work"><span>Статус Работы</span></div>
+                          <div class="result_status_work">
+                              <div class="wrap">
+                                  <a href="#" class="change_status">В работе</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="line r_manager ">
+                          <div class="section_manager"> <span>Менеджер</span></div>
+                          <div class="result_manager">
+                              <div class="wrap">
+                                  <input class="manager_input" type="text" value="Сергей Service-market" disabled="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="line r_group">
+                          <div class="section_group"> <span>Группы</span></div>
+                          <div class="result_group">
+                              <div class="wrap">
+                                  155
+                              </div>
+                          </div>
+                      </div>
+                      <div class="line r_table_requests">
+                          <div class="section_table_requests"> <span>Запросы</span></div>
+                          <div class="result_table_requests">
+                              <div class="wrap">
+                                  123
+                              </div>
+                          </div>
+                      </div>
+                      <div class="line r_articles">
+                          <div class="section_articles"> <span>Статьи</span></div>
+                          <div class="result_articles">
+                              <div class="wrap">
+                                  <a href="#">1</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="line r_analysis">
+                          <div class="section_analysis"> <span>Анализ конкурентов</span></div>
+                          <div class="result_analysis">
+                              <div class="wrap">
+                                  <a href="#" class="update"><img src="img/update.svg" alt=""></a>
+                              </div>
                           </div>
                       </div>
                   </div>
-                  <div class="line r_manager ">
-                      <div class="section_manager"> <span>Менеджер</span></div>
-                      <div class="result_manager">
-                          <div class="wrap">
-                              <input class="manager_input" type="text" value="Егор Семёнов" disabled="">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="line r_group">
-                      <div class="section_group"> <span>Группы</span></div>
-                      <div class="result_group">
-                          <div class="wrap">
-                              155
-                          </div>
-                      </div>
-                  </div>
-                  <div class="line r_table_requests">
-                      <div class="section_table_requests"> <span>Запросы</span></div>
-                      <div class="result_table_requests">
-                          <div class="wrap">
-                              123
-                          </div>
-                      </div>
-                  </div>
-                  <div class="line r_articles">
-                      <div class="section_articles"> <span>Статьи</span></div>
-                      <div class="result_articles">
-                          <div class="wrap">
-                              <a href="#">1</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="line r_analysis">
-                      <div class="section_analysis"> <span>Анализ конкурентов</span></div>
-                      <div class="result_analysis">
-                          <div class="wrap">
-                              <a href="#" class="update"><img src="img/update.svg" alt=""></a>
-                          </div>
-                      </div>
-                  </div>
+                  <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                 <span><a class="project_name sitemap_style" href="#">ziperone.com.ua</a></span>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
               </div>
-          <div class="project line_element">
-              <div class="draggable"><img src="img/draggable.svg" alt=""></div>
-              <input class="check" type="checkbox">
-             <span><a class="project_name sitemap_style" href="#">ziperone.com.ua</a></span>
-              <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
-          </div>
-              <div class="status_work line_element">
-              <span>
-                <a href="#" class="change_status">В работе</a>
-              </span>
-
-              </div>
-              <div class="manager line_element">
-              <span>
-              <input class="manager_input" type="text" value="Егор Семёнов" disabled>
-                </span>
-              </div>
-              <div class="group line_element">
-                  <span> 155</span>
-              </div>
-              <div class="table_requests  line_element">
-                  <div class="wrap">
-                      <span>123</span>
-                  </div>
-              </div>
-              <div class="articles line_element">
-                  <div class="wrap">
+                  <div class="status_work line_element">
                   <span>
-                    <a href="#">1</a>
+                    <a href="#" class="change_status">В работе</a>
                   </span>
-                  </div>
-              </div>
-              <div class="analysis line_element">
-                  <div class="wrap">
-                      <a href="#" class="update"><img src="img/update.svg" alt=""></a>
-                  </div>
-              </div>
 
-      </div>
+                  </div>
+                  <div class="table_requests  line_element">
+                      <div class="wrap">
+                          <span>123</span>
+                      </div>
+                  </div>
+                  <div class="group line_element">
+                          <span> 155</span>
+                      </div>
+                  <div class="articles line_element">
+                      <div class="wrap">
+                      <span>
+                        155
+                      </span>
+                      </div>
+                  </div>
+                  <div class="articles line_element">
+                          <div class="wrap">
+                      <span>
+                        155
+                      </span>
+                          </div>
+                      </div>
+                  <div class="manager line_element">
+                  <span>
+                  <input class="manager_input" type="text" value="Сергей Service-market" disabled>
+                    </span>
+                      </div>
+                  <div class="edits line_element">
+                      <div class="wrap">
+                          <a href="#" class="remove"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+              </div>
           </div></li>
           <li><div><div class="disclose"><span></span></div>
               <div class="table_line">
@@ -215,7 +224,7 @@
                           <div class="section_manager"> <span>Менеджер</span></div>
                           <div class="result_manager">
                               <div class="wrap">
-                                  <input class="manager_input" type="text" value="Костя Христорождественский" disabled="">
+                                  <input class="manager_input" type="text" value="Сергей Service-market" disabled="">
                               </div>
                           </div>
                       </div>
@@ -259,37 +268,43 @@
                       <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
                   </div>
                   <div class="status_work line_element">
-              <span>
-                <a href="#" class="change_status">В работе</a>
-              </span>
+                  <span>
+                    <a href="#" class="change_status" style="color: rgb(56, 160, 244);">Утверждено</a>
+                  </span>
 
-                  </div>
-                  <div class="manager line_element">
-              <span>
-              <input class="manager_input" type="text" value="Костя Христорождественский" disabled>
-                </span>
-                  </div>
-                  <div class="group line_element">
-                      <span> 155</span>
                   </div>
                   <div class="table_requests  line_element">
                       <div class="wrap">
                           <span>123</span>
                       </div>
                   </div>
+                  <div class="group line_element">
+                      <span> 155</span>
+                  </div>
                   <div class="articles line_element">
                       <div class="wrap">
-                  <span>
-                    <a href="#">1</a>
-                  </span>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-                  <div class="analysis line_element">
+                  <div class="articles line_element">
                       <div class="wrap">
-                          <a href="#" class="report"><img src="img/report.svg" alt=""></a>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-
+                  <div class="manager line_element">
+                  <span>
+                  <input class="manager_input" type="text" value="Сергей Service-market" disabled>
+                    </span>
+                  </div>
+                  <div class="edits line_element">
+                      <div class="wrap">
+                          <a href="#" class="remove"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
               </div>
           </div></li>
           <li><div><div class="disclose"><span></span></div>
@@ -308,7 +323,7 @@
                           <div class="section_manager"> <span>Менеджер</span></div>
                           <div class="result_manager">
                               <div class="wrap">
-                                  <input class="manager_input" type="text" value="Егор Семёнов" disabled="">
+                                  <input class="manager_input" type="text" value="Сергей Service-market" disabled="">
                               </div>
                           </div>
                       </div>
@@ -352,37 +367,43 @@
                       <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
                   </div>
                   <div class="status_work line_element">
-              <span>
-                <a href="#" class="change_status">В работе</a>
-              </span>
+                  <span>
+                    <a href="#" class="change_status">В работе</a>
+                  </span>
 
-                  </div>
-                  <div class="manager line_element">
-              <span>
-              <input class="manager_input" type="text" value="Егор Семёнов" disabled>
-                </span>
-                  </div>
-                  <div class="group line_element">
-                      <span> 155</span>
                   </div>
                   <div class="table_requests  line_element">
                       <div class="wrap">
                           <span>123</span>
                       </div>
                   </div>
+                  <div class="group line_element">
+                      <span> 155</span>
+                  </div>
                   <div class="articles line_element">
                       <div class="wrap">
-                  <span>
-                    <a href="#">1</a>
-                  </span>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-                  <div class="analysis line_element">
+                  <div class="articles line_element">
                       <div class="wrap">
-                          <a href="#" class="update"><img src="img/update.svg" alt=""></a>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-
+                  <div class="manager line_element">
+                  <span>
+                  <input class="manager_input" type="text" value="Сергей Service-market" disabled>
+                    </span>
+                  </div>
+                  <div class="edits line_element">
+                      <div class="wrap">
+                          <a href="#" class="remove"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
               </div>
           </div></li>
           <li><div><div class="disclose"><span></span></div>
@@ -401,7 +422,7 @@
                           <div class="section_manager"> <span>Менеджер</span></div>
                           <div class="result_manager">
                               <div class="wrap">
-                                  <input class="manager_input" type="text" value="Егор Семёнов" disabled="">
+                                  <input class="manager_input" type="text" value="Сергей Service-market" disabled="">
                               </div>
                           </div>
                       </div>
@@ -445,37 +466,43 @@
                       <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
                   </div>
                   <div class="status_work line_element">
-              <span>
-                <a href="#" class="change_status">В работе</a>
-              </span>
+                  <span>
+                    <a href="#" class="change_status">В работе</a>
+                  </span>
 
-                  </div>
-                  <div class="manager line_element">
-              <span>
-              <input class="manager_input" type="text" value="Егор Семёнов" disabled>
-                </span>
-                  </div>
-                  <div class="group line_element">
-                      <span> 155</span>
                   </div>
                   <div class="table_requests  line_element">
                       <div class="wrap">
                           <span>123</span>
                       </div>
                   </div>
+                  <div class="group line_element">
+                      <span> 155</span>
+                  </div>
                   <div class="articles line_element">
                       <div class="wrap">
-                  <span>
-                    <a href="#">1</a>
-                  </span>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-                  <div class="analysis line_element">
+                  <div class="articles line_element">
                       <div class="wrap">
-                          <a href="#" class="update"><img src="img/update.svg" alt=""></a>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-
+                  <div class="manager line_element">
+                  <span>
+                  <input class="manager_input" type="text" value="Сергей Service-market" disabled>
+                    </span>
+                  </div>
+                  <div class="edits line_element">
+                      <div class="wrap">
+                          <a href="#" class="remove"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
               </div>
           </div></li>
           <li><div><div class="disclose"><span></span></div>
@@ -494,7 +521,7 @@
                           <div class="section_manager"> <span>Менеджер</span></div>
                           <div class="result_manager">
                               <div class="wrap">
-                                  <input class="manager_input" type="text" value="Егор Семёнов" disabled="">
+                                  <input class="manager_input" type="text" value="Сергей Service-market" disabled="">
                               </div>
                           </div>
                       </div>
@@ -538,40 +565,45 @@
                       <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
                   </div>
                   <div class="status_work line_element">
-              <span>
-                <a href="#" class="change_status">В работе</a>
-              </span>
+                  <span>
+                    <a href="#" class="change_status">В работе</a>
+                  </span>
 
-                  </div>
-                  <div class="manager line_element">
-              <span>
-              <input class="manager_input" type="text" value="Егор Семёнов" disabled>
-                </span>
-                  </div>
-                  <div class="group line_element">
-                      <span> 155</span>
                   </div>
                   <div class="table_requests  line_element">
                       <div class="wrap">
                           <span>123</span>
                       </div>
                   </div>
+                  <div class="group line_element">
+                      <span> 155</span>
+                  </div>
                   <div class="articles line_element">
                       <div class="wrap">
-                  <span>
-                    <a href="#">1</a>
-                  </span>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-                  <div class="analysis line_element">
+                  <div class="articles line_element">
                       <div class="wrap">
-                          <a href="#" class="update"><img src="img/update.svg" alt=""></a>
+                      <span>
+                        155
+                      </span>
                       </div>
                   </div>
-
+                  <div class="manager line_element">
+                  <span>
+                  <input class="manager_input" type="text" value="Сергей Service-market" disabled>
+                    </span>
+                  </div>
+                  <div class="edits line_element">
+                      <div class="wrap">
+                          <a href="#" class="remove"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
               </div>
           </div></li>
-
       </ol>
     </div>
       <div class="table_footer">
@@ -583,25 +615,33 @@
 
 
               </div>
-              <div class="manager line_element">
-
-              </div>
-              <div class="group line_element">
-                  <span> 1555</span>
-              </div>
               <div class="table_requests  line_element">
                   <div class="wrap">
                       <span>1236</span>
                   </div>
               </div>
+              <div class="group line_element">
+                  <span> 1555</span>
+              </div>
+
               <div class="articles line_element">
                   <div class="wrap">
                   <span>
-                    <a href="#">666</a>
+                    1254
                   </span>
                   </div>
               </div>
-              <div class="analysis line_element">
+              <div class="articles line_element">
+                  <div class="wrap">
+                  <span>
+                    1234
+                  </span>
+                  </div>
+              </div>
+              <div class="manager line_element">
+
+              </div>
+              <div class="edits line_element">
               </div>
 
           </div>
@@ -807,22 +847,22 @@
   <script>
       $(document).ready(function(){
 
-//          $('.sortable').nestedSortable({
-//              forcePlaceholderSize: true,
-//              handle: 'div',
-//              helper:	'clone',
-//              items: 'li',
-//              opacity: .6,
-//              placeholder: 'placeholder',
-//              revert: 250,
-//              tabSize: 25,
-//              tolerance: 'pointer',
-//              toleranceElement: '> div',
-//              maxLevels: 1,
-//              isTree: false,
-//              expandOnHover: 700,
-//              startCollapsed: false
-//          });
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 0,
+              isTree: false,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
           setTimeout(function(){
 
               var table_line = $('.table_line');
@@ -849,7 +889,7 @@
       });
       $('.select_manager').select2({
           placeholder: "Все пользователя",
-          width: 'resolve',
+          width: 'resolve'
       });
       $('.select_domain').select2({
           width: 'resolve',

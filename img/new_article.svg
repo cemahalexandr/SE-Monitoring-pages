@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#3070A8;}
+	.st2{fill:#3070A8;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g>
+	<rect x="-16.5" y="-16" class="st0" width="83.1" height="82.1"/>
+	<g>
+		<path class="st1" d="M48.4,49.7H1.7c-0.9,0-1.6-0.7-1.6-1.6V2c0-0.9,0.7-1.6,1.6-1.6h46.7C49.3,0.4,50,1.1,50,2v46.1
+			C50,49,49.3,49.7,48.4,49.7z"/>
+		<path class="st2" d="M39.6,44H13.3V11.2c1.6-1.6,2.4-2.4,4-4h22.3V44z"/>
+		<polyline class="st2" points="21.6,7.2 21.6,7.2 21.6,15.4 13.3,15.4 13.3,15.4 		"/>
+		<g>
+			<path class="st1" d="M12.6,42c-0.3,0-0.5-0.2-0.5-0.5v-5.7H6.4c-0.3,0-0.5-0.2-0.5-0.5v-4.1c0-0.3,0.2-0.5,0.5-0.5h5.7v-5.7
+				c0-0.3,0.2-0.5,0.5-0.5h4.2c0.3,0,0.5,0.2,0.5,0.5v5.7H23c0.3,0,0.5,0.2,0.5,0.5v4.1c0,0.3-0.2,0.5-0.5,0.5h-5.7v5.7
+				c0,0.3-0.2,0.5-0.5,0.5H12.6z"/>
+			<path class="st3" d="M16.8,25.1v6.2H23v4.1h-6.2v6.2h-4.2v-6.2H6.4v-4.1h6.2v-6.2H16.8 M16.8,24.1h-4.2c-0.6,0-1,0.4-1,1v5.2H6.4
+				c-0.6,0-1,0.4-1,1v4.1c0,0.6,0.4,1,1,1h5.2v5.2c0,0.6,0.4,1,1,1h4.2c0.6,0,1-0.4,1-1v-5.2H23c0.6,0,1-0.4,1-1v-4.1
+				c0-0.6-0.4-1-1-1h-5.2v-5.2C17.8,24.5,17.3,24.1,16.8,24.1L16.8,24.1z"/>
+		</g>
+	</g>
+</g>
+</svg>

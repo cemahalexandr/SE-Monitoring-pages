@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Мониторинг проекта ziperone.com.ua</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/src/remodal.css">
+    <link rel="stylesheet" href="libs/src/remodal-default-theme.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main_project.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
+    <script src="js/cbpFWTabs.js"></script>
+</head>
+<body class="query_selection">
+  <div class="container">
+  <header>
+    <div class="logo"><a href="#"><img src="img/query_selection.svg" alt="Seo"> SEO статьи</a></div>
+    <div class="navigation">
+      <ul>
+        <li><a href="http://advanced.cabinet.smartexpert.net/my">Главная</a></li>
+        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">SEO статьи</a></li>
+      </ul>
+    </div>
+      <div class="statistic_diagram">
+          <span class="chart top5" data-percent="86">
+		    <span class="percent"></span>
+              <span class="title">ТОП 5</span>
+	      </span>
+          <span class="chart top10" data-percent="10">
+		    <span class="percent"></span>
+               <span class="title">ТОП 10</span>
+	      </span>
+          <span class="chart top100" data-percent="50">
+		    <span class="percent"></span>
+              <span class="title">ТОП 100</span>
+	      </span>
+      </div>
+  </header>
+<main>
+    <div class="project_line">
+        <div class="selection_project">
+            <label>Проект:</label>
+            <div class="custom_select">
+
+                <select name="domain" class="js-example-basic-multiple select_project" style="width: 100%">
+                    <option>ziperone.com.ua</option>
+                    <option>W22222222222222222</option>
+                </select>
+            </div>
+            <div class="project_id">- ID проекта: <span>1385</span></div>
+        </div>
+            <div class="custom_select styled">
+                <label>Отобразить:</label>
+                <select name="domain" class="js-example-basic-multiple select_block" style="width: 100%">
+                    <option>SEO Статьи</option>
+                    <option>1</option>
+                </select>
+            </div>
+
+    </div>
+    <div class="setting_project_line">
+
+        <div class="custom_select user styled">
+            <label>Менеджер</label>
+            <select name="domain" class="js-example-basic-multiple select_user" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        <div class="custom_select user styled">
+            <label>Исполнитель:</label>
+            <select name="domain" class="js-example-basic-multiple select_user1" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+    </div>
+    <div class="button_block">
+        <div class="button_wrap">
+            <button>Развернуть все</button>
+            <button class="turn_all">Свернуть все</button>
+            <button class="remove_btn"><img src="img/delete_btn.svg" alt="">Удалить выделенные</button>
+        </div>
+
+    </div>
+  <div class="table_wrap">
+  <aside class="table">
+    <div class="table_header">
+      <div class="project head_element">
+          <span>
+         <input type="checkbox" class="check_all"> <label>Выделить все</label>
+        </span>
+          <div class="border_line"></div>
+        <span>
+          Группы <a class="filter_arrow" href="#"><img src="img/filter_arrow.svg" alt=""></a>
+        </span>
+      </div>
+      <div class="query head_element">
+            <span>Запросы</span>
+        </div>
+      <div class="article_head head_element">
+        <span>Статья</span>
+      </div>
+      <div class="change head_element">
+        <span>Изминение</span>
+      </div>
+      <div class="link head_element">
+            <span>Ссылка</span>
+        </div>
+      <div class="performer head_element">
+        <span>Исполнитель</span>
+      </div>
+      <div class="seo_text head_element">
+            <span>SEO текст</span>
+        </div>
+      <div class="edits head_element">
+        <span>Ред.</span>
+      </div>
+    </div>
+    <div class="table_body">
+      <ol class="sortable">
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+          <div class="responsive_table popup_edit">
+              <div class="close_table">&times;</div>
+              <div class="line r_article_head">
+                  <div class="section_name_article_head"> <span>Статья</span></div>
+                  <div class="result_article_head"><div class="wrap">
+                      <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+                  </div></div>
+              </div>
+              <div class="line r_performer">
+                  <div class="section_name_performer"> <span>Исполнитель</span></div>
+                  <div class="result_performer">
+                      <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+                  </div>
+              </div>
+              <div class="line r_edits">
+                  <div class="section_name_edits "> <span>Редакт.</span></div>
+                  <div class="result_edits">
+                      <a href="#"><img src="img/delete.svg" alt=""></a>                  </div>
+              </div>
+              <div class="line r_query">
+                  <div class="section_name_query"> <span>Подбор</span></div>
+                  <div class="result_query">
+                      <a class="query_item" href="#">16/85</a>
+                  </div>
+              </div>
+              <div class="line r_change">
+                  <div class="section_name_change"> <span>Подбор</span></div>
+                  <div class="result_change">
+                      <span>02.11.16</span>
+                  </div>
+              </div>
+              <div class="line r_link">
+                  <div class="section_name_change"> <span>Ссылка</span></div>
+                  <div class="result_change">
+                      <a href="#" class="link_btn">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="project line_element">
+              <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+              <input class="check" type="checkbox">
+              <div class="project_name_wrap">
+                  <span class="project_name">1. Главная</span>
+              </div>
+              <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+          </div>
+          <div class="query line_element">
+                  <a class="query_item" href="#">16/85</a>
+              </div>
+          <div class="article_head line_element">
+                  <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+              </div>
+          <div class="change line_element">
+                  <span>02.11.16</span>
+              </div>
+          <div class="link line_element">
+              <a href="#" class="link_btn">
+                  <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+              </a>
+              </div>
+          <div class="performer line_element">
+                  <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+              </div>
+          <div class="seo_text line_element">
+              <a href="#"><img src="img/new_article.svg" alt=""></a>
+              <a href="#"><img src="img/message.svg" alt=""></a>
+              </div>
+          <div class="edits line_element">
+                <a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+      </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_article_head">
+                      <div class="section_name_article_head"> <span>Статья</span></div>
+                      <div class="result_article_head"><div class="wrap">
+                          <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+                      </div></div>
+                  </div>
+                  <div class="line r_performer">
+                      <div class="section_name_performer"> <span>Исполнитель</span></div>
+                      <div class="result_performer">
+                          <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+                      </div>
+                  </div>
+                  <div class="line r_edits">
+                      <div class="section_name_edits "> <span>Редакт.</span></div>
+                      <div class="result_edits">
+                          <a href="#"><img src="img/delete.svg" alt=""></a>                  </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">16/85</a>
+                      </div>
+                  </div>
+                  <div class="line r_change">
+                      <div class="section_name_change"> <span>Подбор</span></div>
+                      <div class="result_change">
+                          <span>02.11.16</span>
+                      </div>
+                  </div>
+                  <div class="line r_link">
+                      <div class="section_name_change"> <span>Ссылка</span></div>
+                      <div class="result_change">
+                          <a href="#" class="link_btn">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name">1. Главная</span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">16/85</a>
+              </div>
+              <div class="article_head line_element">
+                  <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+              </div>
+              <div class="change line_element">
+                  <span>02.11.16</span>
+              </div>
+              <div class="link line_element">
+                  <a href="#" class="link_btn">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="performer line_element">
+                  <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+              </div>
+              <div class="seo_text line_element">
+                  <a href="#"><img src="img/article.svg" alt=""></a>
+                  <a href="#"><img src="img/message_actv.svg" alt=""></a>
+              </div>
+              <div class="edits line_element">
+                  <a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_article_head">
+                      <div class="section_name_article_head"> <span>Статья</span></div>
+                      <div class="result_article_head"><div class="wrap">
+                          <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+                      </div></div>
+                  </div>
+                  <div class="line r_performer">
+                      <div class="section_name_performer"> <span>Исполнитель</span></div>
+                      <div class="result_performer">
+                          <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+                      </div>
+                  </div>
+                  <div class="line r_edits">
+                      <div class="section_name_edits "> <span>Редакт.</span></div>
+                      <div class="result_edits">
+                          <a href="#"><img src="img/delete.svg" alt=""></a>                  </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">16/85</a>
+                      </div>
+                  </div>
+                  <div class="line r_change">
+                      <div class="section_name_change"> <span>Подбор</span></div>
+                      <div class="result_change">
+                          <span>02.11.16</span>
+                      </div>
+                  </div>
+                  <div class="line r_link">
+                      <div class="section_name_change"> <span>Ссылка</span></div>
+                      <div class="result_change">
+                          <a href="#" class="link_btn">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name">1. Главная</span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">16/85</a>
+              </div>
+              <div class="article_head line_element">
+                  <span>Однажды я поехал выбирать новую шапку и все ш... </span>
+              </div>
+              <div class="change line_element">
+                  <span>02.11.16</span>
+              </div>
+              <div class="link line_element">
+                  <a href="#" class="link_btn">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"></path>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"></path>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"></path>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"></path>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="performer line_element">
+                  <span><input class="manager_input" type="text" value="Сергей  Христорождественский" disabled=""></span>
+              </div>
+              <div class="seo_text line_element">
+                  <a href="#"><img src="img/article_yellow.svg" alt=""></a>
+                  <a href="#"><img src="img/message.svg" alt=""></a>
+              </div>
+              <div class="edits line_element">
+                  <a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+          </div></div></li>
+
+      </ol>
+    </div>
+
+
+  </aside>
+      <div class="button_bottom_block">
+          <div class="btn_wrap">
+              <button class="add_line"><img src="img/plus_btn.svg" alt="">Добавить строку</button>
+              <button class="save_btn"><img src="img/check_icon.svg" alt="">Сохранить изменения</button>
+              <button class="launch"><img src="img/update_white.svg" alt="">Запустить просчет</button>
+          </div>
+
+          <button class="remove"><img src="img/delete_btn.svg" alt="">Удалить карту</button>
+      </div>
+    </div>
+</main>
+    <div class="popup_edit rrs">
+      <div class="tooltip_header">
+        <h3>РРС</h3>
+        <button class="close">&times;</button>
+      </div>
+
+      <div class="tooltip_body">
+        <form>
+          <ul>
+            <li><label class="g_adwors" for="g_adwors"><input class="check_rrs" id="g_adwors" type="checkbox"><img src="img/ga_icon.svg" alt="">Google Adwords</label></li>
+            <li><label class="y_direct" for="y_direct"><input class="check_rrs" id="y_direct" type="checkbox"><img src="img/yandex_dir.svg" alt="">Яндекс директ</label></li>
+            <li><label class="facebook" for="facebook"><input class="check_rrs" id="facebook" type="checkbox"><img src="img/fb_icon.svg" alt="">Facebook</label></li>
+            <li><label class="instagramm" for="instagramm"><input class="check_rrs" id="instagramm" type="checkbox"><img src="img/instagram.svg" alt="">Instagramm</label></li>
+            <li><label class="youtube" for="youtube"><input class="check_rrs" id="youtube" type="checkbox"><img src="img/yt_icon.svg" alt="">Youtube</label></li>
+          </ul>
+        </form>
+      </div>
+      <div class="tooltip_footer">
+        <button class="check_all">Выделить все</button>
+        <button class="submit_rrs">Принять</button>
+      </div>
+    </div>
+      <div class="modal_overlay"></div>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+      <div class="popup_edit external_promotion">
+      <div class="tooltip_header">
+        <h3>Внешнее продвижение</h3>
+        <button class="close">&times;</button>
+      </div>
+      <div class="tooltip_body">
+        <p>Ремонт духовых шкафов candy киев</p>
+        <p class="link"><span>35</span> ссылок</p>
+        <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+        <ol class="link_list">
+          <li>
+            <div class="number"><span>1</span></div>
+            <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+            <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                <img src="img/delete.svg" alt=""></button></div>
+          </li>
+        </ol>
+      </div>
+      <div class="tooltip_footer">
+        <button class="exit">Закрыть</button>
+      </div>
+    </div>
+      <div class="popup_edit project remodal" data-remodal-id="modal">
+         <div class="popup_header">
+             <h2>Редактирование проекта</h2>
+             <button class="close">&times;</button>
+         </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">
+                          <div class="edit_project">
+                              <div class="form-group">
+
+                                  <label class="control-label">Клиент</label>
+                                  <div class="wrap">
+                                      <div id="user_select">
+                                          Сергей Service-market
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label">Домен</label>
+                                  <div class="wrap">
+                                      <div class="domen_input"><input type="text" value="ziperone.com.ua" class="form-control" readonly="readonly"></div> <input  type="text" value="" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Регион продвижения</label>
+                                  <div class="wrap">
+                                      <input type="text" readonly="readonly" name="country" value="Украина" id="demo-hor-inputpass" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label">Рекламная группа</label>
+                                  <div class="wrap">
+                                      <input type="text"  value="катушка для пылесоса"  class="form-control">
+                                  </div>
+                              </div>
+
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Дата запуска проекта</label>
+                                  <div class="wrap create_date">
+                                      14.09.2016
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Статус активности</label>
+                                  <div class="wrap radio">
+                                      <label class="form-radio form-icon form-text active">
+                                          <input type="radio" checked="checked" value="1" name="run"> Вкл
+                                      </label>
+                                      <label class="form-radio form-icon form-text ">
+                                          <input type="radio" value="0" name="run"> Выкл
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close remodal-cancel"  data-remodal-action="cancel">Закрыть</button>
+              <button data-remodal-action="confirm" class="remodal-confirm save">Сохранить</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/jquery.easypiechart.min.js"></script>
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.mjs.nestedSortable.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="libs/src/remodal.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+      $(document).ready(function(){
+
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 10,
+              isTree: true,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
+          setTimeout(function(){
+
+              var table_line = $('.table_line');
+              $.each(table_line, function () {
+                  $current_table_line = $(this);
+                  $.each($('.head_element'), function (key) {
+                      var project_margin;
+                      var line_element = $current_table_line.find('.line_element').eq(key);
+                      var project_width = $(this).outerWidth();
+
+
+                      if (key == 0) {
+                          project_margin = 50;
+                      } else {
+                          project_margin = 0;
+                      }
+                      line_element.css('width', project_width - project_margin);
+                  });
+
+              });
+              var search_requests = $('.search_requests').outerWidth();
+              $('.search_wrap').css('width', search_requests);
+          },100);
+      });
+      $('.select_user').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve'
+      });
+      $('.select_user1').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve'
+      });
+      $('.select_project').select2({
+          width: 'resolve'
+      });
+      $('.select_block').select2({
+          width: 'resolve'
+      });
+
+  </script>
+</body>
+</html>

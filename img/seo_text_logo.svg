@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EDF0F5;stroke:#2D445D;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#2D445D;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#2D445D;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#E4445D;stroke-width:2;stroke-miterlimit:10;}
+	.st4{fill:#E4445D;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M1.2,37.3V10.6c3.3-3.3,5.1-5.1,8.3-8.3h18.4v35L1.2,37.3z"/>
+		<line class="st1" x1="7" y1="16.4" x2="22.9" y2="16.4"/>
+		<line class="st1" x1="7" y1="23.1" x2="22.9" y2="23.1"/>
+		<line class="st1" x1="7" y1="29.7" x2="14.9" y2="29.7"/>
+		<polygon class="st2" points="9.6,10.6 1.2,10.6 9.6,2.3 		"/>
+	</g>
+	<g>
+		<path class="st0" d="M7.9,42.3V15.6c3.3-3.3,5.1-5.1,8.3-8.3h18.4v35L7.9,42.3z"/>
+		<line class="st1" x1="13.7" y1="21.4" x2="29.5" y2="21.4"/>
+		<line class="st1" x1="13.7" y1="28.1" x2="29.5" y2="28.1"/>
+		<line class="st1" x1="13.7" y1="34.7" x2="21.6" y2="34.7"/>
+		<polygon class="st2" points="16.2,15.6 7.9,15.6 16.2,7.3 		"/>
+	</g>
+	<g>
+		<g>
+			<path class="st3" d="M21.6,34.7c22.1,0,25.1-5.4,25.3-25.4"/>
+			<g>
+				<polygon class="st4" points="50.1,13.4 46.8,9.9 43.4,13.2 43.4,10.4 46.9,7 50.2,10.5 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

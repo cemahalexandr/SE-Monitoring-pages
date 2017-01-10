@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#2D445D;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#E4445D;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#E4445D;}
+	.st3{fill:#2D445D;}
+</style>
+<g>
+	<line class="st0" x1="0" y1="5.4" x2="29.5" y2="5.4"/>
+	<line class="st0" x1="0" y1="14.5" x2="23.3" y2="14.5"/>
+	<line class="st0" x1="0" y1="29" x2="20" y2="29"/>
+	<line class="st1" x1="0" y1="21.7" x2="25.5" y2="21.7"/>
+	<g>
+		<g>
+			<line class="st1" x1="25.5" y1="21.7" x2="41.8" y2="21.7"/>
+			<g>
+				<polygon class="st2" points="37.8,25.1 41.2,21.7 37.8,18.4 40.7,18.4 44.1,21.7 40.7,25.1 				"/>
+			</g>
+		</g>
+	</g>
+	<path class="st3" d="M46.1,12.4c-5.1-5.1-13.3-5.1-18.3,0c-2.4,2.5-3.8,5.7-3.8,9.2c0,2.8,0.9,5.5,2.6,7.8l-2.4,2.4
+		c-0.7,0-1.5,0.2-2.1,0.8l-7.6,7.6c-1.1,1.1-1.1,2.8,0,3.9c0.5,0.5,1.2,0.8,1.9,0.8c0.7,0,1.4-0.3,1.9-0.8l7.6-7.6
+		c0.6-0.6,0.8-1.3,0.8-2.1l2.4-2.4c2.3,1.7,5,2.6,7.8,2.6c3.3,0,6.6-1.3,9.2-3.8C51.2,25.7,51.2,17.5,46.1,12.4z M43.6,28.2
+		c-3.6,3.6-9.6,3.6-13.2,0c-1.8-1.8-2.7-4.1-2.7-6.6s1-4.8,2.7-6.6c1.8-1.8,4.2-2.7,6.6-2.7s4.8,0.9,6.6,2.7
+		C47.2,18.6,47.2,24.6,43.6,28.2z"/>
+</g>
+</svg>

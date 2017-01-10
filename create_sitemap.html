@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Мониторинг проекта ziperone.com.ua</title>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link href="libs/select2/select2.css" rel="stylesheet" />
+    <script src="libs/select2/select2.min.js"></script>
+    <link rel="stylesheet" href="libs/src/remodal.css">
+    <link rel="stylesheet" href="libs/src/remodal-default-theme.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main_project.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--<script src="libs/bootstrap/js/bootstrap.js"></script>-->
+    <script src="js/cbpFWTabs.js"></script>
+</head>
+<body class="query_selection">
+  <div class="container">
+  <header>
+    <div class="logo"><a href="#"><img class="sitemap_logo" src="img/sitemap_img.svg" alt="Seo"> Карты сайтов - создать</a></div>
+    <div class="navigation">
+      <ul>
+        <li><a href="http://advanced.cabinet.smartexpert.net/my">Главная</a></li>
+        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">Создать карту сайта</a></li>
+      </ul>
+    </div>
+      <div class="statistic_diagram">
+          <span class="chart top5" data-percent="86">
+		    <span class="percent"></span>
+              <span class="title">ТОП 5</span>
+	      </span>
+          <span class="chart top10" data-percent="10">
+		    <span class="percent"></span>
+               <span class="title">ТОП 10</span>
+	      </span>
+          <span class="chart top100" data-percent="50">
+		    <span class="percent"></span>
+              <span class="title">ТОП 100</span>
+	      </span>
+      </div>
+  </header>
+<main>
+    <div class="project_line">
+        <div class="selection_project">
+            <label>Проект:</label>
+            <div class="custom_select">
+
+                <input type="text" placeholder="Адресс сайта">
+            </div>
+            <div class="draft"><input type="checkbox"> Черновик (доступен только мне)</div>
+        </div>
+            <div class="custom_select styled">
+                <label>Отобразить:</label>
+                <select name="domain" class="js-example-basic-multiple select_block" style="width: 100%">
+                    <option>Подбор запросов</option>
+                    <option>1</option>
+                </select>
+            </div>
+
+    </div>
+    <div class="setting_project_line">
+        <div class="custom_select country styled">
+            <label>Страна:</label>
+            <select name="domain" class="js-example-basic-multiple select_country" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        <div class="custom_select deep styled">
+            <label>Глубина просчета:</label>
+            <select name="domain" class="js-example-basic-multiple select_deep" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+        <div class="custom_select user styled">
+            <label>Менеджер</label>
+            <select name="domain" class="js-example-basic-multiple select_user" style="width: 100%">
+                <option>1</option>
+                <option>W22222222222222222</option>
+            </select>
+        </div>
+    </div>
+    <div class="button_block">
+        <div class="button_wrap">
+            <button>Развернуть все</button>
+            <button>Свернуть все</button>
+            <button class="start_selection"><img src="img/doc_btn.svg" alt="">Запустить подбор</button>
+            <button class="remove_btn"><img src="img/delete_btn.svg" alt="">Удалить выделенные</button>
+        </div>
+        <div class="button_wrap">
+            <button class="excel"><img src="img/excel_icon.svg" alt=""> Загрузить карту сайта EXEL</button>
+        </div>
+    </div>
+  <div class="table_wrap">
+  <aside class="table">
+    <div class="table_header">
+      <div class="project head_element">
+          <span>
+         <input type="checkbox" class="check_all"> <label>Выделить все</label>
+        </span>
+          <div class="border_line"></div>
+        <span>
+          Разделы <a class="filter_arrow" href="#"><img src="img/filter_arrow.svg" alt=""></a>
+        </span>
+      </div>
+      <div class="link head_element">
+        <span>Ссылка</span>
+      </div>
+      <div class="requests head_element">
+        <span>Запросы</span>
+      </div>
+      <div class="query_switch head_element">
+        <span>Способ подбора</span>
+      </div>
+      <div class="query head_element">
+        <span>Подбор</span>
+      </div>
+      <div class="audit head_element">
+        <span>Анализ конкур.</span>
+      </div>
+      <div class="editing head_element">
+        <span>Редакт.</span>
+      </div>
+    </div>
+    <div class="table_body">
+      <ol class="sortable">
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_requests">
+                      <div class="section_name_requests"> <span>Запросы</span></div>
+                      <div class="result_r_requests"><div class="wrap">
+                          <span>
+                              <a class="edit_input" href="#"><img src="img/edit_input.svg" alt=""></a>
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"></span>
+                      </div></div>
+                  </div>
+                  <div class="line r_query_switch">
+                      <div class="section_name_query_switch"> <span>Способ подбора</span></div>
+                      <div class="result_query_switch">    <a class="switch_btn active" href="#">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                      </a>
+                          <a class="switch_btn" href="#">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                          </a></div>
+                  </div>
+                  <div class="line r_editing">
+                      <div class="section_name_editing "> <span>Редакт.</span></div>
+                      <div class="result_editing">
+                          <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">6 / 8</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name"><input type="text" value="Главная"></span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="link line_element">
+                  <a class="link_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"/>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"/>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"/>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"/>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="requests line_element">
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"> <a class="edit_input" href="#"><img src="img/edit_input.svg"
+                                                                                                                                                      alt=""></a>
+              </div>
+              <div class="query_switch line_element">
+                  <a class="switch_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                  </a>
+                  <a class="switch_btn" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                  </a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">6 / 8</a>
+              </div>
+              <div class="audit line_element">
+                  <span><a class="report"><img src="img/report.svg" alt=""></a></span>
+              </div>
+              <div class="editing line_element">
+                  <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_requests">
+                      <div class="section_name_requests"> <span>Запросы</span></div>
+                      <div class="result_r_requests"><div class="wrap">
+                          <span>
+                              <a class="edit_input" href="#"><img src="img/edit_input.svg" alt=""></a>
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"></span>
+                      </div></div>
+                  </div>
+                  <div class="line r_query_switch">
+                      <div class="section_name_query_switch"> <span>Способ подбора</span></div>
+                      <div class="result_query_switch">    <a class="switch_btn active" href="#">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                      </a>
+                          <a class="switch_btn" href="#">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                          </a></div>
+                  </div>
+                  <div class="line r_editing">
+                      <div class="section_name_editing "> <span>Редакт.</span></div>
+                      <div class="result_editing">
+                          <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">6 / 8</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name"><input type="text" value="Главная"></span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="link line_element">
+                  <a class="link_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"/>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"/>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"/>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"/>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="requests line_element">
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"> <a class="edit_input" href="#"><img src="img/edit_input.svg"
+                                                                                                                                                      alt=""></a>
+              </div>
+              <div class="query_switch line_element">
+                  <a class="switch_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                  </a>
+                  <a class="switch_btn" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                  </a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">6 / 8</a>
+              </div>
+              <div class="audit line_element">
+                  <span><a class="report"><img src="img/report.svg" alt=""></a></span>
+              </div>
+              <div class="editing line_element">
+                  <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_requests">
+                      <div class="section_name_requests"> <span>Запросы</span></div>
+                      <div class="result_r_requests"><div class="wrap">
+                          <span>
+                              <a class="edit_input" href="#"><img src="img/edit_input.svg" alt=""></a>
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"></span>
+                      </div></div>
+                  </div>
+                  <div class="line r_query_switch">
+                      <div class="section_name_query_switch"> <span>Способ подбора</span></div>
+                      <div class="result_query_switch">    <a class="switch_btn active" href="#">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                      </a>
+                          <a class="switch_btn" href="#">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                          </a></div>
+                  </div>
+                  <div class="line r_editing">
+                      <div class="section_name_editing "> <span>Редакт.</span></div>
+                      <div class="result_editing">
+                          <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">6 / 8</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name"><input type="text" value="Главная"></span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="link line_element">
+                  <a class="link_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"/>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"/>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"/>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"/>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="requests line_element">
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"> <a class="edit_input" href="#"><img src="img/edit_input.svg"
+                                                                                                                                                      alt=""></a>
+              </div>
+              <div class="query_switch line_element">
+                  <a class="switch_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                  </a>
+                  <a class="switch_btn" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                  </a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">6 / 8</a>
+              </div>
+              <div class="audit line_element">
+                  <span><a class="report"><img src="img/report.svg" alt=""></a></span>
+              </div>
+              <div class="editing line_element">
+                  <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_requests">
+                      <div class="section_name_requests"> <span>Запросы</span></div>
+                      <div class="result_r_requests"><div class="wrap">
+                          <span>
+                              <a class="edit_input" href="#"><img src="img/edit_input.svg" alt=""></a>
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"></span>
+                      </div></div>
+                  </div>
+                  <div class="line r_query_switch">
+                      <div class="section_name_query_switch"> <span>Способ подбора</span></div>
+                      <div class="result_query_switch">    <a class="switch_btn active" href="#">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                      </a>
+                          <a class="switch_btn" href="#">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                          </a></div>
+                  </div>
+                  <div class="line r_editing">
+                      <div class="section_name_editing "> <span>Редакт.</span></div>
+                      <div class="result_editing">
+                          <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">6 / 8</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name"><input type="text" value="Главная"></span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="link line_element">
+                  <a class="link_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"/>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"/>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"/>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"/>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="requests line_element">
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"> <a class="edit_input" href="#"><img src="img/edit_input.svg"
+                                                                                                                                                      alt=""></a>
+              </div>
+              <div class="query_switch line_element">
+                  <a class="switch_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                  </a>
+                  <a class="switch_btn" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                  </a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">6 / 8</a>
+              </div>
+              <div class="audit line_element">
+                  <span><a class="report"><img src="img/report.svg" alt=""></a></span>
+              </div>
+              <div class="editing line_element">
+                  <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+
+          </div></div></li>
+          <li><div><div class="disclose"><span></span></div><div class="table_line">
+              <div class="responsive_table popup_edit">
+                  <div class="close_table">&times;</div>
+                  <div class="line r_requests">
+                      <div class="section_name_requests"> <span>Запросы</span></div>
+                      <div class="result_r_requests"><div class="wrap">
+                          <span>
+                              <a class="edit_input" href="#"><img src="img/edit_input.svg" alt=""></a>
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"></span>
+                      </div></div>
+                  </div>
+                  <div class="line r_query_switch">
+                      <div class="section_name_query_switch"> <span>Способ подбора</span></div>
+                      <div class="result_query_switch">    <a class="switch_btn active" href="#">
+                          <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                      </a>
+                          <a class="switch_btn" href="#">
+                              <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                          </a></div>
+                  </div>
+                  <div class="line r_editing">
+                      <div class="section_name_editing "> <span>Редакт.</span></div>
+                      <div class="result_editing">
+                          <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+                      </div>
+                  </div>
+                  <div class="line r_query">
+                      <div class="section_name_query"> <span>Подбор</span></div>
+                      <div class="result_query">
+                          <a class="query_item" href="#">6 / 8</a>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="project line_element">
+                  <div class="draggable"><img src="img/draggable.svg" alt=""></div>
+                  <input class="check" type="checkbox">
+                  <div class="project_name_wrap">
+                      <span class="project_name"><input type="text" value="Главная"></span>
+                  </div>
+                  <a class="open_hidden_table" href="#"><img src="img/plus.svg" alt=""></a>
+              </div>
+              <div class="link line_element">
+                  <a class="link_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#4F89C7;}
+                    .st1{fill:#FFFFFF;}
+                </style>
+                <g>
+                    <path class="st0" d="M48,50H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h46c1.1,0,2,0.9,2,2v46C50,49.1,49.1,50,48,50z"/>
+                    <g>
+                        <path class="st1" d="M20,24c-0.6,0.5-1.5,0.5-2-0.1l-6.5-6.5c-0.6-0.6-0.6-1.6,0-2.2l4.1-4.1c0.6-0.6,1.6-0.6,2.2,0l6.5,6.5
+                            c0.6,0.6,0.6,1.4,0.1,2l2.2,2.2c1.7-1.8,1.6-4.6-0.1-6.4L20,9.1c-1.8-1.8-4.7-1.8-6.5,0l-4.1,4.1c-1.8,1.8-1.8,4.7,0,6.5l6.5,6.5
+                            c1.8,1.8,4.6,1.8,6.4,0.1L20,24z"/>
+                        <path class="st1" d="M41.3,30.3l-6.5-6.5c-1.8-1.8-4.6-1.8-6.4-0.1l2.2,2.2c0.6-0.5,1.5-0.5,2,0.1l6.5,6.5c0.6,0.6,0.6,1.6,0,2.2
+                            L35,38.8c-0.6,0.6-1.6,0.6-2.2,0l-6.5-6.5c-0.6-0.6-0.6-1.4-0.1-2l-2.2-2.2c-1.7,1.8-1.6,4.6,0.1,6.4l6.5,6.5
+                            c1.8,1.8,4.7,1.8,6.5,0l4.1-4.1C43.1,35.1,43.1,32.1,41.3,30.3z"/>
+                        <path class="st1" d="M18.7,20.6c-0.6-0.6-0.6-1.6,0-2.2c0.6-0.6,1.6-0.6,2.2,0l11,11c0.6,0.6,0.6,1.6,0,2.2s-1.6,0.6-2.2,0
+                            L18.7,20.6z"/>
+                    </g>
+                </g>
+                </svg>
+                  </a>
+              </div>
+              <div class="requests line_element">
+                  <input type="text" placeholder="Запросы" class="input_value" value="Шапки, Шапки, Шапки,Шапки"> <a class="edit_input" href="#"><img src="img/edit_input.svg"
+                                                                                                                                                      alt=""></a>
+              </div>
+              <div class="query_switch line_element">
+                  <a class="switch_btn active" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4F89C7;}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M47.9,49.9H2.1c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2h45.8c1.1,0,2,0.9,2,2v45.7C49.9,49,49,49.9,47.9,49.9z"
+			/>
+		<g>
+			<rect x="17.6" y="23.6" class="st1" width="15.1" height="14.4"/>
+			<g>
+				<g>
+					<rect x="30.3" y="10.4" class="st1" width="13" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="42.4" cy="11.4" rx="3.6" ry="3.6"/>
+				<g>
+					<rect x="7.6" y="10.3" class="st1" width="12.2" height="2.1"/>
+				</g>
+				<ellipse class="st1" cx="7.6" cy="11.4" rx="3.6" ry="3.6"/>
+				<path class="st1" d="M35.4,20.4H14.6c-0.6,0-1-0.4-1-1v-12c0-2.2,1.8-4,4-4h14.8c2.2,0,4,1.8,4,4v12
+					C36.4,19.9,36,20.4,35.4,20.4z"/>
+				<g>
+					<ellipse class="st0" cx="30.2" cy="11.5" rx="3.6" ry="3.6"/>
+					<ellipse class="st0" cx="19.8" cy="11.5" rx="3.6" ry="3.6"/>
+				</g>
+			</g>
+			<g>
+				<path class="st1" d="M30.2,23.6H16.6c-4.6,0-8.3,3.7-8.3,8.3v0.8h3.9v-1.1c0-2.3,1.9-4.1,4.1-4.1h13.9 M34.4,27.5"/>
+				<path class="st1" d="M23.3,27.5h11.1c2.3,0,4.2,1.9,4.2,4.1v1.1h3.9v-0.8c0-4.6-3.7-8.3-8.3-8.3H29L23.3,27.5z"/>
+				<g>
+					<g>
+						<path class="st1" d="M40.4,38.4L40.4,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C43.3,43,46.3,38.4,40.4,38.4z"/>
+					</g>
+					<rect x="37.4" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+				<g>
+					<g>
+						<path class="st1" d="M10.2,38.4L10.2,38.4c-5.9,0-2.6,4.6-5.9,4.6v0c0-6.3,2.6-7.3,5.9-7.3h0c3.2,0,5.9,1,5.9,7.3v0
+							C13.1,43,16.1,38.4,10.2,38.4z"/>
+					</g>
+					<rect x="7.2" y="33.1" class="st1" width="5.9" height="3.8"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<rect x="-16.5" y="-16.3" class="st2" width="83" height="82.8"/>
+</g>
+</svg>
+                  </a>
+                  <a class="switch_btn" href="#">
+                      <svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#4F89C7;}
+                        .st1{fill:#FFFFFF;}
+                        .st2{fill:none;}
+                    </style>
+                    <g>
+                        <g>
+                            <path class="st0" d="M48,50H2.2c-1.1,0-2-0.9-2-2V2.2c0-1.1,0.9-2,2-2H48c1.1,0,2,0.9,2,2V48C50,49.2,49.1,50,48,50z"/>
+                            <g>
+                                <path class="st1" d="M16.8,29.3c0-1,0-12.5,0-18.2c0-0.3,0-0.6,0-0.9c0.1-1.3,1.1-2.2,2.3-2.1c1.1,0.1,1.9,1,1.9,2.3
+                                    c0,3.5,0,7,0,10.5c0,2.5,2.4,2.8,2.4,0s0-8.6,0-13c0-1.4,0.3-2.5,1.4-3.1c0.3,0,0.6,0,0.9,0c1.2,0.6,1.5,1.6,1.5,3.1
+                                    c-0.1,4.3,0,10.6,0,13.1c0,1.6,2.2,1.5,2.2-1.3s0-7.5,0-11.5c0-1.2,0.7-2.2,1.6-2.3c0.9-0.2,1.9,0.4,2.2,1.4
+                                    c0.1,0.4,0.2,0.9,0.2,1.4c0,4.4,0,11.3,0,13.2s2.3,1.5,2.3-0.1s0-6.1,0-9.2c0-1.3,0.9-2.2,2-2.2c1.1,0,2,0.9,2,2.2
+                                    c0,7.1,0.1,14.3,0,21.4c-0.1,4.8-2.9,8.6-7.1,9.6c0,0-8.4,0-8.7,0c-4-0.4-6.7-1-9.1-4.1c-0.9-1.2-1.7-2.4-2.6-3.6
+                                    c-1.8-2.5-3.6-5.1-5.4-7.7c-1-1.4-1.4-3.8-0.2-4.6c1.3-0.9,3.1-0.5,4.2,0.8c0.5,0.6,0.9,1.2,1.4,1.8c0.6,0.8,2.2,3.1,2.9,3.9
+                                    C16,31.2,16.8,30.3,16.8,29.3z"/>
+                            </g>
+                        </g>
+                        <rect x="-16.4" y="-16.4" class="st2" width="83" height="83.1"/>
+                    </g>
+                    </svg>
+                  </a>
+              </div>
+              <div class="query line_element">
+                  <a class="query_item" href="#">6 / 8</a>
+              </div>
+              <div class="audit line_element">
+                  <span><a class="report"><img src="img/report.svg" alt=""></a></span>
+              </div>
+              <div class="editing line_element">
+                  <a href="#"><img src="img/edit.svg" alt=""></a><a href="#"><img src="img/plus_icon_blue.svg" alt=""></a><a href="#"><img src="img/delete.svg" alt=""></a>
+              </div>
+
+          </div></div></li>
+      </ol>
+    </div>
+
+
+  </aside>
+      <div class="button_bottom_block">
+          <div class="btn_wrap">
+              <button class="add_line"><img src="img/plus_btn.svg" alt="">Добавить строку</button>
+              <button class="save_btn"><img src="img/check_icon.svg" alt="">Сохранить изменения</button>
+              <button class="launch"><img src="img/update_white.svg" alt="">Запустить просчет</button>
+          </div>
+
+          <button class="remove"><img src="img/delete_btn.svg" alt="">Удалить карту</button>
+      </div>
+    </div>
+</main>
+    <div class="popup_edit rrs">
+      <div class="tooltip_header">
+        <h3>РРС</h3>
+        <button class="close">&times;</button>
+      </div>
+
+      <div class="tooltip_body">
+        <form>
+          <ul>
+            <li><label class="g_adwors" for="g_adwors"><input class="check_rrs" id="g_adwors" type="checkbox"><img src="img/ga_icon.svg" alt="">Google Adwords</label></li>
+            <li><label class="y_direct" for="y_direct"><input class="check_rrs" id="y_direct" type="checkbox"><img src="img/yandex_dir.svg" alt="">Яндекс директ</label></li>
+            <li><label class="facebook" for="facebook"><input class="check_rrs" id="facebook" type="checkbox"><img src="img/fb_icon.svg" alt="">Facebook</label></li>
+            <li><label class="instagramm" for="instagramm"><input class="check_rrs" id="instagramm" type="checkbox"><img src="img/instagram.svg" alt="">Instagramm</label></li>
+            <li><label class="youtube" for="youtube"><input class="check_rrs" id="youtube" type="checkbox"><img src="img/yt_icon.svg" alt="">Youtube</label></li>
+          </ul>
+        </form>
+      </div>
+      <div class="tooltip_footer">
+        <button class="check_all">Выделить все</button>
+        <button class="submit_rrs">Принять</button>
+      </div>
+    </div>
+      <div class="popup_edit input_edit">
+          <div class="tooltip_header">
+              <h3>Запросы</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <p>Группа: Шерстяные шапки</p>
+              <form>
+                  <textarea class="input_text"></textarea>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="cancel">Отмена</button>
+              <button class="submit_input_edit">Принять</button>
+          </div>
+
+      </div>
+      <div class="modal_overlay"></div>
+      <div class="audit_tooltip">
+          <ul>
+              <li class="report_link"><a href="#"><img src="img/link.svg" alt="">Отчет по ссылке</a></li>
+              <li class="report_pdf"><a href="#"><img src="img/pdf_red.svg" alt="">Отчет в PDF</a></li>
+              <li class="kp_link"><a href="#"><img src="img/link.svg" alt="">КП по ссылке</a></li>
+              <li class="kp_pdf"><a href="#"><img src="img/pdf.svg" alt="">КП в PDF </a></li>
+              <li class="update"><a href="#"><img src="img/update.svg" alt="">Обновить</a></li>
+          </ul>
+      </div>
+      <div class="popup_edit plan_work">
+          <div class="tooltip_header">
+              <h3>План работ</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <form>
+                  <ul>
+                      <li><label class="requests" for="requests"><input class="check_input" id="requests" type="checkbox">
+                          <img src="img/requests_modal.svg" alt="">Добавить запросы</label>
+                      </li>
+                      <li><label class="relink" for="relink"><input class="check_input" id="relink" type="checkbox">
+                          <img src="img/relink_modal.svg" alt="">Сделать перелиновку</label></li>
+                      <li><label class="key" for="key"><input class="check_input" id="key" type="checkbox">
+                          <img src="img/key_modal.svg" alt="">Разместить ключ</label></li>
+                      <li><label class="make_audit" for="make_audit"><input class="check_input" id="make_audit" type="checkbox">
+                          <img src="img/make_audit_modal.svg" alt="">Сделать аудит </label></li>
+                  </ul>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="check_all">Выделить все</button>
+              <button class="submit">Принять</button>
+          </div>
+
+      </div>
+      <div class="popup_edit external_promotion">
+      <div class="tooltip_header">
+        <h3>Внешнее продвижение</h3>
+        <button class="close">&times;</button>
+      </div>
+      <div class="tooltip_body">
+        <p>Ремонт духовых шкафов candy киев</p>
+        <p class="link"><span>35</span> ссылок</p>
+        <form><input type="text" class="link_address"><button class="add_link">Добавить ссылку</button></form>
+        <ol class="link_list">
+          <li>
+            <div class="number"><span>1</span></div>
+            <div class="link"><a class="e_link" href="#">www.od.service-market.com.ua</a></div>
+            <div class="date"><span>17.11.2016</span> <button class="edit_link"><img src="img/edit.svg" alt=""></button> <button class="delete">
+                <img src="img/delete.svg" alt=""></button></div>
+          </li>
+        </ol>
+      </div>
+      <div class="tooltip_footer">
+        <button class="exit">Закрыть</button>
+      </div>
+    </div>
+      <div class="popup_edit project remodal" data-remodal-id="modal">
+         <div class="popup_header">
+             <h2>Редактирование проекта</h2>
+             <button class="close">&times;</button>
+         </div>
+          <div class="popup_body">
+              <div class="tabs">
+                  <nav>
+                      <ul>
+                          <li class="section"><a href="#section-1">Основное</a></li>
+                          <li class="section"><a href="#section-2">Оплата</a></li>
+                          <li class="section"><a href="#section-3">Маркетинг</a></li>
+                      </ul>
+                  </nav>
+                  <div class="content-wrap">
+                      <div class="section" id="section-5">
+                          <div class="edit_project">
+                              <div class="form-group">
+
+                                  <label class="control-label">Клиент</label>
+                                  <div class="wrap">
+                                      <div id="user_select">
+                                          Сергей Service-market
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label">Домен</label>
+                                  <div class="wrap">
+                                      <div class="domen_input"><input type="text" value="ziperone.com.ua" class="form-control" readonly="readonly"></div> <input  type="text" value="" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Регион продвижения</label>
+                                  <div class="wrap">
+                                      <input type="text" readonly="readonly" name="country" value="Украина" id="demo-hor-inputpass" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label">Рекламная группа</label>
+                                  <div class="wrap">
+                                      <input type="text"  value="катушка для пылесоса"  class="form-control">
+                                  </div>
+                              </div>
+
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Дата запуска проекта</label>
+                                  <div class="wrap create_date">
+                                      14.09.2016
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label class="control-label" for="demo-hor-inputpass">Статус активности</label>
+                                  <div class="wrap radio">
+                                      <label class="form-radio form-icon form-text active">
+                                          <input type="radio" checked="checked" value="1" name="run"> Вкл
+                                      </label>
+                                      <label class="form-radio form-icon form-text ">
+                                          <input type="radio" value="0" name="run"> Выкл
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="section" id="section-6">2</div>
+                      <div class="section" id="section-7">3</div>
+                  </div><!-- /content -->
+              </div>
+          </div>
+          <div class="popup_footer">
+              <button class="close remodal-cancel"  data-remodal-action="cancel">Закрыть</button>
+              <button data-remodal-action="confirm" class="remodal-confirm save">Сохранить</button>
+          </div>
+      </div>
+  </div>
+  <script src="js/jquery.easypiechart.min.js"></script>
+  <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="js/jquery.mjs.nestedSortable.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="libs/src/remodal.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+      $(document).ready(function(){
+
+          $('.sortable').nestedSortable({
+              forcePlaceholderSize: true,
+              handle: 'div',
+              helper:	'clone',
+              items: 'li',
+              opacity: .6,
+              placeholder: 'placeholder',
+              revert: 250,
+              tabSize: 25,
+              tolerance: 'pointer',
+              toleranceElement: '> div',
+              maxLevels: 10,
+              isTree: true,
+              expandOnHover: 700,
+              startCollapsed: true
+          });
+          setTimeout(function(){
+
+              var table_line = $('.table_line');
+              $.each(table_line, function () {
+                  $current_table_line = $(this);
+                  $.each($('.head_element'), function (key) {
+                      var project_margin;
+                      var line_element = $current_table_line.find('.line_element').eq(key);
+                      var project_width = $(this).outerWidth();
+
+
+                      if (key == 0) {
+                          project_margin = 50;
+                      } else {
+                          project_margin = 0;
+                      }
+                      line_element.css('width', project_width - project_margin);
+                  });
+
+              });
+              var search_requests = $('.search_requests').outerWidth();
+              $('.search_wrap').css('width', search_requests);
+          },100);
+      });
+      $('.select_user').select2({
+          placeholder: "Выберите пользователя",
+          width: 'resolve'
+      });
+      $('.select_project').select2({
+          width: 'resolve'
+      });
+      $('.select_block').select2({
+          width: 'resolve'
+      });
+      $('.select_deep').select2({
+          width: 'resolve'
+      });
+      $('.select_country').select2({
+          width: 'resolve'
+      });
+
+  </script>
+</body>
+</html>
