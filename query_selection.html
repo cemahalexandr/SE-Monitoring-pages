@@ -92,10 +92,10 @@
     </div>
     <div class="button_block">
         <div class="button_wrap">
-            <button>Развернуть все</button>
-            <button>Свернуть все</button>
-            <button class="start_selection"><img src="img/doc_btn.svg" alt="">Запустить подбор</button>
-            <button class="remove_btn"><img src="img/delete_btn.svg" alt="">Удалить выделенные</button>
+            <button class="turn_btn">Свернуть все</button>
+            <button class="turn_btn line">Развернуть все</button>
+            <button class="start_selection"><img src="img/doc_btn2.svg" alt="">Запустить подбор</button>
+            <button class="remove_btn"><img src="img/del_btn.svg" alt="">Удалить выделенные</button>
         </div>
         <div class="button_wrap">
             <button class="excel"><img src="img/excel_icon.svg" alt=""> Выстроить карту из Excel</button>
@@ -1217,12 +1217,12 @@
   </aside>
       <div class="button_bottom_block">
           <div class="btn_wrap">
-              <button class="add_line"><img src="img/plus_btn.svg" alt="">Добавить строку</button>
-              <button class="save_btn"><img src="img/check_icon.svg" alt="">Сохранить изменения</button>
+              <button class="add_line line"><img src="img/plus_btn_new.svg" alt="">Добавить строку</button>
+              <button class="save_btn"><img src="img/check_btn_new.svg" alt="">Сохранить изменения</button>
               <button class="launch"><img src="img/update_white.svg" alt="">Запустить просчет</button>
           </div>
 
-          <button class="remove"><img src="img/delete_btn.svg" alt="">Удалить карту</button>
+          <button class="remove"><img src="img/del_btn.svg" alt="">Удалить карту</button>
       </div>
     </div>
 </main>
@@ -1403,6 +1403,24 @@
               <button data-remodal-action="confirm" class="remodal-confirm save">Сохранить</button>
           </div>
       </div>
+      <div class="popup_edit link_edit">
+          <div class="tooltip_header">
+              <h3>Ссылки</h3>
+              <button class="close">&times;</button>
+          </div>
+
+          <div class="tooltip_body">
+              <p>....</p>
+              <form>
+                  <textarea class="input_text"></textarea>
+              </form>
+          </div>
+          <div class="tooltip_footer">
+              <button class="cancel">Отмена</button>
+              <button class="submit_input_edit">Принять</button>
+          </div>
+
+      </div>
   </div>
   <script src="js/jquery.easypiechart.min.js"></script>
   <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
@@ -1427,8 +1445,13 @@
               maxLevels: 10,
               isTree: true,
               expandOnHover: 700,
-              startCollapsed: true
+              startCollapsed: true,
+              change: function(){
+                  
+                  console.log(strItems);
+              }
           });
+
           setTimeout(function(){
 
               var table_line = $('.table_line');

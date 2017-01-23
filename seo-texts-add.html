@@ -27,8 +27,8 @@
     <div class="navigation">
       <ul>
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Управление SEO текстами</a></li>
-        <li><a href="#">Список проектов</a></li>
+        <li><a href="#">Карты сайтов</a></li>
+        <li><a href="#">SEO статьи</a></li>
       </ul>
     </div>
   </header>
@@ -47,7 +47,7 @@
           <option>W22222222222222222</option>
         </select>
       </div>
-      <div class="project_id">- ID проекта: <span>1385</span></div>
+      <div class="project_id">— ID проекта: <span>1385</span></div>
     </div>
       <div class="button_block seo_text_btn">
           <button class="back_list"><img src="img/back_arrow.svg" alt=""> Вернуться к списку статей</button>
@@ -58,7 +58,7 @@
     <form class="seo_texts">
         <div class="group-filter">
             <div class="input_wrap">
-                <label>Адрес страницы :</label> <input type="text" class="title">
+                <label>Адрес страницы :</label> <input type="text" class="title" placeholder="Адрес сайта">
             </div>
             <div class="select_wrap">
             <div class="custom_select styled">
@@ -88,10 +88,10 @@
             </div>
             <div class="comment_input">
                 <div class="title">
-                    Коментарии:
+                    Комментарии:
                 </div>
                 <div class="creator">
-                    <span>Люсия Булкоедова:</span><a href="#"><img src="img/delete.svg" alt=""></a><a href="#"><img src="img/edit.svg" alt=""></a>
+                    <span>Люсия Булкоедова:</span><a href="#"><img src="img/delete.svg" alt=""></a><a href="#"><img src="img/edit_icon.svg" alt=""></a>
                 </div>
                 <p>Шапки, магазин шапок, купить шапки, вязанные шапки,тёплая шапка купить, дизайнерские шапки шерсть,
                     шапка-самобранка,</p>
@@ -152,6 +152,7 @@
     $('.select_project').select2({
       width: 'resolve'
     });
+    $('.select_project').prop("disabled", true);
     tinymce.init({
       selector: '#text_edit',
      plugins:'advlist autolink lists link charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table contextmenu paste',
