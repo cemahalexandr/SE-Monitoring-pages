@@ -1,65 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fde5e59-0084-4f7b-bf06-205daab65225" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/1374b0eb76b2628650a424ea188cfeab3d6e42ab/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/1af6572ccc8df0cf1bd8482039dd730fdadb23ef/ie.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/1af6572ccc8df0cf1bd8482039dd730fdadb23ef/print.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/1af6572ccc8df0cf1bd8482039dd730fdadb23ef/screen.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/4360d9f46d36602838ac01b25a3e4e56433d7f02/ie.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/4360d9f46d36602838ac01b25a3e4e56433d7f02/main_project.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/4360d9f46d36602838ac01b25a3e4e56433d7f02/media.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/4360d9f46d36602838ac01b25a3e4e56433d7f02/print.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/4360d9f46d36602838ac01b25a3e4e56433d7f02/screen.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/533807eb77fd422ab06d2465db7ba3b7f552c32f/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5cc1b2894318ca1b228032bcdf5ef3c5cc7cfe71/ie.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5cc1b2894318ca1b228032bcdf5ef3c5cc7cfe71/main_project.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5cc1b2894318ca1b228032bcdf5ef3c5cc7cfe71/media.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5cc1b2894318ca1b228032bcdf5ef3c5cc7cfe71/print.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5cc1b2894318ca1b228032bcdf5ef3c5cc7cfe71/screen.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/C%058/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/8b1de0fb964996dfca872842620703baaa5efa9b/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/c17044e14c0b02252815f0ff968911ec47c759ba/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/checkED.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/projectCompass.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/config.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/sass/ie.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/sass/print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/sass/screen.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/stylesheets/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/stylesheets/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SE-Monitoring-pages/stylesheets/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/check_btn_new.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/del_btn.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/doc_btn2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/edit_icon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/plus_btn_new.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/ie.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_sitemap.html" afterPath="$PROJECT_DIR$/create_sitemap.html" />
+    <list default="true" id="1fde5e59-0084-4f7b-bf06-205daab65225" name="Default" comment="Merge branch 'master' of https://github.com/cemahalexandr/SE-Monitoring-pages&#10;&#10;# Conflicts:&#10;#&#9;css/main_project.css&#10;#&#9;seotexts_sitemap.html&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main_project.css" afterPath="$PROJECT_DIR$/css/main_project.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/media.css" afterPath="$PROJECT_DIR$/css/media.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.mjs.nestedSortable.js" afterPath="$PROJECT_DIR$/js/jquery.mjs.nestedSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/query_selection.html" afterPath="$PROJECT_DIR$/query_selection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/main_project.scss" afterPath="$PROJECT_DIR$/sass/main_project.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/media.scss" afterPath="$PROJECT_DIR$/sass/media.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seo-texts-add.html" afterPath="$PROJECT_DIR$/seo-texts-add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seo_articles.html" afterPath="$PROJECT_DIR$/seo_articles.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotexts_sitemap.html" afterPath="$PROJECT_DIR$/seotexts_sitemap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sitemaps.html" afterPath="$PROJECT_DIR$/sitemaps.html" />
     </list>
     <ignored path="SE-Monitoring-pages.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +25,7 @@
     <favorites_list name="SE-Monitoring-pages" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.30007982">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
@@ -130,7 +75,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main_project.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main_project.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sass/main_project.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="452">
@@ -140,11 +85,21 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="seotexts_sitemap.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/seotexts_sitemap.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1295">
+                  <caret line="549" column="55" selection-start-line="549" selection-start-column="50" selection-end-line="549" selection-end-column="55" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="main_project.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/main_project.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61965">
-                  <caret line="3645" column="0" selection-start-line="3645" selection-start-column="0" selection-end-line="3645" selection-end-column="0" />
+                <state relative-caret-position="227">
+                  <caret line="4054" column="23" selection-start-line="4054" selection-start-column="23" selection-end-line="4054" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -170,16 +125,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/main_project.css" />
         <option value="$PROJECT_DIR$/js/jquery.mjs.nestedSortable.js" />
         <option value="$PROJECT_DIR$/js/jquery.ui.touch-punch.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/seotexts_sitemap.html" />
         <option value="$PROJECT_DIR$/seo-texts-add.html" />
         <option value="$PROJECT_DIR$/sitemaps.html" />
-        <option value="$PROJECT_DIR$/sass/main_project.scss" />
         <option value="$PROJECT_DIR$/query_selection.html" />
         <option value="$PROJECT_DIR$/create_sitemap.html" />
+        <option value="$PROJECT_DIR$/sass/main_project.scss" />
+        <option value="$PROJECT_DIR$/seotexts_sitemap.html" />
+        <option value="$PROJECT_DIR$/css/main_project.css" />
       </list>
     </option>
   </component>
@@ -269,12 +224,12 @@
       <workItem from="1485171045508" duration="12008000" />
       <workItem from="1485244413535" duration="638000" />
       <workItem from="1485855159048" duration="58000" />
-      <workItem from="1485938792198" duration="1324000" />
+      <workItem from="1485938792198" duration="3247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21030000" />
+    <option name="totallyTimeSpent" value="22953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -282,11 +237,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19473007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25841185" sideWeight="0.50385606" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26075268" sideWeight="0.49614397" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3822342" sideWeight="0.49614397" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -328,6 +284,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/cemahalexandr/SE-Monitoring-pages&#10;&#10;# Conflicts:&#10;#&#9;css/main_project.css&#10;#&#9;seotexts_sitemap.html&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/cemahalexandr/SE-Monitoring-pages&#10;&#10;# Conflicts:&#10;#&#9;css/main_project.css&#10;#&#9;seotexts_sitemap.html&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -604,21 +564,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DR17.877/SE-Monitoring-pages-master/sitemaps.html" />
-    <entry file="file://$PROJECT_DIR$/seotexts_sitemap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main_project.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61965">
-          <caret line="3645" column="0" selection-start-line="3645" selection-start-column="0" selection-end-line="3645" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sitemaps.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -627,13 +572,6 @@
             <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#div#1;n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seo-texts-add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="139" column="14" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -665,6 +603,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
           <caret line="2624" column="0" selection-start-line="2624" selection-start-column="0" selection-end-line="2624" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main_project.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="4054" column="23" selection-start-line="4054" selection-start-column="23" selection-end-line="4054" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seo-texts-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2348">
+          <caret line="139" column="14" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotexts_sitemap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1295">
+          <caret line="549" column="55" selection-start-line="549" selection-start-column="50" selection-end-line="549" selection-end-column="55" />
           <folding />
         </state>
       </provider>

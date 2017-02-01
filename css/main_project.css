@@ -2573,7 +2573,7 @@ main.requests_list .sortable li:after {
   align-items: center;
   position: relative;
 }
-/* line 2339, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .switch_btn {
   border-radius: 3px;
   height: 34px;
@@ -2584,7 +2584,7 @@ main.requests_list .sortable li:after {
   padding-right: 10px;
   margin-right: 5px;
 }
-/* line 2348, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .switch_btn.active {
   background: #86c053;
 }
@@ -2592,7 +2592,14 @@ main.requests_list .sortable li:after {
 .create_sitemaps .table .table_line .button_delete {
   text-align: center;
 }
-/* line 2355, ../sass/main_project.scss */
+.create_sitemaps .table .table_line .switch_btn.active {
+  background: #86c053;
+}
+
+.create_sitemaps .table .table_line .button_delete {
+  text-align: center;
+}
+
 .create_sitemaps .table .table_line .button_delete button {
   border-radius: 3px;
   width: 30px;
@@ -2602,27 +2609,35 @@ main.requests_list .sortable li:after {
   padding: 0;
   margin: 0 auto;
 }
-/* line 2363, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .button_delete button img {
   width: 100%;
 }
-/* line 2368, ../sass/main_project.scss */
+
+.create_sitemaps .table .table_line .button_delete button img {
+  width: 100%;
+}
+
 .create_sitemaps .table .table_line .group_block, .create_sitemaps .table .table_line .article {
   font-weight: bold;
   word-break: break-word;
   max-width: 200px;
   font-size: 13px;
 }
-/* line 2373, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .group_block span, .create_sitemaps .table .table_line .article span {
   font-weight: normal;
   font-size: 14px;
 }
-/* line 2378, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .control_button, .create_sitemaps .table .table_line .r_control_button {
   justify-content: space-around;
 }
-/* line 2380, ../sass/main_project.scss */
+
+.create_sitemaps .table .table_line .control_button, .create_sitemaps .table .table_line .r_control_button {
+  justify-content: space-around;
+}
+
 .create_sitemaps .table .table_line .control_button a, .create_sitemaps .table .table_line .r_control_button a {
   border-radius: 4px;
   display: block;
@@ -2632,18 +2647,22 @@ main.requests_list .sortable li:after {
   padding: 5px;
   margin: 0 2px;
 }
-/* line 2388, ../sass/main_project.scss */
+
 .create_sitemaps .table .table_line .control_button a img, .create_sitemaps .table .table_line .r_control_button a img {
   width: 100%;
 }
-/* line 2396, ../sass/main_project.scss */
+
+.create_sitemaps .table .table_line .control_button a img, .create_sitemaps .table .table_line .r_control_button a img {
+  width: 100%;
+}
+
 .create_sitemaps .button_bottom_block {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 20px 0;
 }
-/* line 2401, ../sass/main_project.scss */
+
 .create_sitemaps .button_bottom_block button {
   border-radius: 3px;
   height: 34px;
@@ -2656,102 +2675,124 @@ main.requests_list .sortable li:after {
   background: #86c053;
   margin-right: 5px;
 }
-/* line 2412, ../sass/main_project.scss */
+
 .create_sitemaps .button_bottom_block button.launch {
   background: #ffc36b;
 }
-/* line 2415, ../sass/main_project.scss */
+
 .create_sitemaps .button_bottom_block button.add_line {
   background-color: #ddd;
 }
-/* line 2418, ../sass/main_project.scss */
+
 .create_sitemaps .button_bottom_block button.remove {
   background: rgba(236, 31, 31, 0.82);
 }
-/* line 2425, ../sass/main_project.scss */
+
+.create_sitemaps .button_bottom_block button.launch {
+  background: #ffc36b;
+}
+
+.create_sitemaps .button_bottom_block button.add_line {
+  background-color: #ddd;
+}
+
+.create_sitemaps .button_bottom_block button.remove {
+  background: rgba(236, 31, 31, 0.82);
+}
+
 .create_sitemaps .filter .filter_block {
   flex-grow: 1;
   height: auto;
   max-width: 360px;
 }
-/* line 2429, ../sass/main_project.scss */
+
 .create_sitemaps .filter .filter_block label {
   display: block;
   margin-bottom: 5px;
   text-align: left;
 }
-/* line 2434, ../sass/main_project.scss */
+
 .create_sitemaps .filter .filter_block input {
   width: 100%;
 }
-/* line 2437, ../sass/main_project.scss */
+
+.create_sitemaps .filter .filter_block input {
+  width: 100%;
+}
+
 .create_sitemaps .filter .filter_block .select_user, .create_sitemaps .filter .filter_block .from, .create_sitemaps .filter .filter_block .to {
   height: 32px;
   border-radius: 5px;
   border: 1px solid #aaa;
 }
-/* line 2442, ../sass/main_project.scss */
+
 .create_sitemaps .filter .filter_block .wrap {
   margin-bottom: 5px;
 }
 
-/* line 2449, ../sass/main_project.scss */
 .panel-title {
   margin: 20px 0;
 }
 
-/* line 2452, ../sass/main_project.scss */
 .edit_project {
   padding: 30px 0;
 }
-/* line 2454, ../sass/main_project.scss */
+
+.edit_project {
+  padding: 30px 0;
+}
+
 .edit_project .form-group {
   display: flex;
   align-items: center;
 }
-/* line 2457, ../sass/main_project.scss */
+
 .edit_project .form-group > label {
   width: 130px;
   text-align: right;
   margin-right: 20px;
 }
-/* line 2463, ../sass/main_project.scss */
+
 .edit_project .region {
   height: 0;
   transition: all .3s;
   overflow: hidden;
   margin: 0;
 }
-/* line 2468, ../sass/main_project.scss */
+
 .edit_project .region.open {
   height: 39px;
   margin-bottom: 20px;
 }
-/* line 2473, ../sass/main_project.scss */
+
 .edit_project .wrap {
   flex-grow: 1;
   display: flex;
 }
-/* line 2478, ../sass/main_project.scss */
+
 .edit_project .radio input[type="radio"] {
   margin-left: -15px;
   top: -3px;
 }
-/* line 2482, ../sass/main_project.scss */
+
 .edit_project .radio label {
   margin-bottom: -6px;
 }
-/* line 2486, ../sass/main_project.scss */
+
+.edit_project .radio label {
+  margin-bottom: -6px;
+}
+
 .edit_project .select2 {
   display: none;
   max-width: 420px;
 }
-/* line 2490, ../sass/main_project.scss */
+
 .edit_project .domen_input {
   position: relative;
   margin-right: 20px;
 }
-/* line 2492, ../sass/main_project.scss */
+
 .edit_project .domen_input:after {
   content: '/';
   display: block;
@@ -2761,27 +2802,34 @@ main.requests_list .sortable li:after {
   right: -13px;
 }
 
-/* line 2506, ../sass/main_project.scss */
 body.query_selection .edit_input {
   padding: 3px;
 }
-/* line 2509, ../sass/main_project.scss */
+
+body.query_selection .edit_input {
+  padding: 3px;
+}
+
 body.query_selection .navigation {
   font-weight: 600;
   margin-left: 37px;
 }
-/* line 2513, ../sass/main_project.scss */
+
 body.query_selection .project_line {
   padding-bottom: 12px;
   border-bottom: 1px solid #e9e9e9;
   display: flex;
   justify-content: space-between;
 }
-/* line 2518, ../sass/main_project.scss */
+
 body.query_selection .project_line label {
   display: inline-block;
 }
-/* line 2521, ../sass/main_project.scss */
+
+body.query_selection .project_line label {
+  display: inline-block;
+}
+
 body.query_selection .project_line .selection_project {
   display: flex;
   align-items: center;
@@ -2789,24 +2837,24 @@ body.query_selection .project_line .selection_project {
   flex-wrap: wrap;
   position: relative;
 }
-/* line 2527, ../sass/main_project.scss */
+
 body.query_selection .project_line .selection_project label {
   font-size: 21px;
   color: #7d0a1d;
 }
-/* line 2532, ../sass/main_project.scss */
+
 body.query_selection .project_line .selection_project .select2-container--default .select2-selection--single {
   border: none;
   font-size: 21px;
   font-weight: 600;
   min-width: 200px;
 }
-/* line 2539, ../sass/main_project.scss */
+
 body.query_selection .project_line .selection_project .project_id {
   font-size: 16px;
   font-style: italic;
 }
-/* line 2544, ../sass/main_project.scss */
+
 body.query_selection .project_line .selection_project.line_before:after {
   content: '';
   display: block;
@@ -2817,23 +2865,27 @@ body.query_selection .project_line .selection_project.line_before:after {
   top: -14px;
   right: -40px;
 }
-/* line 2556, ../sass/main_project.scss */
+
 body.query_selection .project_line .select_wrap {
   display: flex;
 }
-/* line 2559, ../sass/main_project.scss */
+
+body.query_selection .project_line .select_wrap {
+  display: flex;
+}
+
 body.query_selection .project_line .select_wrap .select2-container--default .select2-selection--single {
   min-width: 257px;
   height: 31px;
 }
-/* line 2564, ../sass/main_project.scss */
+
 body.query_selection .project_line .seo_text_project {
   flex-grow: 1;
   justify-content: flex-start;
   margin-left: 78px;
   position: relative;
 }
-/* line 2569, ../sass/main_project.scss */
+
 body.query_selection .project_line .seo_text_project:before {
   content: '';
   display: block;
@@ -2844,22 +2896,24 @@ body.query_selection .project_line .seo_text_project:before {
   left: -41px;
   background: #e9e9e9;
 }
-/* line 2580, ../sass/main_project.scss */
+
 body.query_selection .project_line .seo_text_btn {
   margin: -4px 0;
 }
-/* line 2584, ../sass/main_project.scss */
+
+body.query_selection .project_line .seo_text_btn {
+  margin: -4px 0;
+}
+
 body.query_selection .custom_select {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-/* line 2588, ../sass/main_project.scss */
 body.query_selection .custom_select label {
   margin: 0 10px;
   font-size: 13px;
 }
-/* line 2592, ../sass/main_project.scss */
 body.query_selection .custom_select input {
   margin: 0 15px;
   height: 30px;
@@ -2869,22 +2923,26 @@ body.query_selection .custom_select input {
   width: 100%;
   outline: none;
 }
-/* line 2602, ../sass/main_project.scss */
+
 body.query_selection .custom_select .select2-container--default .select2-selection--single {
   min-width: 260px;
   border-color: #666;
   font-weight: 600;
 }
-/* line 2606, ../sass/main_project.scss */
+
 body.query_selection .custom_select .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #9c9c9c;
   font-weight: 400;
 }
-/* line 2615, ../sass/main_project.scss */
+
 body.query_selection .custom_select.styled .select2-container--default .select2-selection--single {
   position: relative;
 }
-/* line 2617, ../sass/main_project.scss */
+
+body.query_selection .custom_select.styled .select2-container--default .select2-selection--single {
+  position: relative;
+}
+
 body.query_selection .custom_select.styled .select2-container--default .select2-selection--single:after {
   content: '';
   display: block;
@@ -2895,11 +2953,11 @@ body.query_selection .custom_select.styled .select2-container--default .select2-
   right: 30px;
   background: #666666;
 }
-/* line 2627, ../sass/main_project.scss */
+
 body.query_selection .custom_select.styled .select2-container--default .select2-selection--single .select2-selection__arrow b {
   margin-left: -8px;
 }
-/* line 2630, ../sass/main_project.scss */
+
 body.query_selection .custom_select.styled .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding-right: 30px;
 }
@@ -2912,11 +2970,30 @@ body.query_selection .custom_select.deep label {
   width: 242px;
 }
 /* line 2648, ../sass/main_project.scss */
+
+/* line 2621, ../sass/main_project.scss */
+body.query_selection .custom_select.styled .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  margin-left: -8px;
+}
+/* line 2624, ../sass/main_project.scss */
+body.query_selection .custom_select.styled .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-right: 30px;
+}
+/* line 2632, ../sass/main_project.scss */
+body.query_selection .custom_select.country .select2-container--default .select2-selection--single {
+  min-width: 200px;
+}
+/* line 2638, ../sass/main_project.scss */
+body.query_selection .custom_select.deep label {
+  width: 242px;
+}
+/* line 2642, ../sass/main_project.scss */
+
 body.query_selection .custom_select.deep .select2-container--default .select2-selection--single {
   max-width: 90px;
   min-width: 50px;
 }
-/* line 2655, ../sass/main_project.scss */
+
 body.query_selection .setting_project_line {
   padding: 12px 0;
   border-bottom: 1px solid #e9e9e9;
@@ -2924,18 +3001,30 @@ body.query_selection .setting_project_line {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
 /* line 2661, ../sass/main_project.scss */
 body.query_selection .setting_project_line .custom_select {
   margin-right: 35px;
 }
 /* line 2665, ../sass/main_project.scss */
+
+/* line 2655, ../sass/main_project.scss */
+body.query_selection .setting_project_line .custom_select {
+  margin-right: 35px;
+}
+/* line 2659, ../sass/main_project.scss */
+
 body.query_selection .button_block, body.query_selection .button_bottom_block {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
 }
+
 /* line 2670, ../sass/main_project.scss */
+
+/* line 2664, ../sass/main_project.scss */
+
 body.query_selection .button_block button, body.query_selection .button_bottom_block button {
   border-radius: 5px;
   height: 34px;
@@ -2950,25 +3039,25 @@ body.query_selection .button_block button, body.query_selection .button_bottom_b
   vertical-align: top;
   margin-right: 7px;
 }
-/* line 2683, ../sass/main_project.scss */
+
 body.query_selection .button_block button img, body.query_selection .button_bottom_block button img {
   width: 13px;
   vertical-align: top;
   margin-right: 3px;
   height: 13px;
 }
-/* line 2689, ../sass/main_project.scss */
+
 body.query_selection .button_block button.start_query, body.query_selection .button_bottom_block button.start_query {
   background: #6db31b;
   width: 140px;
   height: 34px;
 }
-/* line 2694, ../sass/main_project.scss */
+
 body.query_selection .button_block button.line, body.query_selection .button_bottom_block button.line {
   position: relative;
   margin-right: 11px;
 }
-/* line 2697, ../sass/main_project.scss */
+
 body.query_selection .button_block button.line:after, body.query_selection .button_bottom_block button.line:after {
   content: '';
   position: absolute;
@@ -2980,11 +3069,12 @@ body.query_selection .button_block button.line:after, body.query_selection .butt
   background: #e9e9e9;
   margin-right: 10px;
 }
-/* line 2709, ../sass/main_project.scss */
+
 body.query_selection .button_block button.remove_btn, body.query_selection .button_bottom_block button.remove_btn {
   background: #ff5c47;
   width: 180px;
   height: 34px;
+
 }
 /* line 2714, ../sass/main_project.scss */
 body.query_selection .button_block button.turn_btn, body.query_selection .button_bottom_block button.turn_btn {
@@ -2992,10 +3082,19 @@ body.query_selection .button_block button.turn_btn, body.query_selection .button
   height: 34px;
 }
 /* line 2718, ../sass/main_project.scss */
+}
+/* line 2708, ../sass/main_project.scss */
+body.query_selection .button_block button.turn_btn, body.query_selection .button_bottom_block button.turn_btn {
+  width: 123px;
+  height: 34px;
+}
+/* line 2712, ../sass/main_project.scss */
+
 body.query_selection .button_block button.save_btn, body.query_selection .button_bottom_block button.save_btn {
   background: #6db31b;
   width: 183px;
 }
+
 /* line 2721, ../sass/main_project.scss */
 body.query_selection .button_block button.save_btn img, body.query_selection .button_bottom_block button.save_btn img {
   width: 12px;
@@ -3004,22 +3103,40 @@ body.query_selection .button_block button.save_btn img, body.query_selection .bu
 body.query_selection .button_block button.launch, body.query_selection .button_bottom_block button.launch {
   width: 165px;
 }
-/* line 2727, ../sass/main_project.scss */
+
+/* line 2715, ../sass/main_project.scss */
+body.query_selection .button_block button.save_btn img, body.query_selection .button_bottom_block button.save_btn img {
+  width: 12px;
+}
+/* line 2719, ../sass/main_project.scss */
+body.query_selection .button_block button.launch, body.query_selection .button_bottom_block button.launch {
+  width: 165px;
+}
+/* line 2721, ../sass/main_project.scss */
+
 body.query_selection .button_block button.launch img, body.query_selection .button_bottom_block button.launch img {
   width: 18px;
   height: auto;
   vertical-align: middle;
   margin-right: 5px;
 }
+
 /* line 2734, ../sass/main_project.scss */
 body.query_selection .button_block button.remove, body.query_selection .button_bottom_block button.remove {
   background: #ff5c47;
 }
 /* line 2737, ../sass/main_project.scss */
+
+/* line 2728, ../sass/main_project.scss */
+body.query_selection .button_block button.remove, body.query_selection .button_bottom_block button.remove {
+  background: #ff5c47;
+}
+
 body.query_selection .button_block button.back_list, body.query_selection .button_bottom_block button.back_list {
   background: #839fa1;
   font-size: 13px;
   width: 212px;
+
 }
 /* line 2742, ../sass/main_project.scss */
 body.query_selection .button_block button.start_selection, body.query_selection .button_bottom_block button.start_selection {
@@ -3030,38 +3147,59 @@ body.query_selection .button_block button.add_line, body.query_selection .button
   width: 155px;
 }
 /* line 2747, ../sass/main_project.scss */
+
+}
+/* line 2736, ../sass/main_project.scss */
+body.query_selection .button_block button.start_selection, body.query_selection .button_bottom_block button.start_selection {
+  width: 155px;
+}
+/* line 2739, ../sass/main_project.scss */
+body.query_selection .button_block button.add_line, body.query_selection .button_bottom_block button.add_line {
+  width: 155px;
+}
+/* line 2741, ../sass/main_project.scss */
+
 body.query_selection .button_block button.add_line img, body.query_selection .button_bottom_block button.add_line img {
   width: 22px;
   height: auto;
   vertical-align: middle;
 }
-/* line 2753, ../sass/main_project.scss */
+
 body.query_selection .button_block button.excel, body.query_selection .button_bottom_block button.excel {
   background: #207347;
   width: 212px;
 }
-/* line 2756, ../sass/main_project.scss */
+
 body.query_selection .button_block button.excel img, body.query_selection .button_bottom_block button.excel img {
   width: 23px;
   vertical-align: middle;
   height: auto;
 }
-/* line 2764, ../sass/main_project.scss */
+
 body.query_selection .head_element {
   display: flex;
   border-right: 1px solid #ececec;
   flex-grow: 1;
 }
+
 /* line 2768, ../sass/main_project.scss */
 body.query_selection .head_element span {
   margin: auto;
 }
 /* line 2771, ../sass/main_project.scss */
+
+/* line 2762, ../sass/main_project.scss */
+body.query_selection .head_element span {
+  margin: auto;
+}
+/* line 2765, ../sass/main_project.scss */
+
 body.query_selection .head_element.project {
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+
 /* line 2775, ../sass/main_project.scss */
 body.query_selection .head_element.project span {
   margin: 0 10px;
@@ -3071,6 +3209,17 @@ body.query_selection .head_element.project span .check_all {
   vertical-align: bottom;
 }
 /* line 2781, ../sass/main_project.scss */
+
+/* line 2769, ../sass/main_project.scss */
+body.query_selection .head_element.project span {
+  margin: 0 10px;
+}
+/* line 2771, ../sass/main_project.scss */
+body.query_selection .head_element.project span .check_all {
+  vertical-align: bottom;
+}
+/* line 2775, ../sass/main_project.scss */
+
 body.query_selection .head_element.project .filter_arrow {
   display: inline-block;
   width: 20px;
@@ -3078,7 +3227,7 @@ body.query_selection .head_element.project .filter_arrow {
   top: 5px;
   vertical-align: text-bottom;
 }
-/* line 2788, ../sass/main_project.scss */
+
 body.query_selection .head_element.project .border_line {
   position: absolute;
   top: 8px;
@@ -3087,6 +3236,7 @@ body.query_selection .head_element.project .border_line {
   background: #ececec;
   width: 1px;
 }
+
 /* line 2798, ../sass/main_project.scss */
 body.query_selection .select2-container--default.select2-container--disabled .select2-selection--single {
   background: #fff;
@@ -3096,16 +3246,32 @@ body.query_selection .select2-container--default.select2-container--disabled .se
   display: none;
 }
 /* line 2804, ../sass/main_project.scss */
+
+/* line 2792, ../sass/main_project.scss */
+body.query_selection .select2-container--default.select2-container--disabled .select2-selection--single {
+  background: #fff;
+}
+/* line 2794, ../sass/main_project.scss */
+body.query_selection .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__arrow {
+  display: none;
+}
+
 body.query_selection .line_element {
   display: flex;
   border-right: 1px solid #ececec;
   flex-grow: 1;
 }
+
 /* line 2808, ../sass/main_project.scss */
 body.query_selection .line_element span {
   margin: auto;
 }
-/* line 2811, ../sass/main_project.scss */
+
+/* line 2802, ../sass/main_project.scss */
+body.query_selection .line_element span {
+  margin: auto;
+}
+
 body.query_selection .line_element a {
   margin: auto;
   width: 24px;
@@ -3113,13 +3279,14 @@ body.query_selection .line_element a {
   border-radius: 3px;
   overflow: hidden;
 }
-/* line 2818, ../sass/main_project.scss */
+
 body.query_selection .line_element .query_item {
   width: auto;
   height: auto;
   font-weight: 700;
   color: #0051d4;
 }
+
 /* line 2825, ../sass/main_project.scss */
 body.query_selection span.select2-selection.select2-selection--single {
   outline: none;
@@ -3173,21 +3340,77 @@ body.query_selection .table .analysis img {
   width: 20px;
 }
 /* line 2871, ../sass/main_project.scss */
+=======
+/* line 2819, ../sass/main_project.scss */
+body.query_selection span.select2-selection.select2-selection--single {
+  outline: none;
+}
+/* line 2822, ../sass/main_project.scss */
+body.query_selection .table_header {
+  border-left: 1px solid #ececec;
+}
+/* line 2825, ../sass/main_project.scss */
+body.query_selection .table_body {
+  border-left: 1px solid #ececec;
+}
+/* line 2828, ../sass/main_project.scss */
+body.query_selection .table {
+  border: 1px solid #999999;
+}
+/* line 2832, ../sass/main_project.scss */
+body.query_selection .table.sitemap .status_work {
+  width: 87px;
+}
+/* line 2835, ../sass/main_project.scss */
+body.query_selection .table.sitemap .manager {
+  width: 240px;
+}
+/* line 2838, ../sass/main_project.scss */
+body.query_selection .table.sitemap .group, body.query_selection .table.sitemap .table_requests, body.query_selection .table.sitemap .articles {
+  width: 83px;
+}
+/* line 2840, ../sass/main_project.scss */
+body.query_selection .table.sitemap .group a, body.query_selection .table.sitemap .table_requests a, body.query_selection .table.sitemap .articles a {
+  color: #000;
+}
+/* line 2844, ../sass/main_project.scss */
+body.query_selection .table.sitemap .draggable {
+  display: none;
+}
+/* line 2848, ../sass/main_project.scss */
+body.query_selection .table.sitemap .table_line:hover {
+  background: none;
+}
+/* line 2851, ../sass/main_project.scss */
+body.query_selection .table.sitemap .table_line .project {
+  width: 380px;
+}
+/* line 2853, ../sass/main_project.scss */
+body.query_selection .table.sitemap .table_line .project .project_name {
+  margin-left: -40px;
+}
+/* line 2861, ../sass/main_project.scss */
+body.query_selection .table .analysis img {
+  width: 20px;
+}
+/* line 2865, ../sass/main_project.scss */
+
 body.query_selection .table .table_line {
   max-height: 38px;
   font-weight: 600;
 }
-/* line 2874, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .article_head {
   text-align: left;
   font-weight: normal;
   padding-left: 5px;
 }
-/* line 2879, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .project {
   padding-right: 0;
   padding-left: 25px;
 }
+
 /* line 2882, ../sass/main_project.scss */
 body.query_selection .table .table_line .project span {
   margin: 0;
@@ -3201,39 +3424,63 @@ body.query_selection .table .table_line .project .project_name_wrap {
   width: 100%;
 }
 /* line 2891, ../sass/main_project.scss */
+
+/* line 2876, ../sass/main_project.scss */
+body.query_selection .table .table_line .project span {
+  margin: 0;
+}
+/* line 2879, ../sass/main_project.scss */
+body.query_selection .table .table_line .project .open_hidden_table {
+  right: 10px;
+}
+/* line 2882, ../sass/main_project.scss */
+body.query_selection .table .table_line .project .project_name_wrap {
+  width: 100%;
+}
+/* line 2885, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .project .check {
   left: -40px;
   display: none;
   z-index: 20;
 }
-/* line 2898, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .project .project_name {
   color: #000;
   border: none;
 }
-/* line 2901, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .project .project_name input[type=text] {
   width: calc(100% - 5px);
   height: calc(100% - 5px);
   padding: 4px;
   margin: 2px 0;
 }
-/* line 2908, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .project .sitemap_style {
   color: #006ba0;
   border-bottom: 1px dashed #006ba0;
   padding-bottom: 0;
   margin-left: -15px;
 }
+
 /* line 2914, ../sass/main_project.scss */
 body.query_selection .table .table_line .project .draggable {
   left: -15px;
 }
 /* line 2919, ../sass/main_project.scss */
+
+/* line 2904, ../sass/main_project.scss */
+body.query_selection .table .table_line .project .draggable {
+  left: -15px;
+}
+/* line 2909, ../sass/main_project.scss */
+
 body.query_selection .table .table_line .responsive_table .line {
   min-height: 40px;
   height: auto;
 }
+
 /* line 2924, ../sass/main_project.scss */
 body.query_selection .table .table_line a.remove {
   display: block;
@@ -3243,11 +3490,22 @@ body.query_selection .table .link {
   width: 70px;
 }
 /* line 2931, ../sass/main_project.scss */
+
+/* line 2914, ../sass/main_project.scss */
+body.query_selection .table .table_line a.remove {
+  display: block;
+}
+/* line 2918, ../sass/main_project.scss */
+body.query_selection .table .link {
+  width: 70px;
+}
+/* line 2921, ../sass/main_project.scss */
+
 body.query_selection .table .requests {
   width: 370px;
   overflow: hidden;
 }
-/* line 2934, ../sass/main_project.scss */
+
 body.query_selection .table .requests input[type=text] {
   width: calc(100% - 5px);
   height: calc(100% - 5px);
@@ -3255,6 +3513,7 @@ body.query_selection .table .requests input[type=text] {
   margin: 2px 0;
   margin: auto;
 }
+
 /* line 2942, ../sass/main_project.scss */
 body.query_selection .table .query_switch {
   width: 95px;
@@ -3304,10 +3563,62 @@ body.query_selection .sortable .mjs-nestedSortable-collapsed .project_name {
   font-weight: 400;
 }
 /* line 2984, ../sass/main_project.scss */
+
+/* line 2932, ../sass/main_project.scss */
+body.query_selection .table .query_switch {
+  width: 95px;
+}
+/* line 2935, ../sass/main_project.scss */
+body.query_selection .table .query {
+  width: 85px;
+}
+/* line 2938, ../sass/main_project.scss */
+body.query_selection .table .audit {
+  width: 78px;
+}
+/* line 2941, ../sass/main_project.scss */
+body.query_selection .table .editing {
+  width: 105px;
+}
+/* line 2944, ../sass/main_project.scss */
+body.query_selection .table .edits {
+  width: 40px;
+}
+/* line 2947, ../sass/main_project.scss */
+body.query_selection .table .seo_text {
+  width: 100px;
+}
+/* line 2950, ../sass/main_project.scss */
+body.query_selection .table .performer {
+  width: 210px;
+}
+/* line 2953, ../sass/main_project.scss */
+body.query_selection .table .change {
+  width: 90px;
+}
+/* line 2956, ../sass/main_project.scss */
+body.query_selection .table .article_head {
+  width: 239px;
+}
+/* line 2960, ../sass/main_project.scss */
+body.query_selection .table_footer {
+  margin-left: 0;
+}
+/* line 2965, ../sass/main_project.scss */
+body.query_selection .sortable .mjs-nestedSortable-leaf .project_name {
+  font-weight: 400;
+}
+/* line 2970, ../sass/main_project.scss */
+body.query_selection .sortable .mjs-nestedSortable-collapsed .project_name {
+  font-weight: 400;
+}
+/* line 2974, ../sass/main_project.scss */
+
 body.query_selection .sortable li {
   border-bottom: 1px solid #e9e9e9;
   position: relative;
 }
+
 /* line 2987, ../sass/main_project.scss */
 body.query_selection .sortable li.checked {
   background: #d9edff !important;
@@ -3317,6 +3628,17 @@ body.query_selection .sortable li:nth-child(even) {
   background: #f8f9fa;
 }
 /* line 2993, ../sass/main_project.scss */
+
+/* line 2977, ../sass/main_project.scss */
+body.query_selection .sortable li.checked {
+  background: #d9edff !important;
+}
+/* line 2980, ../sass/main_project.scss */
+body.query_selection .sortable li:nth-child(even) {
+  background: #f8f9fa;
+}
+/* line 2983, ../sass/main_project.scss */
+
 body.query_selection .sortable li:before {
   content: '';
   display: block;
@@ -3328,6 +3650,7 @@ body.query_selection .sortable li:before {
   background: #3489ff;
   z-index: 100;
 }
+
 /* line 3005, ../sass/main_project.scss */
 body.query_selection .sortable li.mjs-nestedSortable-collapsed > ol {
   display: none;
@@ -3341,6 +3664,21 @@ body.query_selection .sortable li.mjs-nestedSortable-branch:nth-child(odd) {
   background: #f8f9fa;
 }
 /* line 3019, ../sass/main_project.scss */
+
+/* line 2995, ../sass/main_project.scss */
+body.query_selection .sortable li.mjs-nestedSortable-collapsed > ol {
+  display: none;
+}
+/* line 3000, ../sass/main_project.scss */
+body.query_selection .sortable li.mjs-nestedSortable-leaf:before {
+  box-shadow: 0 0 3px 1px rgba(52, 137, 254, 0.9);
+}
+/* line 3005, ../sass/main_project.scss */
+body.query_selection .sortable li.mjs-nestedSortable-branch:nth-child(odd) {
+  background: #f8f9fa;
+}
+/* line 3009, ../sass/main_project.scss */
+
 body.query_selection .sortable li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -3349,6 +3687,7 @@ body.query_selection .sortable li.mjs-nestedSortable-branch > div > .disclose {
   width: 12px;
   height: 12px;
 }
+
 /* line 3030, ../sass/main_project.scss */
 body.query_selection .sortable li ol li {
   position: relative;
@@ -3358,6 +3697,17 @@ body.query_selection .sortable li ol li.mjs-nestedSortable-leaf:before {
   display: none;
 }
 /* line 3038, ../sass/main_project.scss */
+
+/* line 3020, ../sass/main_project.scss */
+body.query_selection .sortable li ol li {
+  position: relative;
+}
+/* line 3022, ../sass/main_project.scss */
+body.query_selection .sortable li ol li.mjs-nestedSortable-leaf:before {
+  display: none;
+}
+/* line 3028, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -3366,7 +3716,7 @@ body.query_selection .sortable li ol li.mjs-nestedSortable-branch > div > .discl
   width: 12px;
   height: 12px;
 }
-/* line 3049, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li:after {
   content: '';
   display: block;
@@ -3377,7 +3727,7 @@ body.query_selection .sortable li ol li:after {
   height: 2px;
   background: #2681ff;
 }
-/* line 3059, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li:before {
   content: '';
   display: block;
@@ -3389,6 +3739,7 @@ body.query_selection .sortable li ol li:before {
   background: #73c5ff;
   z-index: 100;
 }
+
 /* line 3071, ../sass/main_project.scss */
 body.query_selection .sortable li ol li .table_line .project {
   padding-left: 35px;
@@ -3397,7 +3748,17 @@ body.query_selection .sortable li ol li .table_line .project {
 body.query_selection .sortable li ol li ol li {
   position: relative;
 }
-/* line 3079, ../sass/main_project.scss */
+
+/* line 3061, ../sass/main_project.scss */
+body.query_selection .sortable li ol li .table_line .project {
+  padding-left: 35px;
+}
+/* line 3066, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li {
+  position: relative;
+}
+/* line 3069, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -3406,7 +3767,7 @@ body.query_selection .sortable li ol li ol li.mjs-nestedSortable-branch > div > 
   width: 12px;
   height: 12px;
 }
-/* line 3090, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li:after {
   content: '';
   display: block;
@@ -3417,7 +3778,7 @@ body.query_selection .sortable li ol li ol li:after {
   height: 2px;
   background: #73c5ff;
 }
-/* line 3100, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li:before {
   content: '';
   display: block;
@@ -3429,6 +3790,7 @@ body.query_selection .sortable li ol li ol li:before {
   background: #c89cff;
   z-index: 100;
 }
+
 /* line 3112, ../sass/main_project.scss */
 body.query_selection .sortable li ol li ol li .table_line .project {
   padding-left: 45px;
@@ -3438,6 +3800,16 @@ body.query_selection .sortable li ol li ol li ol li {
   position: relative;
 }
 /* line 3120, ../sass/main_project.scss */
+
+/* line 3102, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li .table_line .project {
+  padding-left: 45px;
+}
+/* line 3107, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li {
+  position: relative;
+}
+
 body.query_selection .sortable li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -3446,7 +3818,7 @@ body.query_selection .sortable li ol li ol li ol li.mjs-nestedSortable-branch > 
   width: 12px;
   height: 12px;
 }
-/* line 3131, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -3457,7 +3829,7 @@ body.query_selection .sortable li ol li ol li ol li:after {
   height: 2px;
   background: #c797ff;
 }
-/* line 3141, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li:before {
   content: '';
   display: block;
@@ -3469,6 +3841,7 @@ body.query_selection .sortable li ol li ol li ol li:before {
   background: #73c5ff;
   z-index: 100;
 }
+
 /* line 3153, ../sass/main_project.scss */
 body.query_selection .sortable li ol li ol li ol li .table_line .project {
   padding-left: 55px;
@@ -3477,7 +3850,16 @@ body.query_selection .sortable li ol li ol li ol li .table_line .project {
 body.query_selection .sortable li ol li ol li ol li ol li {
   position: relative;
 }
-/* line 3162, ../sass/main_project.scss */
+
+/* line 3143, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li .table_line .project {
+  padding-left: 55px;
+}
+/* line 3148, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li ol li {
+  position: relative;
+}
+
 body.query_selection .sortable li ol li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: block;
   position: absolute;
@@ -3486,7 +3868,7 @@ body.query_selection .sortable li ol li ol li ol li ol li.mjs-nestedSortable-bra
   width: 12px;
   height: 12px;
 }
-/* line 3172, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -3497,7 +3879,7 @@ body.query_selection .sortable li ol li ol li ol li ol li:after {
   height: 2px;
   background: #73c5ff;
 }
-/* line 3182, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li ol li:before {
   content: '';
   display: block;
@@ -3509,6 +3891,7 @@ body.query_selection .sortable li ol li ol li ol li ol li:before {
   background: #c6c678;
   z-index: 100;
 }
+
 /* line 3194, ../sass/main_project.scss */
 body.query_selection .sortable li ol li ol li ol li ol li .table_line .project {
   padding-left: 70px;
@@ -3518,6 +3901,16 @@ body.query_selection .sortable li ol li ol li ol li ol li ol li {
   position: relative;
 }
 /* line 3202, ../sass/main_project.scss */
+
+/* line 3184, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li ol li .table_line .project {
+  padding-left: 70px;
+}
+/* line 3189, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li ol li ol li {
+  position: relative;
+}
+
 body.query_selection .sortable li ol li ol li ol li ol li ol li.mjs-nestedSortable-branch > div > .disclose {
   display: none;
   position: absolute;
@@ -3526,7 +3919,7 @@ body.query_selection .sortable li ol li ol li ol li ol li ol li.mjs-nestedSortab
   width: 12px;
   height: 12px;
 }
-/* line 3213, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li ol li ol li:after {
   content: '';
   display: block;
@@ -3537,7 +3930,7 @@ body.query_selection .sortable li ol li ol li ol li ol li ol li:after {
   height: 2px;
   background: #c6c678;
 }
-/* line 3224, ../sass/main_project.scss */
+
 body.query_selection .sortable li ol li ol li ol li ol li ol li .table_line .project {
   padding-left: 70px;
 }
@@ -3561,12 +3954,37 @@ body.query_selection .link_btn svg .st1 {
 body.query_selection .sitemap_select .custom_select label {
   width: 100%;
 }
-/* line 3259, ../sass/main_project.scss */
+
+/* line 3214, ../sass/main_project.scss */
+body.query_selection .sortable li ol li ol li ol li ol li ol li .table_line .project {
+  padding-left: 70px;
+}
+/* line 3232, ../sass/main_project.scss */
+body.query_selection .link_btn.active .st0 {
+  fill: #c3ccd9;
+}
+/* line 3233, ../sass/main_project.scss */
+body.query_selection .link_btn.active .st1 {
+  fill: #FFFFFF;
+}
+/* line 3237, ../sass/main_project.scss */
+body.query_selection .link_btn svg .st0 {
+  fill: #2492ff;
+}
+/* line 3238, ../sass/main_project.scss */
+body.query_selection .link_btn svg .st1 {
+  fill: #FFFFFF;
+}
+/* line 3244, ../sass/main_project.scss */
+body.query_selection .sitemap_select .custom_select label {
+  width: 100%;
+}
+
 body.query_selection .sitemap_logo {
   width: 32px;
   margin-left: -6px;
 }
-/* line 3263, ../sass/main_project.scss */
+
 body.query_selection .seo_logo {
   width: 32px;
   margin-left: -6px;
