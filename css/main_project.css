@@ -770,7 +770,7 @@ main .filter_button .delete_selected:before {
   align-items: center;
   position: relative;
   width: 250px;
-  padding-right: 40px;
+  padding-right: 55px;
 }
 /* line 651, ../sass/main_project.scss */
 .table .table_line .project .draggable {
@@ -791,7 +791,7 @@ main .filter_button .delete_selected:before {
 }
 /* line 666, ../sass/main_project.scss */
 .table .table_line .project .project_name_wrap {
-  width: 275px;
+  width: 190px;
   padding-right: 5px;
   height: 100%;
   text-align: left;

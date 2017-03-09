@@ -3,7 +3,9 @@
   .requests_list {
     width: 100%;
   }
-
+  .table_monitoring_wrap .table .table_header .project {
+    flex-grow: 1;
+  }
 
   /* line 15, ../sass/media.scss */
   .table_monitoring_wrap {
@@ -13,7 +15,9 @@
   main.project_list{
     width:100%;
   }
-
+  .table_monitoring_wrap .table .table_line .project .project_name_wrap{
+    width: 100%;
+  }
 
 }
 @media (max-width: 1199px) {

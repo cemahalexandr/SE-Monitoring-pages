@@ -20,7 +20,7 @@ a{
 
 header{
   padding-top: 20px;
-  height: 175px;
+  min-height: 175px;
   position: relative;
   .logo{
     margin-top: 45px;
@@ -38,7 +38,7 @@ header{
   .statistic_diagram{
     position: absolute;
     width:50%;
-    top: 30px;
+    top: -30px;
     margin-bottom:20px;
     right:0;
     text-align: right;
@@ -92,21 +92,13 @@ header{
   }
 }
 main{
-  margin-bottom: 100px;
   background: #fff;
   padding: 17px 20px 20px;
   position: relative;
+  width:1170px;
+  margin: 0 auto;
   &.seo_page{
-    .table{
-      .project{
-        flex-grow:1;
-      }
-      .table_line{
-        .project{
-          flex-grow:1;
-        }
-      }
-    }
+
     .sortable{
       li{
         &:before{
@@ -138,7 +130,7 @@ main{
     background-color: #f7f7f7;
     border-radius: 3px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
     transition: border .5s;
     transition-delay: .5s;
     &:hover{
@@ -168,7 +160,7 @@ main{
     overflow: hidden;
     transition: all ease-out .5s;
     border: 2px solid #fff;
-    z-index:5;
+    z-index:1;
     &.open{
       height: 190px;
       border: 2px solid #d2d2d2;
@@ -189,17 +181,15 @@ main{
         margin-bottom: 13px;
       }
       .success {
-        margin: 10px 45px;
-        padding: 10px 30px;
+        margin: 10px auto;
+        display: block;
+        padding:0 13px;
         border-radius: 3px;
         height: 34px;
         border: none;
         background: #86c053;
         color: #fff;
         position: relative;
-        padding-left: 13px;
-        padding-right: 13px;
-        margin-bottom: 5px;
       }
     }
     .select{
@@ -401,7 +391,7 @@ main{
     }
     form{
       display: flex;
-      align-items: baseline;
+      align-items: center;
     }
   }
   .filter_button{
@@ -416,12 +406,15 @@ main{
       padding-left: 23px;
       padding-right: 13px;
       margin-bottom:5px;
+      font-size:14px;
       img{
         display: block;
         position: absolute;
         left: 7px;
         width: 12px;
         height:15px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
     .add_request, .export, .delete_reques, .pause{
@@ -430,7 +423,7 @@ main{
       img{
         position: absolute;
         left: 10px;
-        top: 0;
+        top: 50%;
         width: 15px;
         height: 100%;
       }
@@ -850,6 +843,7 @@ main{
         height: 40px;
         position: relative;
         padding: 8px 0;
+        cursor: pointer;
         img{
           height:100%;
         }
@@ -930,6 +924,7 @@ main{
     width: 300px;
     display: flex;
     border-right: 1px solid #ececec;
+    flex-grow:1;
     span{
       margin: auto;
     }
@@ -1142,7 +1137,15 @@ main{
     *{
       margin: auto;
     }
-
+    .table_line{
+      .rrs{
+        border-right: 1px solid #ececec;
+        width: 197px;
+      }
+    }
+    &.head_element{
+      border-left: 1px solid #ececec;
+    }
   }
   .audit{
     width: 59px;
@@ -1325,10 +1328,12 @@ main.requests_list{
       margin-top:10px;
     }
   }
+
   &.rrs{
     width: 255px;
     position: absolute;
     display: none;
+
     &.open{
       display: block;
     }
@@ -1611,6 +1616,12 @@ main.requests_list{
     position: relative;
     color: #ffffff;
     font-weight: bold;
+    h3{
+      margin:0;
+      font-size:13px;
+      color: #ffffff;
+      font-weight: 700;
+    }
     .close{
       position: absolute;
       top: 4px;
@@ -2334,8 +2345,6 @@ main.requests_list{
         position: relative;
 
       }
-
-
         .switch_btn{
           border-radius: 3px;
           height: 34px;
@@ -2466,8 +2475,11 @@ main.requests_list{
     overflow: hidden;
     margin:0;
     &.open{
-      height:39px;
+      height:60px;
       margin-bottom:20px;
+      .select2{
+        display: block;
+      }
     }
   }
   .wrap{
@@ -2501,14 +2513,13 @@ main.requests_list{
   }
 }
 body.query_selection{
-
-
   .edit_input{
     padding:3px;
   }
   .navigation{
     font-weight:600;
     margin-left:37px;
+    width:60%;
   }
   .project_line{
     padding-bottom: 12px;
@@ -3317,4 +3328,11 @@ body.query_selection{
 }
 .textForCheck{
   padding-left:16px;
+}
+.table{
+  font-size:14px;
+  color: #333;
+}
+img{
+  vertical-align: top;
 }

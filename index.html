@@ -20,7 +20,31 @@
     <script src="js/cbpFWTabs.js"></script>
 
 </head>
-<body>
+<body class="padding">
+<button class="toggle">toggle</button>
+<style>
+    @media screen and (min-width: 768px){
+        .toggle{
+            position: absolute;
+            top:50px;
+            left:50px;
+        }
+        body{
+            padding-left:50px;
+            transition: all .3s;
+            overflow-x:hidden;
+        }
+        body.padding{
+            padding-left:220px;
+        }
+    }
+
+</style>
+<script>
+    $('.toggle').on('click', function () {
+        $('body').toggleClass('padding');
+    })
+</script>
   <div class="container">
   <header>
     <div class="logo"><a href="#"><img src="img/logo.png" alt="Seo"> Мониторинг проектов</a></div>

@@ -1,13 +1,8 @@
+
 @media (min-width: 1420px) and (max-width: 1920px) {
 
-  body.monitoring{
-    //.container{
-    //  width: 1400px;
-    //  margin: 0 auto;
-    //}
-    .container{
-      width: 94%;
-    }
+  .requests_list{
+    width: 94%;
     .table{
       .table_header{
         justify-content: center;
@@ -25,12 +20,17 @@
 
 @media (max-width: 1199px) {
   main {
+    max-width: 970px;
     .filter {
       &.open {
         height: 330px;
       }
       .filter_block {
         width: 49%;
+        margin:0;
+        .success{
+          margin:10px 0;
+        }
         &.optimize {
           border: none;
         }
@@ -103,6 +103,14 @@
   .seo_texts .group-filter{
     flex-wrap: wrap;
   }
+  header{
+    .statistic_diagram{
+      width:100%;
+      text-align: center;
+      position: static;
+      margin-bottom:35px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -112,16 +120,13 @@
     .logo{
       text-align: center;
     }
-    .statistic_diagram{
-      width:100%;
-      text-align: center;
-      position: relative;
-    }
+
     .navigation{
       text-align: center;
     }
   }
   main{
+    max-width: 750px;
     .filter{
       &.open{
         height: 350px;
@@ -206,6 +211,12 @@
       }
     }
   }
+  .table .plan_work .work_wrap{
+    height:40px;
+  }
+  .table .search_requests .search_wrap{
+    height:40px;
+  }
 }
 @media (max-width: 768px) {
   header{
@@ -233,6 +244,9 @@
   }
 }
 @media (max-width: 767px) {
+  main{
+    width:100%;
+  }
   .table{
     .external_promotion, .group, .table_requests, .requests_input {
       display: none !important;
@@ -286,6 +300,9 @@
       top: 0;
       margin-top:0;
     }
+  }
+  main .filter .filter_block .success{
+    margin: 10px auto;
   }
   .table{
     .pagination{
@@ -530,6 +547,9 @@
       }
     }
   }
+  main .filter .status_block input[type=date]{
+    width:90px;
+  }
 }
 @media (max-width: 400px) {
   .table{
@@ -574,6 +594,12 @@
         margin-bottom:10px;
       }
     }
+  }
+  #page-content{
+    padding:0;
+  }
+  main{
+    padding: 17px 10px 20px;
   }
 }
 @media (max-width: 330px) {
