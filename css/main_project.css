@@ -621,7 +621,7 @@ main .filter_button .delete_selected:before {
 }
 /* line 517, ../sass/main_project.scss */
 .table_monitoring_wrap .table {
-  min-width: 1390px;
+  min-width: 1540px;
 }
 /* line 520, ../sass/main_project.scss */
 .table_monitoring_wrap .table .table_header .project {

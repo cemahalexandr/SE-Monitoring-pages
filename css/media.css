@@ -25,6 +25,9 @@
   main {
     max-width: 970px;
   }
+  .wrap_filter{
+    max-width: 970px;
+  }
   /* line 25, ../sass/media.scss */
   main .filter.open {
     height: 330px;
@@ -158,6 +161,9 @@ min-width: 1255px;
 
   /* line 128, ../sass/media.scss */
   main {
+    max-width: 750px;
+  }
+  .wrap_filter{
     max-width: 750px;
   }
   /* line 131, ../sass/media.scss */
@@ -304,7 +310,9 @@ min-width: 1255px;
   main {
     width: 100%;
   }
-
+  .wrap_filter{
+    max-width: 100%;
+  }
   /* line 251, ../sass/media.scss */
   .table .external_promotion, .table .group, .table .table_requests, .table .requests_input {
     display: none !important;
